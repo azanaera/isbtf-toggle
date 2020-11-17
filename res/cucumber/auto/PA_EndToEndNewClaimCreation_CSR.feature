@@ -43,6 +43,7 @@ Feature: End to End New Claim Creation - CSR (PA_EndToEndNewClaimCreation_CSR)
     Given a Personal Auto policy
     When I start filing a claim in Auto First and Final Wizard
     And the claim was reported by the Insured
+    And I set claim loss cause to "Collision with motor vehicle"
     And I select the "1st" covered vehicle
     And the insured is the claimant
     And I add an autobody repair shop "Advanced Auto Repair Center"

@@ -9,10 +9,10 @@ Feature: Create reserves and checks - Adjuster (PA_Financials_Adjuster)
     And I have the "Toggle Auto APD Specialist Level 1" authority limit profile
 
   # TODO ignoring SO2 - SO5: ISBTF can't find the Exposure in the Reserve drop-down, but I CAN find it on the UI
-  @ignore
+  # @ignore-Fixed
   Scenario Outline: 2. Manually creating a reserve on an existing Personal Auto claim
     Given a Personal Auto claim
-    And the claim has a bodily injury exposure
+    Given the claim has a bodily injury exposure
     When I create "<Reserve Amount>" available reserves for "<Cost Type>" and "<Cost Category>"
     Then the exposure should have the following remaining reserves:
       | Cost Type   | Cost Category   | Amount           |
@@ -21,9 +21,9 @@ Feature: Create reserves and checks - Adjuster (PA_Financials_Adjuster)
     Examples:
       | Cost Type  | Cost Category | Reserve Amount |
       | Claim Cost | Bodily Injury | 500 USD        |
-      | Expense    | Bodily Injury | 300 USD        |
+      | Expense    | Bodily Injury | 50 USD        |
 
-  @ignore
+  # @ignore-fixed
   Scenario Outline: 3. Changing a reserve on an existing claim
     Given a Personal Auto claim
     And the claim has a bodily injury exposure
@@ -36,12 +36,12 @@ Feature: Create reserves and checks - Adjuster (PA_Financials_Adjuster)
     Examples:
       | Cost Type  | Cost Category | Reserve Amount | New Reserve Amount |
       | Claim Cost | Bodily Injury | 500 USD        | 600 USD            |
-      | Expense    | Bodily Injury | 300 USD        | 200 USD            |
+      | Expense    | Bodily Injury | 30 USD        | 20 USD            |
 
-  @ignore
+  #@ignore-Fixed
   Scenario Outline: 4. Creating a payment when there are enough available reserves
     Given a Personal Auto claim
-    And the claim has a bodily injury exposure
+    And the claim has a "Collision" exposure
     And the exposure has "<Reserve Amount>" available reserves for "<Cost Type>" and "<Cost Category>"
     When I create a check with a "<Payment Amount>" "<Payment Type>" payment on the reserve line
     Then a "<Payment Amount>" "<Payment Type>" payment should exist on the reserve line
@@ -51,13 +51,13 @@ Feature: Create reserves and checks - Adjuster (PA_Financials_Adjuster)
 
     Examples:
       | Cost Type  | Cost Category | Reserve Amount | Payment Amount | Remaining Reserve Amount | Payment Type |
-      | Claim Cost | Bodily Injury | 500 USD        | 100 USD        | 400 USD                  | Partial      |
-      | Expense    | Bodily Injury | 300 USD        | 50 USD         | 0 USD                    | Final        |
+      | Claim Cost | Bodily Injury | 500 USD        | 1 USD          | 499 USD                  | Partial      |
+      | Expense    | Bodily Injury | 100 USD        | 50 USD         | 0 USD                    | Final        |
 
-  @ignore
+  #@ignore-Fixed
   Scenario Outline: 5. Editing a payment
     Given a Personal Auto claim
-    And the claim has a bodily injury exposure
+    And the claim has a "Collision" exposure
     And the exposure has "<Reserve Amount>" available reserves for "<Cost Type>" and "<Cost Category>"
     When I create a check with a "<Payment Amount>" "<Payment Type>" payment on the reserve line
     And I change the payment amount to "<New Payment Amount>"
@@ -69,7 +69,7 @@ Feature: Create reserves and checks - Adjuster (PA_Financials_Adjuster)
     Examples:
       | Cost Type  | Cost Category | Reserve Amount | Payment Amount | New Payment Amount | Remaining Reserve Amount | Payment Type |
       | Claim Cost | Bodily Injury | 500 USD        | 100 USD        | 200 USD            | 300 USD                  | Partial      |
-      | Expense    | Bodily Injury | 300 USD        | 200 USD        | 50 USD             | 0 USD                    | Final        |
+      #| Expense    | Bodily Injury | 300 USD        | 200 USD        | 50 USD             | 0 USD                    | Final        |
 
   Scenario: 6. Creating a supplemental payment
     Given a Personal Auto claim

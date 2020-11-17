@@ -91,6 +91,7 @@ class PAClaimContextImpl extends ClaimContextImpl implements PAClaimContext {
                   )
               )
           )
+          .withFault(0)
           .withNonConflictingClaimNumber()
           .create(bundle)
     }, CurrentUser)
@@ -158,7 +159,10 @@ class PAClaimContextImpl extends ClaimContextImpl implements PAClaimContext {
     autoFirstAndFinalScreen.FNOLWizardCheckDV_ready.Payee_Picker.clickByLabelSubstr(payeeName)
     autoFirstAndFinalScreen.FNOLWizardCheckDV_ready.PayeeRole.getOptionByLabel("Other").click()
     autoFirstAndFinalScreen.FNOLWizardCheckDV_ready.CheckAmount.Value = currencyAmount.Amount.toString()
-    autoFirstAndFinalScreen.FNOLWizardCheckDV_ready.ApplyDeductible.BoolValue = false
+
+    if(autoFirstAndFinalScreen.FNOLWizardCheckDV_ready.ApplyDeductible.Visible) {
+      autoFirstAndFinalScreen.FNOLWizardCheckDV_ready.ApplyDeductible.BoolValue = false
+    }
     autoFirstAndFinalScreen.FNOLWizardCheckDV_ready.CheckMailTo.Value = "Temp address"
     autoFirstAndFinalScreen.FNOLWizardCheckDV_ready.MailingAddressInputSet.CCAddressInputSet.setAddress("200 Somewhere Street", "San Mateo", TC_CA, "94404")
   }
