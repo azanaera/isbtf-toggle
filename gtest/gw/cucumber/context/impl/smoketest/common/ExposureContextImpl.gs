@@ -6,6 +6,8 @@ uses gw.api.database.Queries
 uses gw.api.database.Query
 uses gw.api.database.Relop
 uses gw.api.databuilder.ExposureBuilder
+uses gw.api.databuilder.IncidentBuilder
+uses gw.api.databuilder.PersonBuilder
 uses gw.api.locale.DisplayKey
 uses gw.api.util.LocaleUtil
 uses gw.cucumber.CucumberStepBase
@@ -48,7 +50,11 @@ class ExposureContextImpl extends CucumberStepBase implements ExposureContext {
 
   override function createBodilyInjuryExposure() {
     gw.transaction.Transaction.runWithNewBundle(\bundle -> {
+//    code  added for getting the _claimWrapper for adding the exposure on this object
+      var claim = _claimWrapper.get()
+      bundle.add(claim)
       _exposureWrapper.set(ExposureBuilder.uiReadyForCoverageType(CoverageType.TC_BOD_INJ_PA_EXT)
+          .onClaim(claim)//modified for adding the exposure to the _claimWrapper
           .create(bundle))
     }, CurrentUser)
   }

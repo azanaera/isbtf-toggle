@@ -2,6 +2,7 @@ package gw.cucumber.context.impl.smoketest.pa
 
 uses gw.api.locale.DisplayKey
 uses gw.cucumber.context.api.pa.PAClaimContext
+uses gw.cucumber.transformer.TypelistTransformer
 uses gw.cucumber.util.common.UIHelper
 uses pcftest.NewClaimSaved
 uses pcftest.NewContactPopup
@@ -91,6 +92,13 @@ class PAFirstAndFinalClaimContextImpl extends PAClaimContextImpl implements PACl
       newClaimSaved = wizard.finish()
     }
     captureNewlyCreatedClaim((newClaimSaved as NewClaimSaved).ClaimEntity)
+  }
+
+  override function setLossCause(lossCauseText : String) {
+    var lossCause = new TypelistTransformer<LossCause>().transform(lossCauseText)
+    var wizard = Wizard
+    wizard.goToAutoFirstAndFinal()
+    wizard.QuickClaimAutoFirstAndFinal.FNOLWizard_AutoFirstAndFinalScreen.Claim_LossCause_Ext.TypeKeyValue = lossCause
   }
 
 }
