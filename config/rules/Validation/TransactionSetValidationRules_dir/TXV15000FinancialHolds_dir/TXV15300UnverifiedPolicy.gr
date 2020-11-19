@@ -2,6 +2,7 @@ package rules.Validation.TransactionSetValidationRules_dir.TXV15000FinancialHold
 
 uses gw.api.locale.DisplayKey
 
+@gw.rules.RuleDisabled
 @gw.rules.RuleName("TXV15300 - Unverified Policy")
 internal class TXV15300UnverifiedPolicy {
   static function doCondition(transactionSet : entity.TransactionSet) : boolean {

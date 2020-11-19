@@ -7952,5 +7952,274 @@
    <categorylist
       typelist="CoverageType"/>	
   </typecode>
-  
+ <typecode
+    code="HOPersLiab_Prop_Togl_Ext"
+    desc="Property Damage"
+    name="Property Damage">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+  <typecode
+    code="HOPersLiab_Bod_Togl_Ext"
+    desc="Bodily Injury"
+    name="Bodily Injury">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+  <typecode
+    code="HOPersLiab_Med_Togl_Ext"
+    desc="Medical"
+    name="Medical">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+  <typecode
+    code="HOPersLiab_Gen_Togl_Ext"
+    desc="General"
+    name="General">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>     
+   <typecode
+    code="HOPersLiab_Side_Togl_Ext"
+    desc="Side Hustle - Liability"
+    name="Side Hustle - Liability">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+  <typecode
+    code="HOPersLiab_Pet_Togl_Ext"
+    desc="Pet Parent"
+    name="Pet Parent">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+  <typecode
+    code="HOPersLiab_Prop_Vol_Togl_Ext"
+    desc="Property Damage Voluntary"
+    name="Property Damage Voluntary">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+  <typecode
+    code="HOPersLiab_Int_Togl_Ext"
+    desc="Interest"
+    name="Interest">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>   
+   <typecode
+    code="HOIdentityProtect_Togl_Ext"
+    desc="Identity Shield"
+    name="Identity Shield">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOIdentityProtect_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode> 
+  <typecode
+    code="HOPersPropActive_Cont_Togl_Ext"
+    desc="Contents"
+    name="Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropActive_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+   <typecode
+    code="HOPersPropActive_Side_Togl_Ext"
+    desc="Side Hustle - Contents"
+    name="Side Hustle - Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropActive_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>  
+  <typecode
+    code="HOPersPropBlanket_Cont_Togl_Ext"
+    desc="Contents"
+    name="Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropBlanket_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+   <typecode
+    code="HOPersPropBlanket_Side_Togl_Ext"
+    desc="Side Hustle - Contents"
+    name="Side Hustle - Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropBlanket_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>   
+   <typecode
+    code="HOPersPropCollect_Cont_Togl_Ext"
+    desc="Contents"
+    name="Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropCollect_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+   <typecode
+    code="HOPersPropCollect_Side_Togl_Ext"
+    desc="Side Hustle - Contents"
+    name="Side Hustle - Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropCollect_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode> 
+    <typecode
+    code="HOPersPropCreativeandMaker_Cont_Togl_Ext"
+    desc="Contents"
+    name="Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropCreativeandMaker_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+   <typecode
+    code="HOPersPropCreativeandMaker_Side_Togl_Ext"
+    desc="Side Hustle - Contents"
+    name="Side Hustle - Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropCreativeandMaker_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+    <typecode
+    code="HOPersPropFashionandJewelry_Cont_Togl_Ext"
+    desc="Contents"
+    name="Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropFashionandJewelry_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+   <typecode
+    code="HOPersPropFashionandJewelry_Side_Togl_Ext"
+    desc="Side Hustle - Contents"
+    name="Side Hustle - Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropFashionandJewelry_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode> 
+   <typecode
+    code="HOPersPropFurnitureandAppliances_Cont_Togl_Ext"
+    desc="Contents"
+    name="Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropFurnitureandAppliances_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+   <typecode
+    code="HOPersPropFurnitureandAppliances_Side_Togl_Ext"
+    desc="Side Hustle - Contents"
+    name="Side Hustle - Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropFurnitureandAppliances_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode> 
+   <typecode
+    code="HOPersPropTechnology_Cont_Togl_Ext"
+    desc="Contents"
+    name="Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropTechnology_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>
+   <typecode
+    code="HOPersPropTechnology_Side_Togl_Ext"
+    desc="Side Hustle - Contents"
+    name="Side Hustle - Contents">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPersPropTechnology_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>  
+   <typecode
+    code="HOPetParentCovg_Togl_Ext"
+    desc="Pet Parent"
+    name="Pet Parent">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPetParentCovg_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>   
+    <typecode
+    code="HOPetParentCovgLim_Togl_Ext"
+    desc="Pet Parent"
+    name="Pet Parent">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOPetParentCovgLim_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>     
+   <typecode
+    code="HOSideHustleLegalFees_Togl_Ext"
+    desc="Side Hustle - Legal Fees"
+    name="Side Hustle - Legal Fees">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOSideHustleLegalFees_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>     
+   <typecode
+    code="HOSideHustleLossIncome_Togl_Ext"
+    desc="Side Hustle - Loss of Income"
+    name="Side Hustle - Loss of Income">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOSideHustleLossIncome_Togl_Ext"
+      typelist="CoverageType"/>	
+   </typecode>     
 </typelistextension>

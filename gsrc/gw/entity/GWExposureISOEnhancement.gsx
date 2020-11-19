@@ -43,10 +43,11 @@ enhancement GWExposureISOEnhancement : Exposure {
     var policyCoverageCode = ISOTranslate.instance().getCoverageCodes(
         this.Claim.Policy.PolicyType, this.Claim.LOBCode, this.PrimaryCoverage,
         this.CoverageSubType, this.Claim.LossCause)
+    print("policyCoverageCode:"+ policyCoverageCode)
     if (policyCoverageCode == null) {
-      throw new ISOBadRequestException(DisplayKey.get("Java.Error.ISO.IncorrectPolicyCoverage", 
-          this.Claim.Policy.PolicyType.Code, this.PrimaryCoverage.Code,
-          this.CoverageSubType.Code, this.LossParty.Code))
+//      throw new ISOBadRequestException(DisplayKey.get("Java.Error.ISO.IncorrectPolicyCoverage",
+//          this.Claim.Policy.PolicyType.Code, this.PrimaryCoverage.Code,
+ //         this.CoverageSubType.Code, this.LossParty.Code))
     }
     return policyCoverageCode
   }

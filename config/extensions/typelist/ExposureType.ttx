@@ -192,6 +192,9 @@ all three files for that Coverage. Do not just delete these entries, because the
     <category
       code="UM_UIM_UIMBI_EXT"
       typelist="CoverageSubtype"/>
+    <category
+      code="HOPersLiab_BI_Ext"
+      typelist="CoverageSubtype"/>
   </typecode>
   <typecode
     code="LostWages"
@@ -620,6 +623,9 @@ all three files for that Coverage. Do not just delete these entries, because the
       typelist="CoverageSubtype"/>
     <category
       code="PRO_DAM_PRO_EXT"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPersLiab_PR_Ext"
       typelist="CoverageSubtype"/>
   </typecode>
   <typecode
@@ -1071,6 +1077,18 @@ all three files for that Coverage. Do not just delete these entries, because the
     <category
       code="zd7gujr17mccs3puv5jreeu1e59GD"
       typelist="CoverageSubtype"/>
+    <category
+      code="HOIdentityProtect_GN_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPersLiab_GN_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPetParentCovgInjuryDeath_GN_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPetParentCovgLimInjuryDeath_GN_Ext"
+      typelist="CoverageSubtype"/>
     <!-- <category
       code="zocji60oon5qu43lr22k8q4o15a"
       typelist="CoverageSubtype"/>
@@ -1274,6 +1292,9 @@ all three files for that Coverage. Do not just delete these entries, because the
     <category
       code="MED_COVR_EXT"
       typelist="CoverageSubtype"/>
+    <category
+      code="HOPersLiab_MP_Ext"
+      typelist="CoverageSubtype"/>
   </typecode>
   <typecode
     code="TowOnly"
@@ -1360,6 +1381,33 @@ all three files for that Coverage. Do not just delete these entries, because the
     <category
       code="zlghejgaimjih96iplkcios7bs9"
       typelist="CoverageSubtype"/>
+    <category
+      code="HOPersPropBlanket_CO_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPersPropActive_CO_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPersPropCollectibles_CO_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPersPropCreativeandMaker_CO_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPersPropFashionandJewelry_CO_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPersPropFurnitureandAppliances_CO_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPersPropTechnology_CO_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOSideHustleLegalFees_CO_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOSideHustleLossIncome_CO_Ext"
+      typelist="CoverageSubtype"/>
   </typecode>
   <typecode
     code="OtherStructure"
@@ -1381,6 +1429,15 @@ all three files for that Coverage. Do not just delete these entries, because the
       typelist="Incident"/>
     <category
       code="zpsii9qu58bma5eju8f5pgi0brb"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOTempLivingCost_LE_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPetParentCovgBoarding_LE_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPetParentCovgLimBoarding_LE_Ext"
       typelist="CoverageSubtype"/>
   </typecode>
   <typecode

@@ -2670,7 +2670,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zd7gujr17mccs3puv5jreeu1e59"
     desc="Personal Liability"
     identifierCode="HOPCovE"
-    name="Coverage E - Personal Liability">
+    name="Coverage E - Personal Liability"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2691,7 +2692,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z8tjsluucfmoh3nho364cli3uv8"
     desc="Medical Payments To Others"
     identifierCode="HOPCovF"
-    name="Coverage F - Medical Payments To Others">
+    name="Coverage F - Medical Payments To Others"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2706,7 +2708,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zl4i2neakg3g4ecg0t01bj445va"
     desc="Dwelling"
     identifierCode="HOPCovA"
-    name="Coverage A - Dwelling">
+    name="Coverage A - Dwelling"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2721,7 +2724,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z26h4fbq18l81e5n478v5v07mj8"
     desc="Other Structures"
     identifierCode="HOPCovB"
-    name="Coverage B - Other Structures">
+    name="Coverage B - Other Structures"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2736,7 +2740,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zbtjua8nrhpvncl90406b37g2l9"
     desc="Personal Property"
     identifierCode="HOPCovC"
-    name="Coverage C - Personal Property">
+    name="Coverage C - Personal Property"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2751,7 +2756,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zpsii9qu58bma5eju8f5pgi0brb"
     desc="Loss of Use"
     identifierCode="HOPCovD"
-    name="Coverage D - Loss of Use">
+    name="Coverage D - Loss of Use"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2766,7 +2772,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zocji60oon5qu43lr22k8q4o15a"
     desc="Section I Deductibles"
     identifierCode="HOPSectionIDeductibles"
-    name="Section I Deductibles">
+    name="Section I Deductibles"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2781,7 +2788,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zu7jmsu26rk141vkaijeq6golm9"
     desc="Building Additions and Alterations"
     identifierCode="HOPBuildingAdditions"
-    name="Building Additions and Alterations">
+    name="Building Additions and Alterations"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2796,7 +2804,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zdtga636fmshibrnrfu1h5s7cvb"
     desc="Collapse"
     identifierCode="HOPCollapse"
-    name="Collapse">
+    name="Collapse"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2811,7 +2820,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z7ui0o2ttovs76h6rtk6q9gbeh8"
     desc="Construction Permit Increase Costs"
     identifierCode="HOPConstructionPermitIncreaseCosts"
-    name="Construction Permit Increase Costs">
+    name="Construction Permit Increase Costs"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2826,7 +2836,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zu4gq88v6fqir3hpdsamf12gu2a"
     desc="Credit/Debit Card, Forgery and Counterfeit Money"
     identifierCode="HOPCreditCardProtection"
-    name="Credit/Debit Card, Forgery and Counterfeit Money">
+    name="Credit/Debit Card, Forgery and Counterfeit Money"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2841,7 +2852,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zmpji3fssm9h5emk8uqv9nl6sb8"
     desc="Damage to Property of Others"
     identifierCode="HOPDamagePropOthers"
-    name="Damage to Property of Others">
+    name="Damage to Property of Others"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2856,7 +2868,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="ztihci8muqm61c3a6vmaeb28a2b"
     desc="Data and Records"
     identifierCode="HOPDataAndRecords"
-    name="Data and Records">
+    name="Data and Records"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2871,7 +2884,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z2cjsu8d7ldr23ojbnc6es16ti9"
     desc="Debris Removal"
     identifierCode="HOPDebrisRemoval"
-    name="Debris Removal">
+    name="Debris Removal"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2886,7 +2900,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zo4iu93mmrrl90ise6f67gqif98"
     desc="Debris Removal of Trees"
     identifierCode="HOPDebrisTreeRemoval"
-    name="Debris Removal of Trees">
+    name="Debris Removal of Trees"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2901,7 +2916,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zrjhog8dpqkb00hc4dtc7ljrukb"
     desc="Dwelling Under Construction - Extension of Coverages"
     identifierCode="HOPDwellingUnderConstruction"
-    name="Dwelling Under Construction - Extension of Coverages">
+    name="Dwelling Under Construction - Extension of Coverages"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2916,7 +2932,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zvoiu1bhk3vs48lq0i2ef8fogfa"
     desc="Emergency Living Expense - Power Interruption Off Premises"
     identifierCode="HOPEmergencyLivingExpense"
-    name="Emergency Living Expense - Power Interruption Off Premises">
+    name="Emergency Living Expense - Power Interruption Off Premises"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2931,7 +2948,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z6vgil0u20qn9a8b8h9c24sc6eb"
     desc="Emergency Removal of Property"
     identifierCode="HOPEmergencyPropertyRemoval"
-    name="Emergency Removal of Property">
+    name="Emergency Removal of Property"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2946,7 +2964,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zk9jol4tjcvk422ctjoib6nm5s9"
     desc="Fire Department Service Charge"
     identifierCode="HOPFireDeptCharges"
-    name="Fire Department Service Charge">
+    name="Fire Department Service Charge"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2961,7 +2980,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z7lhomv5qqndfdnsr9680bb1hq9"
     desc="Fire Extinguisher Recharge"
     identifierCode="HOPFireExtinguisherRecharge"
-    name="Fire Extinguisher Recharge">
+    name="Fire Extinguisher Recharge"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2976,7 +2996,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zeliiv44ls0fd7s7cdln05s05qa"
     desc="First Aid"
     identifierCode="HOPFirstAid"
-    name="First Aid">
+    name="First Aid"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -2991,7 +3012,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zjjh6939q3g4n4k900psm1l21o9"
     desc="Fungus &amp; Mold Remediation"
     identifierCode="HOPFungusMoldRemediation"
-    name="Fungus &amp; Mold Remediation">
+    name="Fungus &amp; Mold Remediation"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3006,7 +3028,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zu6i6rdl89rc2cu7inkfbe38b6b"
     desc="Glass"
     identifierCode="HOPGlass"
-    name="Glass">
+    name="Glass"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3021,7 +3044,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="ze3gohh5o7209812gfah4cs0ed8"
     desc="Grave Markers"
     identifierCode="HOPGraveMarkers"
-    name="Grave Markers">
+    name="Grave Markers"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3036,7 +3060,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z2tgk324p0qk1fq75ei5be8g5gb"
     desc="Identity Theft Protection"
     identifierCode="HOPIdTheft"
-    name="Identity Theft Protection">
+    name="Identity Theft Protection"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3051,7 +3076,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zk9i4qe1i9ncn6lptuvt85f0439"
     desc="Inflation Protection"
     identifierCode="HOPInflationProtection"
-    name="Inflation Protection">
+    name="Inflation Protection"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3066,7 +3092,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z0ui0qal30ijg7f24ndprcj356b"
     desc="Landlord's Furnishings"
     identifierCode="HOPLandlordsFurnishings"
-    name="Landlord's Furnishings">
+    name="Landlord's Furnishings"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3081,7 +3108,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z78h4sr6nki8ha99hku55rd4uaa"
     desc="Lock Replacement"
     identifierCode="HOPLockReplacement"
-    name="Lock Replacement">
+    name="Lock Replacement"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3096,7 +3124,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zp2g4atrihccn086l4vpbreit28"
     desc="Loss Assessment"
     identifierCode="HOPLossAssessment"
-    name="Loss Assessment">
+    name="Loss Assessment"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3111,7 +3140,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zilgk228c95qt3ob6v9s6na08ab"
     desc="Mortgage Closing Cost Expense"
     identifierCode="HOPMortgageClosingCostExpense"
-    name="Mortgage Closing Cost Expense">
+    name="Mortgage Closing Cost Expense"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3126,7 +3156,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zi8gq0ddmt92f4efi0tqik4hgv8"
     desc="Ordinance Or Law"
     identifierCode="HOPOrdinanceOrLaw"
-    name="Ordinance Or Law">
+    name="Ordinance Or Law"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3141,7 +3172,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z8oh0o5asbk8g9v4bspvmgpq3k9"
     desc="Personal Property Off Premises - Earthquake and Flood"
     identifierCode="HOPPersonalPropertyOffPremises"
-    name="Personal Property Off Premises - Earthquake and Flood">
+    name="Personal Property Off Premises - Earthquake and Flood"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3156,7 +3188,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zbags5ei5vefn92sf55g2tielv8"
     desc="Reasonable Repairs"
     identifierCode="HOPReasonableRepairs"
-    name="Reasonable Repairs">
+    name="Reasonable Repairs"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3171,7 +3204,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zuhiksn15sd0g53anl8v0pu45db"
     desc="Reward"
     identifierCode="HOPReward"
-    name="Reward">
+    name="Reward"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3186,7 +3220,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z19ia8ibe31cierblikntvppe68"
     desc="Trees, Shrubs, Plants &amp; Lawns"
     identifierCode="HOPTreesShrubsPlantsLawns"
-    name="Trees, Shrubs, Plants &amp; Lawns">
+    name="Trees, Shrubs, Plants &amp; Lawns"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3201,7 +3236,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z1bg07ii0pfa4cj02al1n88sgeb"
     desc="Volcanic Action"
     identifierCode="HOPVolcanicAction"
-    name="Volcanic Action">
+    name="Volcanic Action"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3216,7 +3252,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z4lhib5av546s2ko4naf3s8crf8"
     desc=""
     identifierCode="HOPAssistedLivingCare"
-    name="Assisted Living Care">
+    name="Assisted Living Care"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3231,7 +3268,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z50ikk44122467ads0qitrdqqi8"
     desc="Backup of Sewers, Drains and Sump Pump"
     identifierCode="HOPBackupSewersDrainsPump"
-    name="Backup of Sewers, Drains and Sump Pump">
+    name="Backup of Sewers, Drains and Sump Pump"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3246,7 +3284,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zr4gsjbrvihdr6ktd06s5kc87n9"
     desc="Earthquake"
     identifierCode="HOPEarthquake"
-    name="Earthquake">
+    name="Earthquake"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3261,7 +3300,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zb4iiqcl6a21b0grb6aamorc4ca"
     desc="Escaped Liquid Fuel"
     identifierCode="HOPEscapedLiquidFuel"
-    name="Escaped Liquid Fuel">
+    name="Escaped Liquid Fuel"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3276,7 +3316,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zc9i82cntebm2a97javsujkqk7b"
     desc="Extended Theft for Residence Rented to Others"
     identifierCode="HOPExtendedResidenceTheft"
-    name="Extended Residence Theft">
+    name="Extended Residence Theft"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3291,7 +3332,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zr3jqmau1bned1g0oe6pqhu7ct8"
     desc="Foundation Water Damage from Seepage"
     identifierCode="HOPFoundationWaterDamage"
-    name="Foundation Water Damage from Seepage">
+    name="Foundation Water Damage from Seepage"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3306,7 +3348,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z39i08pn1407l7i6bv5j2jk2jhb"
     desc=""
     identifierCode="HOPGolfCart"
-    name="Golf Cart">
+    name="Golf Cart"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3321,7 +3364,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z4bjaqp9ugpiqe79vlsr61jkfb9"
     desc=""
     identifierCode="HOPIncLimitOtherStructures"
-    name="Increased Limit - Other Structures">
+    name="Increased Limit - Other Structures"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3336,7 +3380,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zbkhgt4jvb1i76oglrok2qsnq09"
     desc="Increased Limits - Personal Property At Other Residences"
     identifierCode="HOPIncLimitPersPropertyAtOtherResidences"
-    name="Increased Limits - Personal Property At Other Residences">
+    name="Increased Limits - Personal Property At Other Residences"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3351,7 +3396,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z6phevqrmj0r38hvvhtbk7pimv8"
     desc="Limited Fungus And Mold Liability"
     identifierCode="HOPLimitedFungusAndMold"
-    name="Limited Fungus And Mold Liability">
+    name="Limited Fungus And Mold Liability"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3366,7 +3412,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zntgc6mmauu3hagr0g8ura77549"
     desc=""
     identifierCode="HOPPermittedIncidentalOccupancies"
-    name="Permitted Incidental Occupancies">
+    name="Permitted Incidental Occupancies"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3381,7 +3428,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zqai6drb846ga0qkobutjcleb2a"
     desc="Refrigerated Contents"
     identifierCode="HOPRefrigeratedContents"
-    name="Refrigerated Contents">
+    name="Refrigerated Contents"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3396,7 +3444,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zs8hqfgnkr1v9396ccjbc8pbki8"
     desc="Scheduled Landlord's Furnishings"
     identifierCode="HOPScheduledLandlordsFurnishing"
-    name="Scheduled Landlord's Furnishings">
+    name="Scheduled Landlord's Furnishings"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3411,7 +3460,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zlghejgaimjih96iplkcios7bs9"
     desc="Scheduled Personal Property"
     identifierCode="HOPScheduledPersonalProperty"
-    name="Scheduled Personal Property">
+    name="Scheduled Personal Property"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3426,7 +3476,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zdmj42u34b70e98oe73a1ab3u48"
     desc="Sinkhole Collapse"
     identifierCode="HOPSinkhole"
-    name="Sinkhole Collapse">
+    name="Sinkhole Collapse"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3441,7 +3492,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z74i2o900p9aner9khi3ucsf1pb"
     desc="Special Computer Coverage"
     identifierCode="HOPSpecialComputerCoverage"
-    name="Special Computer Coverage">
+    name="Special Computer Coverage"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3456,7 +3508,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zo8jgu75d357q794cno84vh0338"
     desc="Specific Structures Away From Residence"
     identifierCode="HOPSpecificStructsAwayFromResidence"
-    name="Specific Structures Away From Residence">
+    name="Specific Structures Away From Residence"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3471,7 +3524,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zpajido164efucetokjge4q45e9"
     desc="Structures Rented To Others - Residence Premises"
     identifierCode="HOPStructuresRentedToOthersResidencePremises"
-    name="Structures Rented To Others - Residence Premises">
+    name="Structures Rented To Others - Residence Premises"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3486,7 +3540,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zc1jk38ardj581cfmn0e395i758"
     desc="Valuable Personal Property"
     identifierCode="HOPValuablePersonalProperty"
-    name="Valuable Personal Property">
+    name="Valuable Personal Property"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3501,7 +3556,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zrcjqe5k1gu1ic8sbend4tpb1gb"
     desc="Workers' Compensation"
     identifierCode="HOPWorkersCompensation"
-    name="Workers' Compensation">
+    name="Workers' Compensation"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3516,7 +3572,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z1gguiuovtplr3j4rucqdv0stra"
     desc=""
     identifierCode="HOPAssistedLivingCareItem"
-    name="Assisted Living Care Item">
+    name="Assisted Living Care Item"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3531,7 +3588,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zdogeskkpv01dc9p8upk23dne09"
     desc="Golf Cart Coverage - Schedule Detail"
     identifierCode="HOPGolfCartItem"
-    name="Golf Cart Item">
+    name="Golf Cart Item"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3546,7 +3604,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z1fhulh3d21qr4o5ktk2e54ndpb"
     desc="Increased Limit - Other Structures Item"
     identifierCode="HOPIncLimitOtherStructuresItem"
-    name="Increased Limit - Other Structures Item">
+    name="Increased Limit - Other Structures Item"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3561,7 +3620,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zm8igrhpt3bfg2lvdnl5lf0iat9"
     desc="Increased Limits - Personal Property At Other Residences Item"
     identifierCode="HOPIncLimitPersPropertyAtOtherResidencesItem"
-    name="Increased Limits - Personal Property At Other Residences Item">
+    name="Increased Limits - Personal Property At Other Residences Item"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3576,7 +3636,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zrrhqcqhj768sfnjh0uoas3n5d9"
     desc=""
     identifierCode="HOPPermittedIncidentalOccupanciesItem"
-    name="Permitted Incidental Occupancies Item">
+    name="Permitted Incidental Occupancies Item"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3591,7 +3652,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zo5h0mvsjli2d8gp47cpa3appfb"
     desc=""
     identifierCode="HOPScheduledLandlordsFurnishingItem"
-    name="Scheduled Landlord's Furnishings Item">
+    name="Scheduled Landlord's Furnishings Item"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3606,7 +3668,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zd5joencat3ep2cm32h3e5cdmj9"
     desc="Scheduled Personal Property Item"
     identifierCode="HOPScheduledPersonalPropertyItem"
-    name="Scheduled Personal Property Item">
+    name="Scheduled Personal Property Item"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3621,7 +3684,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zh5j85vgpge8n6saji15tsonl8b"
     desc=""
     identifierCode="HOPSpecificStructsAwayFromResidenceItem"
-    name="Specific Structures Away From Residence Item">
+    name="Specific Structures Away From Residence Item"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3636,7 +3700,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zcgjavp5vcr21558v9bucnfqj0b"
     desc="Structures Rented To Others - Residence Premises Item"
     identifierCode="HOPStructuresRentedToOthersResidencePremisesItem"
-    name="Structures Rented To Others - Residence Premises Item">
+    name="Structures Rented To Others - Residence Premises Item"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -3651,7 +3716,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zc9iqhupesj0fbpvo8ltn4526b8"
     desc="Valuable Personal Property Item"
     identifierCode="HOPValuablePersonalPropertyItem"
-    name="Valuable Personal Property Item">
+    name="Valuable Personal Property Item"
+    retired="true">
     <category
       code="HOPHomeowners"
       typelist="PolicyType"/>
@@ -5055,6 +5121,175 @@ all three files for that Coverage. Do not just delete these entries, because the
       typelist="PolicyType"/>
     <category
       code="UIMPD_UIM_EXT"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOIdentityProtect_Togl_Ext"
+    name="Identity Protector"
+    desc="Identity Protector">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOIdentityProtect_GN_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOPersLiab_Togl_Ext"
+    name="Personal Liability"
+    desc="Personal Liability">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOPersLiab_BI_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPersLiab_GN_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPersLiab_MP_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPersLiab_PR_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOPersPropBlanket_Togl_Ext"
+    name="Blanket"
+    desc="Blanket">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOPersPropBlanket_CO_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOTempLivingCost_Togl_Ext"
+    name="Temporary Living Cost"
+    desc="Temporary Living Cost">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOTempLivingCost_LE_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOPersPropActive_Togl_Ext"
+    name="Active"
+    desc="Active">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOPersPropActive_CO_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOPersPropCollect_Togl_Ext"
+    name="Collectibles"
+    desc="Collectibles">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOPersPropCollectibles_CO_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOPersPropCreativeandMaker_Togl_Ext"
+    name="Creative/Maker"
+    desc="Creative/Maker">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOPersPropCreativeandMaker_CO_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOPersPropFashionandJewelry_Togl_Ext"
+    name="Fashion/Jewelry"
+    desc="Fashion/Jewelry">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOPersPropFashionandJewelry_CO_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOPersPropFurnitureandAppliances_Togl_Ext"
+    name="Furniture/Appliances"
+    desc="Furniture/Appliances">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOPersPropFurnitureandAppliances_CO_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOPersPropTechnology_Togl_Ext"
+    name="Technology"
+    desc="Technology">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOPersPropTechnology_CO_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOPetParentCovg_Togl_Ext"
+    name="Pet Parent Coverage"
+    desc="Pet Parent Coverage">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOPetParentCovgInjuryDeath_GN_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPetParentCovgBoarding_LE_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOPetParentCovgLim_Togl_Ext"
+    name="Pet Parent Coverage - Limited"
+    desc="Pet Parent Coverage - Limited">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOPetParentCovgLimInjuryDeath_GN_Ext"
+      typelist="CoverageSubtype"/>
+    <category
+      code="HOPetParentCovgLimBoarding_LE_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOSideHustleLegalFees_Togl_Ext"
+    name="Side Hustle - Legal Fees"
+    desc="Side Hustle - Legal Fees">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOSideHustleLegalFees_CO_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
+  <typecode
+    code="HOSideHustleLossIncome_Togl_Ext"
+    name="Side Hustle - Loss of Income"
+    desc="Side Hustle - Loss of Income">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOSideHustleLossIncome_CO_Ext"
       typelist="CoverageSubtype"/>
   </typecode>
 </typelistextension>
