@@ -703,6 +703,51 @@ all three files for that Coverage. Do not just delete these entries, because the
     <category
       code="UIMPD_UIM_EXT"
       typelist="CoverageSubType"/>
+    <category
+      code="HOIdentityProtect_GN_Ext"
+      typelist="CoverageSubType"/>
+	  <category
+      code="HOPersPropBlanket_CO_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOTempLivingCost_LE_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOPersPropActive_CO_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOPersPropCollectibles_CO_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOPersPropCreativeandMaker_CO_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOPersPropFashionandJewelry_CO_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOPersPropFurnitureandAppliances_CO_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOPersPropTechnology_CO_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOPetParentCovgInjuryDeath_GN_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOPetParentCovgBoarding_LE_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOPetParentCovgLimInjuryDeath_GN_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOPetParentCovgLimBoarding_LE_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOSideHustleLegalFees_CO_Ext"
+      typelist="CoverageSubType"/>	  
+	  <category
+      code="HOSideHustleLossIncome_CO_Ext"
+      typelist="CoverageSubType"/>	    
   </typecode>
   <typecode
     code="third_party"
@@ -1251,6 +1296,18 @@ all three files for that Coverage. Do not just delete these entries, because the
       typelist="CoverageSubType"/>
     <category
       code="PRO_DAM_PRO_EXT"
-      typelist="CoverageSubType"/>    
+      typelist="CoverageSubType"/> 
+    <category
+      code="HOPersLiab_BI_Ext"
+      typelist="CoverageSubType"/> 	  
+    <category
+      code="HOPersLiab_GN_Ext"
+      typelist="CoverageSubType"/> 	  
+    <category
+      code="HOPersLiab_MP_Ext"
+      typelist="CoverageSubType"/> 	  
+    <category
+      code="HOPersLiab_PR_Ext"
+      typelist="CoverageSubType"/> 	  
   </typecode>
 </typelistextension>

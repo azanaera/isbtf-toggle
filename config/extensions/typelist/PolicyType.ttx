@@ -881,6 +881,48 @@
     <category
       code="PC"
       typelist="SourceSystem"/>
+    <category
+      code="HOIdentityProtect_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOPersPropBlanket_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOTempLivingCost_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOPersPropActive_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOPersPropCollect_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOPersPropCreativeandMaker_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOPersPropFashionandJewelry_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOPersPropFurnitureandAppliances_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOPersPropTechnology_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOPetParentCovg_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOPetParentCovgLim_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOSideHustleLegalFees_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOSideHustleLossIncome_Togl_Ext"
+      typelist="CoverageType"/>
   </typecode>
   <typecode
     code="CommercialProperty"

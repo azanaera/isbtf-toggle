@@ -2869,7 +2869,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zd7gujr17mccs3puv5jreeu1e59GD"
     desc="Personal Liability General"
     identifierCode="HOPCovEGD"
-    name="Coverage E - Personal Liability General">
+    name="Coverage E - Personal Liability General"
+    retired="true">
     <category
       code="zd7gujr17mccs3puv5jreeu1e59"
       typelist="CoverageType"/>
@@ -2884,7 +2885,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zd7gujr17mccs3puv5jreeu1e59BI"
     desc="Personal Liability Bodily Injury"
     identifierCode="HOPCovEBI"
-    name="Coverage E - Personal Liability Bodily Injury">
+    name="Coverage E - Personal Liability Bodily Injury"
+    retired="true">
     <category
       code="BodilyInjuryDamage"
       typelist="ExposureType"/>
@@ -2899,7 +2901,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zd7gujr17mccs3puv5jreeu1e59PD"
     desc="Personal Liability Property"
     identifierCode="HOPCovEPD"
-    name="Coverage E - Personal Liability Property">
+    name="Coverage E - Personal Liability Property"
+    retired="true">
     <category
       code="PropertyDamage"
       typelist="ExposureType"/>
@@ -2914,7 +2917,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z8tjsluucfmoh3nho364cli3uv8"
     desc="Medical Payments To Others"
     identifierCode="HOPCovF"
-    name="Coverage F - Medical Payments To Others">
+    name="Coverage F - Medical Payments To Others"
+    retired="true">
     <category
       code="z8tjsluucfmoh3nho364cli3uv8"
       typelist="CoverageType"/>
@@ -2929,7 +2933,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zl4i2neakg3g4ecg0t01bj445va"
     desc="Dwelling"
     identifierCode="HOPCovA"
-    name="Coverage A - Dwelling">
+    name="Coverage A - Dwelling"
+    retired="true">
     <category
       code="zl4i2neakg3g4ecg0t01bj445va"
       typelist="CoverageType"/>
@@ -2944,7 +2949,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z26h4fbq18l81e5n478v5v07mj8"
     desc="Other Structures"
     identifierCode="HOPCovB"
-    name="Coverage B - Other Structures">
+    name="Coverage B - Other Structures"
+    retired="true">
     <category
       code="z26h4fbq18l81e5n478v5v07mj8"
       typelist="CoverageType"/>
@@ -2959,7 +2965,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zbtjua8nrhpvncl90406b37g2l9"
     desc="Personal Property"
     identifierCode="HOPCovC"
-    name="Coverage C - Personal Property">
+    name="Coverage C - Personal Property"
+    retired="true">
     <category
       code="zbtjua8nrhpvncl90406b37g2l9"
       typelist="CoverageType"/>
@@ -2974,7 +2981,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zpsii9qu58bma5eju8f5pgi0brb"
     desc="Loss of Use"
     identifierCode="HOPCovD"
-    name="Coverage D - Loss of Use">
+    name="Coverage D - Loss of Use"
+    retired="true">
     <category
       code="zpsii9qu58bma5eju8f5pgi0brb"
       typelist="CoverageType"/>
@@ -3846,7 +3854,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zjjh6939q3g4n4k900psm1l21o9"
     desc="Fungus &amp; Mold Remediation"
     identifierCode="HOPFungusMoldRemediation"
-    name="Fungus &amp; Mold Remediation">
+    name="Fungus &amp; Mold Remediation"
+    retired="true">
     <category
       code="zjjh6939q3g4n4k900psm1l21o9"
       typelist="CoverageType"/>
@@ -3861,7 +3870,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="z2tgk324p0qk1fq75ei5be8g5gb"
     desc="Identity Theft Protection"
     identifierCode="HOPIdTheft"
-    name="Identity Theft Protection">
+    name="Identity Theft Protection"
+    retired="true">
     <category
       code="z2tgk324p0qk1fq75ei5be8g5gb"
       typelist="CoverageType"/>
@@ -3876,7 +3886,8 @@ all three files for that Coverage. Do not just delete these entries, because the
     code="zlghejgaimjih96iplkcios7bs9"
     desc="Scheduled Personal Property"
     identifierCode="HOPScheduledPersonalProperty"
-    name="Scheduled Personal Property">
+    name="Scheduled Personal Property"
+    retired="true">
     <category
       code="zlghejgaimjih96iplkcios7bs9"
       typelist="CoverageType"/>
@@ -5533,6 +5544,215 @@ all three files for that Coverage. Do not just delete these entries, because the
       typelist="CoverageType"/>
     <category
       code="VehicleDamage"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOIdentityProtect_GN_Ext"
+    name="Identity Protector"
+    desc="Identity Protector">
+    <category
+      code="HOIdentityProtect_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="GeneralDamage"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPersLiab_BI_Ext"
+    name="Bodily Injury"
+    desc="Bodily Injury">
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="BodilyInjuryDamage"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPersLiab_GN_Ext"
+    name="General"
+    desc="General">
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="GeneralDamage"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPersLiab_MP_Ext"
+    name="Med Pay"
+    desc="Med Pay">
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="MedPay"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPersLiab_PR_Ext"
+    name="Property Damage"
+    desc="Property Damage">
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="PropertyDamage"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPersPropBlanket_CO_Ext"
+    name="Blanket"
+    desc="Blanket">
+    <category
+      code="HOPersPropBlanket_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="Content"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOTempLivingCost_LE_Ext"
+    name="Temporary Living Cost"
+    desc="Temporary Living Cost">
+    <category
+      code="HOTempLivingCost_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="LivingExpenses"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPersPropActive_CO_Ext"
+    name="Active"
+    desc="Active">
+    <category
+      code="HOPersPropActive_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="Content"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPersPropCollectibles_CO_Ext"
+    name="Collectibles"
+    desc="Collectibles">
+    <category
+      code="HOPersPropCollect_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="Content"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPersPropCreativeandMaker_CO_Ext"
+    name="Creative/Maker"
+    desc="Creative/Maker">
+    <category
+      code="HOPersPropCreativeandMaker_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="Content"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPersPropFashionandJewelry_CO_Ext"
+    name="Fashion/Jewelry"
+    desc="Fashion/Jewelry">
+    <category
+      code="HOPersPropFashionandJewelry_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="Content"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPersPropFurnitureandAppliances_CO_Ext"
+    name="Furniture/Appliances"
+    desc="Furniture/Appliances">
+    <category
+      code="HOPersPropFurnitureandAppliances_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="Content"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPersPropTechnology_CO_Ext"
+    name="Technology"
+    desc="Technology">
+    <category
+      code="HOPersPropTechnology_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="Content"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPetParentCovgInjuryDeath_GN_Ext"
+    name="Pet Parent - Injury/Death"
+    desc="Pet Parent - Injury/Death">
+    <category
+      code="HOPetParentCovg_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="GeneralDamage"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPetParentCovgBoarding_LE_Ext"
+    name="Pet Parent - Boarding"
+    desc="Pet Parent - Boarding">
+    <category
+      code="HOPetParentCovg_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="LivingExpenses"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPetParentCovgLimInjuryDeath_GN_Ext"
+    name="Pet Parent - Injury/Death"
+    desc="Pet Parent - Injury/Death">
+    <category
+      code="HOPetParentCovgLim_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="GeneralDamage"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOPetParentCovgLimBoarding_LE_Ext"
+    name="Pet Parent - Boarding"
+    desc="Pet Parent - Boarding">
+    <category
+      code="HOPetParentCovgLim_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="LivingExpenses"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOSideHustleLegalFees_CO_Ext"
+    name="Side Hustle - Legal Fees"
+    desc="Side Hustle - Legal Fees">
+    <category
+      code="HOSideHustleLegalFees_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="Content"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOSideHustleLossIncome_CO_Ext"
+    name="Side Hustle - Loss of Income"
+    desc="Side Hustle - Loss of Income">
+    <category
+      code="HOSideHustleLossIncome_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="Content"
       typelist="ExposureType"/>
   </typecode>
 

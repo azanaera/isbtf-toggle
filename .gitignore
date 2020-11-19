@@ -4,6 +4,7 @@ gradle/cache/
 Jenkinsfile
 configuration.iml
 build/
+deploy/
 generated/
 generated_classes/
 plugins/Gosu/idea-gclasses/

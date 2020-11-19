@@ -43,6 +43,7 @@
         id="Description"
         label="DisplayKey.get(&quot;Web.FixedPropertyIncident.Description&quot;)"
         numRows="3"
+        required="true"
         value="FixedPropertyIncident.Description"/>
       <CurrencyInput
         editable="true"

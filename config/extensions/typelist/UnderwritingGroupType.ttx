@@ -6,21 +6,30 @@
   <typecode
     code="acme_auto"
     desc="Acme Auto"
-    name="Acme Auto"/>
+    name="Acme Auto"
+    retired="true"/>
   <typecode
     code="acme_prop"
     desc="Acme Property"
-    name="Acme Property"/>
+    name="Acme Property"
+    retired="true"/>
   <typecode
     code="acme_wc"
     desc="Acme Workers' Comp"
-    name="Acme Workers' Comp"/>
+    name="Acme Workers' Comp"
+    retired="true"/>
   <typecode
     code="acme_fire"
     desc="Acme Fire"
-    name="Acme Fire"/>
+    name="Acme Fire"
+    retired="true"/>
   <typecode
     code="southwestern"
     desc="Southwestern"
-    name="Southwestern"/>
+    name="Southwestern"
+    retired="true"/>
+  <typecode
+    code="44245"
+    desc="Toggle"
+    name="Toggle"/>
 </typelistextension>
