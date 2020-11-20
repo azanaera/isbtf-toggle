@@ -23,6 +23,8 @@ Feature: Define financial summary presentation
   Scenario Outline: Capture property damage information during FNOL for a Homeowners policy
     Given a Homeowners policy
     When I start filing a claim
+    And I set the Loss Date to "Today"
+    And the claim was reported by the Insured
     And I set claim loss cause to "Hurricane"
     And I add a dwelling incident
       | Damage Description  | <Dwelling Damage Description>          |
