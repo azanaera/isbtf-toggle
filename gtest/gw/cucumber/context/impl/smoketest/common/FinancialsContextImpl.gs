@@ -84,7 +84,7 @@ class FinancialsContextImpl extends CucumberStepBase implements FinancialsContex
   override function createExistingReserves(amountString : String, costTypeString : String, costCategoryString : String) {
     var exposure = _exposureWrapper.get() ?: _claimWrapper.get().Exposures.single()
     var costType = _costTypeTypelistTransformer.transform(costTypeString)
-    var costCategory = _costCategoryTypelistTransformer.transform(costCategoryString)
+    var costCategory = _costCategoryTypelistTransformer.transform(costCategoryString, true)
     _costTypeWrapper.set(costType)
     _costCategoryWrapper.set(costCategory)
     var reserve : Reserve
@@ -362,7 +362,7 @@ class FinancialsContextImpl extends CucumberStepBase implements FinancialsContex
 
   override function setAvailableReserves(amountString : String, costTypeString : String, costCategoryString : String) {
     var costType = _costTypeTypelistTransformer.transform(costTypeString)
-    var costCategory = _costCategoryTypelistTransformer.transform(costCategoryString)
+    var costCategory = _costCategoryTypelistTransformer.transform(costCategoryString, true)
     _costTypeWrapper.set(costType)
     _costCategoryWrapper.set(costCategory)
 

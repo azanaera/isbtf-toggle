@@ -607,7 +607,7 @@ abstract class ClaimContextImpl extends CucumberStepBase implements ClaimContext
   }
 
   override function setClaimLossCause(lossCauseStr : String) {
-    var lossCause = new TypelistTransformer<LossCause>().transform(lossCauseStr)
+    var lossCause = new TypelistTransformer<LossCause>().transform(lossCauseStr, true)
     var claim : Claim
     gw.transaction.Transaction.runWithNewBundle(\bundle -> {
       claim = bundle.add(_claimWrapper.get())

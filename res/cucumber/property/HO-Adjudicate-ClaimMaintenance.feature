@@ -58,7 +58,7 @@ Feature: Claim Maintenance
       | General Injury Type  | <General Injury Type> |
     Examples:
       | Describe Injuries                                                                                                  | Loss Party     | Severity | General Injury Type |
-      | After medical evaluation it was determined that I have 3rd degree burns on my hand from trying to put out the fire | Insured's loss | Moderate | Multiple injuries   |
+      | After medical evaluation it was determined that I have 3rd degree burns on my hand from trying to put out the fire | Insured's loss | Moderate (usable) | All other  |
 
   @23790.3-GW
   Scenario: Add a Living Expenses Incident to the Homeowners Claim
