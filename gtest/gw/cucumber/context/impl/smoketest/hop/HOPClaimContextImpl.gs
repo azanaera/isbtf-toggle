@@ -2,6 +2,7 @@ package gw.cucumber.context.impl.smoketest.hop
 
 uses cucumber.api.DataTable
 uses entity.Incident
+uses gw.api.databuilder.AddressBuilder
 uses gw.api.databuilder.ClaimBuilder
 uses gw.api.databuilder.DwellingIncidentBuilder
 uses gw.api.databuilder.DwellingRoomDamageBuilder
@@ -11,10 +12,13 @@ uses gw.api.databuilder.IncidentBuilderBase
 uses gw.api.databuilder.MobilePropertyIncidentBuilder
 uses gw.api.databuilder.OtherStructureIncidentBuilder
 uses gw.api.databuilder.PolicyBuilder
+uses gw.api.databuilder.PolicyCoverageBuilder
+uses gw.api.databuilder.PolicyLocationBuilder
 uses gw.api.databuilder.PropertyIncidentBuilder
 uses gw.api.claim.IncidentUIHelpers
 uses gw.api.database.Query
 uses gw.api.databuilder.InjuryIncidentBuilder
+uses gw.api.databuilder.VehicleRUBuilder
 uses gw.api.util.DateUtil
 uses gw.cucumber.context.api.hop.HOPClaimContext
 uses gw.cucumber.context.impl.smoketest.common.ClaimContextImpl
@@ -24,6 +28,9 @@ uses gw.cucumber.transformer.CurrencyAmountTransformer
 uses gw.cucumber.transformer.SpecialistServiceTransformer
 uses gw.cucumber.transformer.TypelistTransformer
 uses gw.cucumber.util.common.UIHelper
+uses gw.plugin.Plugins
+uses gw.plugin.policy.search.IPolicySearchAdapter
+uses gw.rest.testsupport.v1.plugin.policy.PolicyStorePlugin
 uses pcftest.ChoosePropertyContentsScheduledItemPopup
 uses pcftest.ClaimLossDetails
 uses pcftest.ClaimPolicyGeneral
@@ -40,7 +47,23 @@ uses pcftest.PolicyLocationPopup
 @SuppressWarnings("unused")
 class HOPClaimContextImpl extends ClaimContextImpl implements HOPClaimContext {
   override function createPolicyDataSet() {
-    (_policyDataSetWrapper.get() as PolicyDataSet).PolicyNumber = "73-235676"
+    var policy = new PolicyBuilder()
+        .uiReadyHOPHomeowners()
+        .withVerified(true)
+        .withPolicyLocation(new PolicyLocationBuilder()
+            .withAddress(new AddressBuilder()
+                              .asHomeAddress()
+                              .withUniqueAddressLine1()))
+        .withCoverage(new PolicyCoverageBuilder()
+                            .withType(CoverageType.TC_CPBLANKETCOV)
+                            .withExposureLimit(500bd.ofDefaultCurrency())
+                            .withIncidentLimit(500bd.ofDefaultCurrency()))
+
+    .create()
+    (_policyDataSetWrapper.get() as PolicyDataSet).PolicyNumber = policy.PolicyNumber
+
+    var policyPlugin = Plugins.get(IPolicySearchAdapter) as PolicyStorePlugin
+    policyPlugin.addPolicy(policy)
   }
 
   override function createUnverifiedPolicy() {
@@ -101,6 +124,7 @@ class HOPClaimContextImpl extends ClaimContextImpl implements HOPClaimContext {
     injuryIncidentPopup.FNOLInjuryIncidentScreen.ContactDV.ClaimContactPerson.getOptionByLabel(DK_NEWPERSON).click()
     injuryIncidentPopup.FNOLInjuryIncidentScreen.ContactDV.FNOLContactInputSet.GlobalPersonNameInputSet_default.LastName.Value = "Smith"
     injuryIncidentPopup.FNOLInjuryIncidentScreen.ContactDV.InjuryIncidentInputSet.InjuryDescription.Value = "new injury incident"
+    injuryIncidentPopup.FNOLInjuryIncidentScreen.ContactDV.InjuryIncidentInputSet.PrimaryInjuryType.selectFirstValidOption()
     injuryIncidentPopup.FNOLInjuryIncidentScreen.ContactDV.InjuryIncidentInputSet.LossParty.TypeKeyValue = lossPartyType
     var location = injuryIncidentPopup.FNOLInjuryIncidentScreen.Update.click()
     UIHelper.assertNoMessages(location)
@@ -117,7 +141,7 @@ class HOPClaimContextImpl extends ClaimContextImpl implements HOPClaimContext {
   override function addInjuryExposure(coverageSubtype : CoverageSubtype = null) {
     var wizard = Wizard
     wizard.goToAssignAndSaveHomeowners()
-    super.addInjuryExposure(coverageSubtype ?: CoverageSubtype.TC_HOPCOVEBI)
+    super.addInjuryExposure(coverageSubtype ?: CoverageSubtype.TC_HOPERSLIAB_BI_EXT)
   }
 
   override function finishFilingClaim() {
@@ -489,6 +513,7 @@ class HOPClaimContextImpl extends ClaimContextImpl implements HOPClaimContext {
     newInjuryIncidentPopup.NewInjuryIncidentScreen.InjuryIncidentDV.InjuryIncidentInputSet.LossParty.selectFirstValidOption()
     //Disabled as part of Toggle R1
     //newInjuryIncidentPopup.NewInjuryIncidentScreen.InjuryIncidentDV.InjuryIncidentInputSet.Severity.selectFirstValidOption()
+    newInjuryIncidentPopup.NewInjuryIncidentScreen.InjuryIncidentDV.InjuryIncidentInputSet.PrimaryInjuryType.selectFirstValidOption()
     newInjuryIncidentPopup.NewInjuryIncidentScreen.InjuryIncidentDV.InjuryIncidentInputSet.InjuryDescription.Value = description
     newInjuryIncidentPopup.update()
     claimLossDetails.ClaimLossDetailsScreen.Update.click()
@@ -593,9 +618,9 @@ class HOPClaimContextImpl extends ClaimContextImpl implements HOPClaimContext {
     var expectedIncident = table.asMap(String, String)
     assertThat(claim.Incidents.hasMatch(\incident ->
         incident.Subtype == typekey.Incident.TC_INJURYINCIDENT and
-            incident.AsInjuryIncident.Description == expectedIncident.get(DK_DESCRIBEINJURIES) and
-            incident.AsInjuryIncident.LossParty == new TypelistTransformer<LossPartyType>().transform(expectedIncident.get(DK_LOSSPARTY)) and
-            incident.AsInjuryIncident.Severity == new TypelistTransformer<SeverityType>().transform(expectedIncident.get(DK_SEVERITY)) and
+            incident.Description == expectedIncident.get(DK_DESCRIBEINJURIES) and
+            incident.LossParty == new TypelistTransformer<LossPartyType>().transform(expectedIncident.get(DK_LOSSPARTY)) and
+            incident.Severity == new TypelistTransformer<SeverityType>().transform(expectedIncident.get(DK_SEVERITY)) and
             incident.AsInjuryIncident.GeneralInjuryType == new TypelistTransformer<InjuryType>().transform(expectedIncident.get(DK_INJURYTYPE))
     )).as("The expected Bodily Injury incident (${expectedIncident}), could not be found on the claim").isTrue()
   }
