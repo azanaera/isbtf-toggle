@@ -42,8 +42,8 @@ Feature: New Claim Creation CSR (PA_NewClaimCreation_CSR)
     And I select the "1st" covered vehicle
     And the insured is the claimant
     And I add an autobody repair shop "Advanced Auto Repair Center"
+    And I select Ready To Pay option "True"
     And I create a "500 USD" check to "Advanced Auto Repair Center"
-    And I select Ready To Pay option "Yes"
     And I finish filing the claim
     Then a "Personal Auto" claim should be created
     And a "500 USD" check to "Advanced Auto Repair Center" should exist on the claim
