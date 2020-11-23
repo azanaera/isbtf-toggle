@@ -81,17 +81,19 @@ class AdminContextImpl extends CucumberStepBase implements AdminContext {
     var authorityLimitMaps = table.asMaps(String, String)
 
     gw.transaction.Transaction.runWithNewBundle(\bundle -> {
-      var profile = AuthorityLimitProfileBuilder.uiReadyProfile()
+      var profileBuilder = AuthorityLimitProfileBuilder.uiReadyProfile()
           .withUniqueName()
 
       for (map in authorityLimitMaps) {
         var limitType = new TypelistTransformer<AuthorityLimitType>().transform(map.get(DK_LIMIT_TYPE))
         var currencyAmount = new CurrencyAmountTransformer().transform(map.get(DK_LIMIT_AMOUNT))
-        profile.withLimit(limitType, currencyAmount)
+        profileBuilder.withLimit(limitType, currencyAmount)
       }
 
+      var profile = profileBuilder.create(bundle)
       var user = bundle.add(getUserByUsername(CurrentUser))
-      user.setAuthorityProfile(profile.createAndCommit())
+
+      user.setAuthorityProfile(profile)
     }, User.util.UnrestrictedUser)
   }
 
