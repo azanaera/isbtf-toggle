@@ -639,17 +639,17 @@ class FinancialsContextImpl extends CucumberStepBase implements FinancialsContex
   private function createUserWithAuthorityLimits(limits : Map<AuthorityLimitType, CurrencyAmount>) : User {
     var tempUser : User
     gw.transaction.Transaction.runWithNewBundle(\bundle -> {
-      var profile = AuthorityLimitProfileBuilder.uiReadyProfile()
+      var profileBuilder = AuthorityLimitProfileBuilder.uiReadyProfile()
           .withUniqueName()
 
       for (var k in limits.Keys) {
-        profile.withLimit(k, limits.get(k))
+        profileBuilder.withLimit(k, limits.get(k))
       }
-
+      var profile = profileBuilder.create(bundle)
       tempUser = UserBuilder.uiReadyUser()
           .withAuthorityLimitProfile(profile)
           .withAdjusterRole()
-          .createAndCommit()
+          .create(bundle)
     }, User.util.UnrestrictedUser)
     return tempUser
   }
