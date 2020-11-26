@@ -1,5 +1,5 @@
-@homeowners
-Feature: New Claim Creation
+@homeowners @suite
+Feature: New Claim Creation - CSR (HOP_NewClaimCreation_CSR.feature)
 
   As a customer service representative,
   I want to file claims against verified policies.

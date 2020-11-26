@@ -1,5 +1,5 @@
-@homeowners @HO-DetermineHandlingStrategy-Segmentation
-Feature: Segmentation
+@homeowners @HO-DetermineHandlingStrategy-Segmentation @suite
+Feature: Segmentation (HO-DetermineHandlingStrategy-Segmentation.feature)
 
   As an adjuster,
   I want the system to be able to categorize the claim and/or exposures based on key variables such as complexity, severity, etc...
@@ -57,7 +57,7 @@ Feature: Segmentation
       | Property          | Death              | Insured's loss |
       | Personal Property | Major (not usable) | Insured's loss |
 
-  @23960-GW
+  @23960-GW @ignore
   Scenario Outline: Exposure Segmentation Rule for Property default
     Given a Homeowners policy
     When I file a new claim with the following exposure:

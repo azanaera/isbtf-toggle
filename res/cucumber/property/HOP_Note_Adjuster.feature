@@ -1,5 +1,5 @@
-@homeowners
-Feature: Note
+@homeowners @suite
+Feature: Note - Adjuster (HOP_Note_Adjuster.feature)
 
   As an adjuster,
   I want to add new notes for existing claims.

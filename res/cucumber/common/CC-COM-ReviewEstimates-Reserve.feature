@@ -14,7 +14,7 @@ Feature: Process reserves (CC-COM-ReviewEstimates-Reserve)
     And I have the "Approve any approval activity" permission
 
   #TODO ignoring: Passes locally, but on TC: Bundle invariants violated. Orphaned policy.  Each unretired Policy must be one-to-one with a Claim.
-  @23300-GW @ignore
+  @23300-GW
   Scenario Outline: 1. Process reserves for a Personal Auto claim
     Given a Personal Auto claim
     And the claim has a bodily injury exposure

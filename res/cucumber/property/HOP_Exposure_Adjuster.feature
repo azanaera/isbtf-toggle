@@ -1,5 +1,5 @@
-@homeowners
-Feature: Exposure
+@homeowners @suite
+Feature: Exposure - Adjuster (HOP_Exposure_Adjuster.feature)
 
   As an adjuster,
   I want to create exposures while filing a new claim and on existing claims.
@@ -7,6 +7,7 @@ Feature: Exposure
   Background:
     Given I am a user with the "Adjuster" role
 
+  @ignore
   Scenario: Creating a dwelling exposure on an existing Homeowners claim
     Given a Homeowners claim
     And the claim has a dwelling incident
