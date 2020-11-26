@@ -1,5 +1,5 @@
-@homeowners @HO-DetermineHandlingStrategy-Segmentation
-Feature: Segmentation
+@homeowners @HO-DetermineHandlingStrategy-Segmentation @suite
+Feature: Segmentation ~ HO_DetermineHandlingStrategy_Segmentation
 
   As an adjuster,
   I want the system to be able to categorize the claim and/or exposures based on key variables such as complexity, severity, etc...
@@ -8,19 +8,19 @@ Feature: Segmentation
   Background:
     Given I am a user with the "Adjuster" role
 
-  @23960-GW
+  @23960-GW @ignore
   Scenario: Homeowners claim with default exposure segmentation
     Given a Homeowners policy
     When I file a new claim with a mid complexity exposure
     Then the claim segment should be "Property - mid complexity"
 
-  @23960-GW
+  @23960-GW @ignore
   Scenario: Homeowners claim with default claim segmentation
     Given a Homeowners policy
     When I file a new claim with no exposure
     Then the claim segment should be "Property - low complexity"
 
-  @23960-GW
+  @23960-GW @ignore
   Scenario Outline: Exposure Segmentation Rule for Property Low
     Given a Homeowners policy
     When I file a new claim with the following exposure:
@@ -32,7 +32,7 @@ Feature: Segmentation
       | Personal Property | Minor             |
       | Property          | Minor             |
 
-  @23960-GW
+  @23960-GW @ignore
   Scenario Outline: Exposure Segmentation Rule for Property Medium
     Given a Homeowners policy
     When I file a new claim with the following exposure:
@@ -45,7 +45,7 @@ Feature: Segmentation
       | Loss Of Use       | Minor              | Insured's loss        |
       | Personal Property | Major (not usable) | Third-party liability |
 
-  @23960-GW
+  @23960-GW @ignore
   Scenario Outline: Exposure Segmentation Rule for Property high
     Given a Homeowners policy
     When I file a new claim with the following exposure:
@@ -57,7 +57,7 @@ Feature: Segmentation
       | Property          | Death              | Insured's loss |
       | Personal Property | Major (not usable) | Insured's loss |
 
-  @23960-GW
+  @23960-GW @ignore
   Scenario Outline: Exposure Segmentation Rule for Property default
     Given a Homeowners policy
     When I file a new claim with the following exposure:

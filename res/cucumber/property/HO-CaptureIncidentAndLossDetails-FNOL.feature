@@ -1,5 +1,5 @@
 @homeowners @HO-CaptureIncidentAndLossDetails-FNOL
-Feature: Define financial summary presentation
+Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetails_FNOL
 
   As an adjuster,
   I want to be able to view financial records associated with a claim

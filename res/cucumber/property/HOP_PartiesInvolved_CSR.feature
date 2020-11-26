@@ -1,5 +1,5 @@
-@homeowners
-Feature: Parties Involved
+@homeowners @suite
+Feature: Parties Involved ~ HOP_PartiesInvolved_CSR
 
   As a customer service representative,
   I want to add contacts for new claims.

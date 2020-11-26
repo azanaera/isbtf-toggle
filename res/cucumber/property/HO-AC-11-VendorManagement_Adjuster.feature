@@ -1,5 +1,5 @@
-@homeowners @HO-AC-11-VendorManagement
-Feature: Vendor Management
+@homeowners @HO-AC-11-VendorManagement @suite
+Feature: Vendor Management ~ HO-AC-11-VendorManagement_Adjuster
 
   As an adjuster
   I want to create, track, and manage requests for services to be provided by vendors
@@ -8,7 +8,7 @@ Feature: Vendor Management
   Background:
     Given I am a user with the "Adjuster" role
 
-  @23258-GW
+  @23258-GW @ignore
   Scenario: A service request is created for an existing claim related to "1st Party Vehicle" to "Quote and Perform Service" for "Cleaning"
     Given a Homeowners claim
     And the claim has a "Coverage A - Dwelling" exposure
@@ -18,7 +18,7 @@ Feature: Vendor Management
     Then a "Plumber" service should be requested on the claim
     And the request type should be "Quote and Perform Service"
 
-  @23258-GW
+  @23258-GW @ignore
   Scenario: Cancel a service request
     Given a Homeowners claim
     And the claim has a "Coverage A - Dwelling" exposure
@@ -26,7 +26,7 @@ Feature: Vendor Management
     When I cancel the service request
     Then the service request is "Canceled"
 
-  @23258-GW
+  @23258-GW @ignore
   Scenario: Assign Service
     Given a Homeowners claim
     And the claim has a "Coverage A - Dwelling" exposure
@@ -35,7 +35,7 @@ Feature: Vendor Management
     When I Re-assign the service request
     Then assignment has changed for service request
 
-  @23258-GW
+  @23258-GW @ignore
   Scenario: Record Vendor Progress
     Given a Homeowners claim
     And the claim has a "Coverage A - Dwelling" exposure
@@ -43,7 +43,7 @@ Feature: Vendor Management
     When I update Vendor Reference Number
     Then service request should reflect updated Reference Number
 
-  @23258-GW
+  @23258-GW @ignore
   Scenario: Request Requote for Service
     Given a Homeowners claim
     And the claim has a "Coverage A - Dwelling" exposure
@@ -52,7 +52,7 @@ Feature: Vendor Management
     When I request for requote
     Then Requote request is sent and history table is updated
 
-  @23258-GW
+  @23258-GW @ignore
   Scenario: Approve Quote for Service
     Given a Homeowners claim
     And the claim has a "Coverage A - Dwelling" exposure
@@ -61,7 +61,7 @@ Feature: Vendor Management
     When I approve the quote and the requested service completion date
     Then Quote Status is "Approved"
 
-  @23258-GW
+  @23258-GW @ignore
   Scenario: Revise Quote
     Given a Homeowners claim
     And the claim has a "Coverage A - Dwelling" exposure
@@ -78,7 +78,7 @@ Feature: Vendor Management
     And Quote Status is "Waiting for Approval"
     And the service request is "Vendor Waiting"
 
-  @23258-GW
+  @23258-GW @ignore
   Scenario: Add Invoice
     Given a Homeowners claim
     And the claim has a "Coverage A - Dwelling" exposure
@@ -91,7 +91,7 @@ Feature: Vendor Management
       | Court costs  | Court Costs description  | 50     |
     Then a new invoice is added for a total of "150 USD"
 
-  @23258-GW
+  @23258-GW @ignore
   Scenario: Send Message to vendor
     Given a Homeowners claim
     And the claim has a "Coverage A - Dwelling" exposure

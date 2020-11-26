@@ -1,5 +1,5 @@
-@homeowners @HO-ArrangeServices-FNOL
-Feature: Service Request
+@homeowners @HO-ArrangeServices-FNOL @suite
+Feature: Service Request ~ HO_ArrangeServices_FNOL
 
   As a customer service representative,
   I want to request services for new claims,
@@ -8,7 +8,7 @@ Feature: Service Request
   Background:
     Given I am a user with the "Customer Service Associate" role
 
-  @23750-GW
+  @23750-GW @ignore
   Scenario: Requesting a quote and perform service for roofing on a new claim
     Given a Homeowners policy
     When I start filing a claim

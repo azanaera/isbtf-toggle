@@ -1,5 +1,5 @@
-@homeowners
-Feature: Parties Involved
+@homeowners @suite
+Feature: Parties Involved ~ HOP_PartiesInvolved_Adjuster
 
   As an adjuster,
   I want to add contacts for existing claims.
