@@ -1,5 +1,5 @@
 @homeowners @suite
-Feature: Exposure - Adjuster (HOP_Exposure_Adjuster.feature)
+Feature: Exposure ~ HOP_Exposure_Adjuster
 
   As an adjuster,
   I want to create exposures while filing a new claim and on existing claims.

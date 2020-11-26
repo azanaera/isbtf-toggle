@@ -1,5 +1,5 @@
 @homeowners @HO-Adjudicate-ClaimMaintenance @suite
-Feature: Claim Maintenance (HO-Adjudicate-ClaimMaintenance.feature)
+Feature: Claim Maintenance ~ HO_Adjudicate_ClaimMaintenance
 
   As an adjuster,
   I want to create and update incidents on existing claims,

@@ -1,5 +1,5 @@
 @homeowners @HO-ArrangeServices-FNOL @suite
-Feature: Service Request (HO-ArrangeServices-FNOL.feature)
+Feature: Service Request ~ HO_ArrangeServices_FNOL
 
   As a customer service representative,
   I want to request services for new claims,

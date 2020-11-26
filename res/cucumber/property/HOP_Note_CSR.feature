@@ -1,5 +1,5 @@
 @homeowners @suite
-Feature: Note - CSR (HOP_Note_CSR.feature)
+Feature: Note ~ HOP_Note_CSR
 
   As a customer service representative,
   I want to add new notes while filing claims.

@@ -1,5 +1,5 @@
 @homeowners @suite
-Feature: Activity - Adjuster (HOP_Activity_Adjuster.feature)
+Feature: Activity ~ HOP_Activity_Adjuster
 
   As an adjuster,
   I want to add new activities to existing claims and also perform actions on open activities.

@@ -1,5 +1,5 @@
 @homeowners @HO-DetermineHandlingStrategy-Assignment @suite
-Feature: Assignment (HO-DetermineHandlingStrategy-Assignment.feature)
+Feature: Assignment ~ HO_DetermineHandlingStrategy_Assignment
 
   As an adjuster,
   I want to reassign claims manually and automated using assignment rules.

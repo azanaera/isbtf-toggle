@@ -1,5 +1,5 @@
 @homeowners @FNOL-10-Fnol-VendorServiceManagement @suite
-Feature: Service Request - Adjuster (HOP_ServiceRequest_Adjuster.feature)
+Feature: Service Request ~ HOP_ServiceRequest_Adjuster
 
   As an adjuster,
   I want to request services for both new claims and existing claims,

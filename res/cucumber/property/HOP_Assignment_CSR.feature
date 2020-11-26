@@ -1,5 +1,5 @@
 @homeowners @suite
-Feature: Assignment - CSR (HOP_Activity_CSR.feature)
+Feature: Assignment ~ HOP_Activity_CSR
 
   As a customer service representative,
   I want to create and assign claims manually and automated using assignment rules.

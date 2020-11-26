@@ -1,5 +1,5 @@
 @homeowners @HO-AC-11-VendorManagement @suite
-Feature: Vendor Management (HO-AC-11-VendorManagement_Adjuster.feature)
+Feature: Vendor Management ~ HO-AC-11-VendorManagement_Adjuster
 
   As an adjuster
   I want to create, track, and manage requests for services to be provided by vendors

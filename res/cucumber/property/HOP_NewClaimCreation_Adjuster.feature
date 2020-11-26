@@ -1,5 +1,5 @@
 @homeowners @suite
-Feature: New Claim Creation - Adjuster (HOP_NewClaimCreation_Adjuster.feature)
+Feature: New Claim Creation ~ HOP_NewClaimCreation_Adjuster
 
   As an adjuster,
   I want to file claims against unverified policies.
