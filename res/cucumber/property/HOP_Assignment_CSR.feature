@@ -22,10 +22,10 @@ Feature: Assignment ~ HOP_Activity_CSR
    Scenario: 2. Manually assigning a new Homeowners claim
     Given a Homeowners policy
     When I start filing a claim
-    And I manually assign the claim to group "Customer Service Associate" and user "Justin Silvers"
+    And I manually assign the claim to group "Toggle Auto East Zone APD Handlers Group 1" and user "Justin Silvers"
     And I finish filing the claim
     Then a "Homeowners" claim should be created
-    And the claim should be assigned to group "Claim Organization"
+    And the claim should be assigned to group "Toggle Auto East Zone APD Handlers Group 1"
     And the claim should be assigned to user "Justin Silvers"
 
   @23860-GW-I
@@ -35,12 +35,12 @@ Feature: Assignment ~ HOP_Activity_CSR
     And I set loss location to an address in state "California"
     And I add a "Third-party liability" injury incident
     And I add a bodily injury exposure
-    And I manually assign the claim individually to group "Property - TeamA" and user "Harry Atley"
-    And I assign the "Coverage E - Personal Liability" exposure through automated assignment
+    And I manually assign the claim individually to group "Toggle Auto East Zone APD Handlers Group 1" and user "Justin Silvers"
+    And I assign the "Personal Liability" exposure through automated assignment
     And I finish filing the claim
     Then a "Homeowners" claim should be created
-    And the claim should be assigned to group "Property - TeamA"
-    And the claim should be assigned to user "Harry Atley"
+    And the claim should be assigned to group "Toggle Auto East Zone APD Handlers Group 1"
+    And the claim should be assigned to user "Justin Silvers"
     And the exposure should be assigned to the claim owner
 
   @23860-GW-I
@@ -51,9 +51,9 @@ Feature: Assignment ~ HOP_Activity_CSR
     And I add a "Third-party liability" injury incident
     And I add a bodily injury exposure
     And I assign the claim individually through automated assignment
-    And I manually assign the "Coverage E - Personal Liability" exposure to group "Property - TeamA" and user "Harry Atley"
+    And I manually assign the "Personal Liability" exposure to group "Toggle Auto East Zone APD Handlers Group 1" and user "Justin Silvers"
     And I finish filing the claim
     Then a "Homeowners" claim should be created
-    And the claim should be assigned to a user in "Toggle Auto East Zone APD Handlers MGR 1" group
+    And the claim should be assigned to a user in "Claim Organization" group
     And the exposure should be assigned to group "Toggle Auto East Zone APD Handlers Group 1"
-    And the exposure should be assigned to user "Harry Atley"
+    And the exposure should be assigned to user "Justin Silvers"
