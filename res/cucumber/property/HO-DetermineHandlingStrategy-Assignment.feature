@@ -29,7 +29,7 @@ Feature: Assignment ~ HO_DetermineHandlingStrategy_Assignment
     And the claim has a "Personal Liability" exposure
     And the exposure is assigned to group "Toggle Auto East Zone Generalist Group 1" and user "Alexander Sleeman"
     When I manually reassign the exposure to group "Toggle Auto East Zone APD Handlers Group 1" and user "Justin Silvers"
-    Then the exposure should be assigned to group "Toggle Auto APD Specialist Level 1"
+    Then the exposure should be assigned to group "Toggle Auto East Zone APD Handlers Group 1"
     And the exposure should be assigned to user "Justin Silvers"
 
   @23860-GW
