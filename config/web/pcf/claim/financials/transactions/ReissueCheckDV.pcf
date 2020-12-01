@@ -98,14 +98,18 @@
         </ListViewPanel>
       </ListViewInput>
       <InputDivider/>
-      <TextAreaInput
+      <TextInput
         boldLabel="true"
         editable="true"
         id="Check_PayTo"
         label="DisplayKey.get(&quot;NVV.Financials.ReissueCheck.Check.PayTo&quot;)"
-        numRows="1"
         required="true"
         value="Check.PayTo"/>
+      <TextInput
+        boldLabel="true"
+        editable="true"
+        id="Check_PayTo2_Ext"
+        value="Check.PayTo2_Ext"/>
     </InputColumn>
     <InputColumn>
       <Label

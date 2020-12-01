@@ -30,7 +30,8 @@
             <TitleBar
               title="DisplayKey.get(&quot;NVV.Claim.SubView.SItriggers&quot;)"/>
           </PanelRef>
-          <DetailViewPanel>
+          <DetailViewPanel
+            __disabled="true">
             <InputColumn>
               <TextInput
                 boldLabel="true"
@@ -59,7 +60,8 @@
                 title="DisplayKey.get(&quot;NVV.Claim.SubView.Questionnaire&quot;, QuestionSet.Name)"/>
             </PanelRef>
           </PanelIterator>
-          <DetailViewPanel>
+          <DetailViewPanel
+            __disabled="true">
             <InputColumn>
               <TextInput
                 boldLabel="true"
@@ -83,7 +85,8 @@
                 id="SIinfo_SITotalScore"
                 label="DisplayKey.get(&quot;NVV.Claim.SubView.SIinfo.SITotalScore&quot;, ScriptParameters.SpecialInvestigation_CreateActivityForSupervisorThreshold)"
                 value="util.SIUTotalScore.getSIUTotalScore(Claim)"
-                valueType="java.lang.Integer"/>
+                valueType="java.lang.Integer"
+                __disabled="true"/>
               <Label
                 id="SIInfo_SupervisorSection"
                 label="DisplayKey.get(&quot;NVV.Claim.SubView.SIinfo.SupervisorSection&quot;)"/>

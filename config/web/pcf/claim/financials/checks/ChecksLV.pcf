@@ -30,7 +30,7 @@
           id="PayTo"
           label="DisplayKey.get(&quot;LV.Financials.Checks.PayTo&quot;)"
           printWidth="0.20"
-          value="CheckView.PayTo"/>
+          value="CheckView.PayTo2_Ext != null ? CheckView.PayTo + CheckView.PayTo2_Ext : CheckView.PayTo"/>
         <CurrencyCell
           action="ClaimFinancialsChecksDetail.go(Claim, CheckView.Check)"
           formatType="currency"

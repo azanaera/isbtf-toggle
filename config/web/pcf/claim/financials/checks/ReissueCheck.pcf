@@ -5,6 +5,7 @@
   <Page
     afterCancel="ClaimFinancialsChecksDetail.go(Claim, check)"
     afterCommit="ClaimFinancialsChecksDetail.go(Claim, check)"
+    afterEnter="ext.config.check.CheckScreensHelper_Ext.CheckLevyWithholding(check)"
     canEdit="true"
     canVisit="perm.Claim.viewpayments(Claim)"
     countsAsWork="false"

@@ -5292,4 +5292,15 @@ all three files for that Coverage. Do not just delete these entries, because the
       code="HOSideHustleLossIncome_CO_Ext"
       typelist="CoverageSubtype"/>
   </typecode>
+  <typecode
+    code="HOMedPayToOthers_Togl_Ext"
+    name="Medical Payments to Others"
+    desc="Medical Payments to Others">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
+      typelist="CoverageSubtype"/>
+  </typecode>
 </typelistextension>

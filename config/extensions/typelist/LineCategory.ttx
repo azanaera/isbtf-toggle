@@ -2810,12 +2810,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -2852,7 +2855,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -2947,12 +2950,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -2989,7 +2995,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -3181,12 +3187,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -3223,7 +3232,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -3320,12 +3329,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -3362,7 +3374,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -3457,12 +3469,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -3499,7 +3514,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -3595,12 +3610,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -3637,7 +3655,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -3733,12 +3751,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -3775,7 +3796,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -3871,12 +3892,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -3913,7 +3937,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>		  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -4008,12 +4032,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -4050,7 +4077,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -4146,12 +4173,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -4188,7 +4218,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>		  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -4284,12 +4314,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -4326,7 +4359,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -4422,12 +4455,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -4464,7 +4500,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -4559,12 +4595,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -4601,7 +4640,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -4696,12 +4735,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -4738,7 +4780,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>		  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -4833,12 +4875,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -4875,7 +4920,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>		  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -4970,12 +5015,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -5012,7 +5060,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>		  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -5107,12 +5155,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -5149,7 +5200,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>		  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -5244,12 +5295,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -5286,7 +5340,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>		  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -5381,12 +5435,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -5423,7 +5480,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>		  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -5518,12 +5575,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -5560,7 +5620,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>		  	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -5656,12 +5716,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -5698,7 +5761,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>			  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -5796,12 +5859,15 @@
       typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -5838,7 +5904,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>		  
+      typelist="coveragetype"/>
   </typecode>
 
 
@@ -5938,12 +6004,15 @@
       typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
-<!--  all HO  coverage types -->
+    <!--  all HO  coverage types -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -5980,7 +6049,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>			  
+      typelist="coveragetype"/>
   </typecode>
   <typecode
     code="nonattorney_ext"
@@ -6074,12 +6143,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -6116,7 +6188,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -6216,12 +6288,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -6258,7 +6333,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -6353,12 +6428,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -6395,7 +6473,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -6589,12 +6667,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -6631,7 +6712,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -6726,12 +6807,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -6768,7 +6852,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -6876,6 +6960,9 @@
       code="HOPersLiab_Togl_Ext"
       typelist="coveragetype"/>
     <category
+      code="HOMedPayToOthers_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
       code="HOPersPropBlanket_Togl_Ext"
       typelist="coveragetype"/>
     <category
@@ -6910,7 +6997,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
   </typecode>
   <typecode
     code="background_ext"
@@ -7006,12 +7093,15 @@
       typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -7050,7 +7140,7 @@
       code="HOSideHustleLossIncome_Togl_Ext"
       typelist="coveragetype"/>
 
-	  
+
   </typecode>
   <typecode
     code="causeand_ext"
@@ -7144,12 +7234,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -7186,9 +7279,9 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
-      typelist="costcategory"/>	  
+      typelist="costcategory"/>
   </typecode>
   <typecode
     code="indadjperman_ext"
@@ -7377,12 +7470,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -7419,7 +7515,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -7515,12 +7611,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -7557,7 +7656,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -7653,12 +7752,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -7695,7 +7797,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -7790,12 +7892,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -7832,7 +7937,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -7928,12 +8033,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -7970,7 +8078,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -8160,12 +8268,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -8202,7 +8313,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -8297,12 +8408,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -8339,7 +8453,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -8438,12 +8552,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -8480,7 +8597,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -8575,12 +8692,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -8617,7 +8737,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -8713,12 +8833,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -8756,7 +8879,7 @@
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
       typelist="coveragetype"/>
-	  
+
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -8852,12 +8975,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -8894,7 +9020,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -8990,12 +9116,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -9032,7 +9161,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -9128,12 +9257,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -9170,7 +9302,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -9265,12 +9397,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -9307,7 +9442,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -9403,12 +9538,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -9445,7 +9583,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -9540,12 +9678,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -9582,7 +9723,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <categorylist
       typelist="costcategory"/>
   </typecode>
@@ -9680,12 +9821,15 @@
     <category
       code="UIM_PA_PD_EXT"
       typelist="coveragetype"/>
-<!-- Renters -->
+    <!-- Renters -->
     <category
       code="HOIdentityProtect_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -9722,7 +9866,7 @@
       typelist="coveragetype"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
-      typelist="coveragetype"/>	  
+      typelist="coveragetype"/>
     <category
       code="claim_level_exp_ext"
       typelist="costcategory"/>
@@ -9745,6 +9889,9 @@
       typelist="coveragetype"/>
     <category
       code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
       typelist="coveragetype"/>
     <category
       code="HOPersPropBlanket_Togl_Ext"
@@ -9804,6 +9951,9 @@
       code="HOPersLiab_Togl_Ext"
       typelist="coveragetype"/>
     <category
+      code="HOMedPayToOthers_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
       code="HOPersPropBlanket_Togl_Ext"
       typelist="coveragetype"/>
     <category
@@ -9840,64 +9990,64 @@
       code="HOSideHustleLossIncome_Togl_Ext"
       typelist="coveragetype"/>
   </typecode>
-<typecode
-code="repl_cost_ext"
-desc="Replacement Cost"
-name="Replacement Cost">
-<category
-  code="payment"
-  typelist="transaction"/>
-<category
-  code="claimcost"
-  typelist="costtype"/>
-<categorylist
-  typelist="costcategory"/>
-<category
-  code="HOIdentityProtect_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOPersLiab_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOPersPropBlanket_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOTempLivingCost_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOPersPropActive_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOPersPropCollect_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOPersPropCreativeandMaker_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOPersPropFashionandJewelry_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOPersPropFurnitureandAppliances_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOPersPropTechnology_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOPetParentCovg_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOPetParentCovgLim_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOSideHustleLegalFees_Togl_Ext"
-  typelist="coveragetype"/>
-<category
-  code="HOSideHustleLossIncome_Togl_Ext"
-  typelist="coveragetype"/>
-</typecode>
+  <typecode
+    code="repl_cost_ext"
+    desc="Replacement Cost"
+    name="Replacement Cost">
+    <category
+      code="payment"
+      typelist="transaction"/>
+    <category
+      code="claimcost"
+      typelist="costtype"/>
+    <categorylist
+      typelist="costcategory"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
+      typelist="coveragetype"/>	  
+    <category
+      code="HOIdentityProtect_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOPersPropBlanket_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOTempLivingCost_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOPersPropActive_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOPersPropCollect_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOPersPropCreativeandMaker_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOPersPropFashionandJewelry_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOPersPropFurnitureandAppliances_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOPersPropTechnology_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOPetParentCovg_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOPetParentCovgLim_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOSideHustleLegalFees_Togl_Ext"
+      typelist="coveragetype"/>
+    <category
+      code="HOSideHustleLossIncome_Togl_Ext"
+      typelist="coveragetype"/>
+  </typecode>
 
 
- 
-
-
-  </typelistextension>
+</typelistextension>

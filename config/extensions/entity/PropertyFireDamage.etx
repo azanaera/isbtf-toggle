@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<extension
+  xmlns="http://guidewire.com/datamodel"
+  entityName="PropertyFireDamage">
+  <typekey
+    desc="Fire Started Location"
+    name="FireStartedLocation_Ext"
+    nullok="true"
+    typelist="FireStartedLocn_Ext"/>
+</extension>

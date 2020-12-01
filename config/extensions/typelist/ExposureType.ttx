@@ -1295,6 +1295,9 @@ all three files for that Coverage. Do not just delete these entries, because the
     <category
       code="HOPersLiab_MP_Ext"
       typelist="CoverageSubtype"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
+      typelist="CoverageSubtype"/>
   </typecode>
   <typecode
     code="TowOnly"

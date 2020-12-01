@@ -15,7 +15,8 @@ class CheckScreensHelper_Ext {
     var paytoLength :int = 40
     var addressLength :int = 50
     var lengthLines : int = 0
-     if (check.PayTo != null and check.PayTo.length() > paytoLength){
+     if ((check.PayTo != null and check.PayTo.length() > paytoLength)
+         or (check.PayTo2_Ext != null and check.PayTo2_Ext.length() > paytoLength)){
       ret = DisplayKey.get("Toggle.Wizard.NewCheckWizard.PayTo_Ext")
     }
     if (check.MailingAddress.AddressLine1 != null){

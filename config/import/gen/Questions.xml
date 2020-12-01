@@ -1,0 +1,2016 @@
+<?xml version="1.0"?>
+<import xmlns="http://guidewire.com/cc/exim/import" version="p8.50.a13.301.179">
+  <QuestionSet public-id="siucarquestionset">
+    <Name>Auto SIU</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <QuestionSetType>siucar</QuestionSetType>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+  </QuestionSet>
+  <Question public-id="siucarquestion14">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>13</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Was the vehicle repaired before the claim was reported?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucarquestion14no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion14"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucarquestion14yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucarquestion14"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siucarquestion13">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>12</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Does striking vehicle have relatively light damage?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucarquestion13no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion13"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucarquestion13yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucarquestion13"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siucarquestion12">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>11</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Does struck vehicle have heavy damage?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucarquestion12no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion12"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucarquestion12yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucarquestion12"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siucarquestion11">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>10</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Are two vehicles involved in accident?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucarquestion11no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion11"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucarquestion11yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucarquestion11"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <Question public-id="siucarquestion10">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>9</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Does salvage or repair shop take active interest in the claim?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucarquestion10no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion10"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucarquestion10yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucarquestion10"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siucarquestion9">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>8</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Do appraisal photographs show only close-up view of the damage - but not enough of the car to identify make and model?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucarquestion9no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion9"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucarquestion9yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucarquestion9"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siucarquestion8">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>7</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Do accounts of the accident by drivers, passengers and witnesses appear rehearsed or are conversely inconsistent?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucarquestion8no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion8"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucarquestion8yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucarquestion8"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siucarquestion7">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>6</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Do neighbors, friends and relatives have knowledge of vehicle?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucarquestion7no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion7"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucarquestion7yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucarquestion7"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siucarquestion5">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>40</Indent>
+    <Priority>4</Priority>
+    <QuestionFormat>ChoiceSelect</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>How long since vehicle has been seen?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siuq5unavalable">
+    <Code>Unavailable</Code>
+    <Description>Unavailable</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Unavailable</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>4</Priority>
+    <Question public-id="siucarquestion5"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siu590moredays">
+    <Code>More than 90 Days</Code>
+    <Description>More than 90 Days</Description>
+    <Description_L10N_ARRAY/>
+    <Name>More than 90 Days</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="siucarquestion5"/>
+    <Score>3</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siuq53090days">
+    <Code>30-90 Days</Code>
+    <Description>30-90 Days</Description>
+    <Description_L10N_ARRAY/>
+    <Name>30-90 Days</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="siucarquestion5"/>
+    <Score>2</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siuq530DaysLess">
+    <Code>30 days or less</Code>
+    <Description>30 days or less</Description>
+    <Description_L10N_ARRAY/>
+    <Name>30 days or less</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion5"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siucarquestion4">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>3</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Was car not seen for some time prior to the theft?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucarquestion4no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion4"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucarquestion4yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucarquestion4"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <Question public-id="siucarquestion3">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>2</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Does the stolen vehicle have salvage title?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucarquestion3no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion3"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucarquestion3yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucarquestion3"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siucarquestion2">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>1</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Was vehicle purchased outside of State?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucarquestion2no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion2"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucarquestion2yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucarquestion2"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siucarquestion1">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>0</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucarquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Was vehicle stolen?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucarquestion1no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucarquestion1"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucarquestion1yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucarquestion1"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionSet public-id="siucompquestionset">
+    <Name>Workers Compensation SIU</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <QuestionSetType>siuwork</QuestionSetType>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+  </QuestionSet>
+  <Question public-id="siucompquestion4">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>3</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucompquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Is claimant working in a different job?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucompquestion4no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucompquestion4"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucompquestion4yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucompquestion4"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siucompquestion3">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>2</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucompquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Is claimant resisting going back to work?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucompquestion3no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucompquestion3"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucompquestion3yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucompquestion3"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siucompquestion2">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>1</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucompquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Is claimant missing work due to the injury?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucompquestion2no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucompquestion2"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucompquestion2yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucompquestion2"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <Question public-id="siucompquestion1">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>0</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siucompquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Is it possible injury is not job-related?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siucompquestion1no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siucompquestion1"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siucompquestion1yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siucompquestion1"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <QuestionSet public-id="siugenquestionset">
+    <Name>General SIU</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <QuestionSetType>siugen</QuestionSetType>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+  </QuestionSet>
+  <Question public-id="siugenquestion15">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>14</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Does claimant refrain from using mail, fax or other traceable types of communication?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion15no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion15"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion15yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion15"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion14">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>13</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Is claimant familiar with insurance claims terminology and procedures?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion14no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion14"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion14yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion14"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion13">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>12</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Did the claimant present excessive documentation?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion13no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion13"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion13yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion13"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion12">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>11</Priority>
+    <QuestionFormat>ChoiceSelect</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>What is claimant's credit score?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siuq12below400">
+    <Code>Below 400</Code>
+    <Description>Below 400</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Below 400</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="siugenquestion12"/>
+    <Score>3</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siuq12400500">
+    <Code>400-500</Code>
+    <Description>400-500</Description>
+    <Description_L10N_ARRAY/>
+    <Name>400-500</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="siugenquestion12"/>
+    <Score>2</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siuq12notavail">
+    <Code>Not Available</Code>
+    <Description>Not Available</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Not Available</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion12"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siuq12500600">
+    <Code>500-600</Code>
+    <Description>500-600</Description>
+    <Description_L10N_ARRAY/>
+    <Name>500-600</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion12"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siuq12600above">
+    <Code>Above 600</Code>
+    <Description>Above 600</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Above 600</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion12"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion10">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>9</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Is claimant experiencing financial problems?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion10no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion10"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion10yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion10"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion9">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>8</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Are the claimant injuries in line with the damages from the incident?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion9no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion9"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion9yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion9"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion8">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>7</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Does the claimant have prior injuries?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion8no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion8"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion8yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion8"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion7">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>6</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Does claim have issues related to injuries?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion7no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion7"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion7yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion7"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion6">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>5</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Are there discrepancies between witness accounts and statements made by insured/claimant?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion6no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion6"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion6yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion6"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion5">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>4</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Are there discrepancies between official reports of incident and statements made by insured/claimant?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion5no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion5"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion5yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion5"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion4">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>3</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Does claim have discrepancies?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion4no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion4"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion4yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion4"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion3">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>2</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Is claimant willing to settle for less money to settle quickly?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion3no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion3"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion3yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion3"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion2">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>20</Indent>
+    <Priority>1</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Does claimant want an exceedingly quick settlement?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion2no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion2"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion2yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion2"/>
+    <Score>1</Score>
+  </QuestionChoice>
+  <Question public-id="siugenquestion1">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>0</Priority>
+    <QuestionFormat>ChoiceRadio</QuestionFormat>
+    <QuestionSet public-id="siugenquestionset"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Does claim involve a settlement?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="siugenquestion1no">
+    <Code>No</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="siugenquestion1"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="siugenquestion1yes">
+    <Code>Yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>0</Priority>
+    <Question public-id="siugenquestion1"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionSet public-id="QuestionSetSPM:1">
+    <Name>Timeliness</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <QuestionSetType>spmreview</QuestionSetType>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+  </QuestionSet>
+  <Question public-id="QuestionSPM:3">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>2</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:1"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>How timely were the repairs?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:11">
+    <Code>more3days</Code>
+    <Description>More than 3 days past estimate</Description>
+    <Description_L10N_ARRAY/>
+    <Name>More than 3 days past estimate</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>4</Priority>
+    <Question public-id="QuestionSPM:3"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:10">
+    <Code>win3day</Code>
+    <Description>Within 3 days of estimate</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Within 3 days of estimate</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:3"/>
+    <Score>50</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:9">
+    <Code>win1day</Code>
+    <Description>Within 1 day of estimate</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Within 1 day of estimate</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:3"/>
+    <Score>70</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:8">
+    <Code>ontime</Code>
+    <Description>On time</Description>
+    <Description_L10N_ARRAY/>
+    <Name>On time</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:3"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <Question public-id="QuestionSPM:2">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>1</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:1"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>How long did it take to get an estimate?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:7">
+    <Code>more3days</Code>
+    <Description>More than 3 days from initial contact</Description>
+    <Description_L10N_ARRAY/>
+    <Name>More than 3 days from initial contact</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>4</Priority>
+    <Question public-id="QuestionSPM:2"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:6">
+    <Code>win3day</Code>
+    <Description>Within 3 days of initial contact</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Within 3 days of initial contact</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:2"/>
+    <Score>50</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:5">
+    <Code>win1day</Code>
+    <Description>Within 1 day of initial contact</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Within 1 day of initial contact</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:2"/>
+    <Score>70</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:4">
+    <Code>sameday</Code>
+    <Description>Same Day</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Same Day</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:2"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <Question public-id="QuestionSPM:1">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>0</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:1"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>How quickly was the service provider able to schedule the repair?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:3">
+    <Code>more3days</Code>
+    <Description>More than 3 days from initial contact</Description>
+    <Description_L10N_ARRAY/>
+    <Name>More than 3 days from initial contact</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:1"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:2">
+    <Code>win3day</Code>
+    <Description>Within 3 days of initial contact</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Within 3 days of initial contact</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:1"/>
+    <Score>50</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:1">
+    <Code>win1day</Code>
+    <Description>Within 1 day of initial contact</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Within 1 day of initial contact</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:1"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <QuestionSet public-id="QuestionSetSPM:2">
+    <Name>Communications</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <QuestionSetType>spmreview</QuestionSetType>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+  </QuestionSet>
+  <Question public-id="QuestionSPM:6">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>2</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:2"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Did the service provider satisfactorily answer any questions you had?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:18">
+    <Code>no</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:6"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:17">
+    <Code>yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:6"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <Question public-id="QuestionSPM:5">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>1</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:2"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Did the service provider obtain your authorization before beginning the repairs?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:16">
+    <Code>no</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:5"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:15">
+    <Code>yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:5"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <Question public-id="QuestionSPM:4">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>0</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:2"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>How would you rate the service provider's explanation of the needed repairs?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:14">
+    <Code>poor</Code>
+    <Description>Poor</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Poor</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:4"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:13">
+    <Code>satisfactory</Code>
+    <Description>Satisfactory</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Satisfactory</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:4"/>
+    <Score>50</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:12">
+    <Code>excellent</Code>
+    <Description>Excellent</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Excellent</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:4"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <QuestionSet public-id="QuestionSetSPM:3">
+    <Name>Technicians</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <QuestionSetType>spmreview</QuestionSetType>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+  </QuestionSet>
+  <Question public-id="QuestionSPM:8">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>2</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:3"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Knowledge</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:26">
+    <Code>poor</Code>
+    <Description>Poor</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Poor</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>4</Priority>
+    <Question public-id="QuestionSPM:8"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:25">
+    <Code>ok</Code>
+    <Description>OK</Description>
+    <Description_L10N_ARRAY/>
+    <Name>OK</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:8"/>
+    <Score>50</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:24">
+    <Code>good</Code>
+    <Description>Good</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Good</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:8"/>
+    <Score>70</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:23">
+    <Code>great</Code>
+    <Description>Great</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Great</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:8"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <Question public-id="QuestionSPM:9">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>1</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:3"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Helpfulness</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:30">
+    <Code>poor</Code>
+    <Description>Poor</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Poor</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>4</Priority>
+    <Question public-id="QuestionSPM:9"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:29">
+    <Code>ok</Code>
+    <Description>OK</Description>
+    <Description_L10N_ARRAY/>
+    <Name>OK</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:9"/>
+    <Score>50</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:28">
+    <Code>good</Code>
+    <Description>Good</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Good</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:9"/>
+    <Score>70</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:27">
+    <Code>great</Code>
+    <Description>Great</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Great</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:9"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <Question public-id="QuestionSPM:7">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>0</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:3"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Professionalism</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:22">
+    <Code>poor</Code>
+    <Description>Poor</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Poor</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>4</Priority>
+    <Question public-id="QuestionSPM:7"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:21">
+    <Code>ok</Code>
+    <Description>OK</Description>
+    <Description_L10N_ARRAY/>
+    <Name>OK</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:7"/>
+    <Score>50</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:20">
+    <Code>good</Code>
+    <Description>Good</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Good</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:7"/>
+    <Score>70</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:19">
+    <Code>great</Code>
+    <Description>Great</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Great</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:7"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <QuestionSet public-id="QuestionSetSPM:4">
+    <Name>Quality</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>5</Priority>
+    <QuestionSetType>spmreview</QuestionSetType>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+  </QuestionSet>
+  <Question public-id="QuestionSPM:10">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>0</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:4"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>How would you rate the quality of the service provider's work?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:33">
+    <Code>poor</Code>
+    <Description>Poor</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Poor</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:10"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:32">
+    <Code>satisfactory</Code>
+    <Description>Satisfactory</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Satisfactory</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:10"/>
+    <Score>70</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:31">
+    <Code>excellent</Code>
+    <Description>Excellent</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Excellent</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:10"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <QuestionSet public-id="QuestionSetSPM:5">
+    <Name>Accuracy of Quote</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>6</Priority>
+    <QuestionSetType>spmreview</QuestionSetType>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+  </QuestionSet>
+  <Question public-id="QuestionSPM:13">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>2</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:5"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>% of difference between initial quote and final payment?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:42">
+    <Code>over20</Code>
+    <Description>Greater than 20%</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Greater than 20%</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>4</Priority>
+    <Question public-id="QuestionSPM:13"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:41">
+    <Code>tentwenty</Code>
+    <Description>Between 10% and 20%</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Between 10% and 20%</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:13"/>
+    <Score>5</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:40">
+    <Code>fiveten</Code>
+    <Description>Between 5% and 10%</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Between 5% and 10%</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:13"/>
+    <Score>10</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:39">
+    <Code>atmost5</Code>
+    <Description>Within 5% of original quote</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Within 5% of original quote</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:13"/>
+    <Score>25</Score>
+  </QuestionChoice>
+  <Question public-id="QuestionSPM:12">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>1</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:5"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>How many requotes?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:38">
+    <Code>morethan3</Code>
+    <Description>More than 3</Description>
+    <Description_L10N_ARRAY/>
+    <Name>More than 3</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:12"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:37">
+    <Code>twothree</Code>
+    <Description>2 to 3</Description>
+    <Description_L10N_ARRAY/>
+    <Name>2 to 3</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:12"/>
+    <Score>10</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:36">
+    <Code>one</Code>
+    <Description>1</Description>
+    <Description_L10N_ARRAY/>
+    <Name>1</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:12"/>
+    <Score>25</Score>
+  </QuestionChoice>
+  <Question public-id="QuestionSPM:11">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>0</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:5"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Were there any requotes?</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:35">
+    <Code>yes</Code>
+    <Description>Yes</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Yes</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:11"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:34">
+    <Code>no</Code>
+    <Description>No</Description>
+    <Description_L10N_ARRAY/>
+    <Name>No</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:11"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <QuestionSet public-id="QuestionSetSPM:6">
+    <Name>Office Staff</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>4</Priority>
+    <QuestionSetType>spmreview</QuestionSetType>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+  </QuestionSet>
+  <Question public-id="QuestionSPM:15">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>2</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:6"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Knowledge</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:50">
+    <Code>poor</Code>
+    <Description>Poor</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Poor</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>4</Priority>
+    <Question public-id="QuestionSPM:15"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:49">
+    <Code>ok</Code>
+    <Description>OK</Description>
+    <Description_L10N_ARRAY/>
+    <Name>OK</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:15"/>
+    <Score>50</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:48">
+    <Code>good</Code>
+    <Description>Good</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Good</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:15"/>
+    <Score>70</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:47">
+    <Code>great</Code>
+    <Description>Great</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Great</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:15"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <Question public-id="QuestionSPM:16">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>1</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:6"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Helpfulness</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:54">
+    <Code>poor</Code>
+    <Description>Poor</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Poor</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>4</Priority>
+    <Question public-id="QuestionSPM:16"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:53">
+    <Code>ok</Code>
+    <Description>OK</Description>
+    <Description_L10N_ARRAY/>
+    <Name>OK</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:16"/>
+    <Score>50</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:52">
+    <Code>good</Code>
+    <Description>Good</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Good</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:16"/>
+    <Score>70</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:51">
+    <Code>great</Code>
+    <Description>Great</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Great</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:16"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <Question public-id="QuestionSPM:14">
+    <DefaultAnswer/>
+    <DefaultAnswer_L10N_ARRAY/>
+    <Indent>0</Indent>
+    <Priority>0</Priority>
+    <QuestionFormat/>
+    <QuestionSet public-id="QuestionSetSPM:6"/>
+    <QuestionType>Choice</QuestionType>
+    <Required>false</Required>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+    <Text>Professionalism</Text>
+    <Text_L10N_ARRAY/>
+  </Question>
+  <QuestionChoice public-id="QuestionChoiceSPM:46">
+    <Code>poor</Code>
+    <Description>Poor</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Poor</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>4</Priority>
+    <Question public-id="QuestionSPM:14"/>
+    <Score>0</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:45">
+    <Code>ok</Code>
+    <Description>OK</Description>
+    <Description_L10N_ARRAY/>
+    <Name>OK</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>3</Priority>
+    <Question public-id="QuestionSPM:14"/>
+    <Score>50</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:44">
+    <Code>good</Code>
+    <Description>Good</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Good</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>2</Priority>
+    <Question public-id="QuestionSPM:14"/>
+    <Score>70</Score>
+  </QuestionChoice>
+  <QuestionChoice public-id="QuestionChoiceSPM:43">
+    <Code>great</Code>
+    <Description>Great</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Great</Name>
+    <Name_L10N_ARRAY/>
+    <Priority>1</Priority>
+    <Question public-id="QuestionSPM:14"/>
+    <Score>100</Score>
+  </QuestionChoice>
+  <QuestionFilter public-id="siucarfilter1">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siucarquestion1"/>
+    <Question public-id="siucarquestion2"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siucarfilter2">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siucarquestion1"/>
+    <Question public-id="siucarquestion3"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siucarfilter3">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siucarquestion1"/>
+    <Question public-id="siucarquestion4"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siucarfilter4">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siucarquestion4"/>
+    <Question public-id="siucarquestion5"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siucarfilter5">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siucarquestion11"/>
+    <Question public-id="siucarquestion12"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siucarfilter6">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siucarquestion11"/>
+    <Question public-id="siucarquestion13"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siucompfilter1">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siucompquestion2"/>
+    <Question public-id="siucompquestion3"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siucompfilter2">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siucompquestion2"/>
+    <Question public-id="siucompquestion4"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siugenfilter1">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siugenquestion1"/>
+    <Question public-id="siugenquestion2"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siugenfilter2">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siugenquestion1"/>
+    <Question public-id="siugenquestion3"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siugenfilter3">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siugenquestion4"/>
+    <Question public-id="siugenquestion5"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siugenfilter4">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siugenquestion4"/>
+    <Question public-id="siugenquestion6"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siugenfilter5">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siugenquestion7"/>
+    <Question public-id="siugenquestion8"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siugenfilter6">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siugenquestion7"/>
+    <Question public-id="siugenquestion9"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="siugenfilter7">
+    <Answer>Yes</Answer>
+    <FilterQuestion public-id="siugenquestion10"/>
+    <Question public-id="siugenquestion12"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="SPMQFilter:1">
+    <Answer>yes</Answer>
+    <FilterQuestion public-id="QuestionSPM:11"/>
+    <Question public-id="QuestionSPM:12"/>
+  </QuestionFilter>
+  <QuestionFilter public-id="SPMQFilter:2">
+    <Answer>yes</Answer>
+    <FilterQuestion public-id="QuestionSPM:11"/>
+    <Question public-id="QuestionSPM:13"/>
+  </QuestionFilter>
+  <ReviewType public-id="SPMReviewType:1">
+    <ContactSubtype>AutoRepairShop</ContactSubtype>
+    <Description>Sample Review Type for Auto Repair Shops</Description>
+    <Description_L10N_ARRAY/>
+    <Name>Auto Repair Service</Name>
+    <Name_L10N_ARRAY/>
+    <ShouldRetireFromImportXML>false</ShouldRetireFromImportXML>
+  </ReviewType>
+  <ReviewCategoryQuestionSet public-id="ReviewCatQSet:1">
+    <ElementOrder>1</ElementOrder>
+    <QuestionSet public-id="QuestionSetSPM:1"/>
+    <ReviewCategory>timeliness</ReviewCategory>
+    <ReviewType public-id="SPMReviewType:1"/>
+  </ReviewCategoryQuestionSet>
+  <ReviewCategoryQuestionSet public-id="ReviewCatQSet:2">
+    <ElementOrder>2</ElementOrder>
+    <QuestionSet public-id="QuestionSetSPM:2"/>
+    <ReviewCategory>communication</ReviewCategory>
+    <ReviewType public-id="SPMReviewType:1"/>
+  </ReviewCategoryQuestionSet>
+  <ReviewCategoryQuestionSet public-id="ReviewCatQSet:3">
+    <ElementOrder>3</ElementOrder>
+    <QuestionSet public-id="QuestionSetSPM:6"/>
+    <ReviewCategory>officestaff</ReviewCategory>
+    <ReviewType public-id="SPMReviewType:1"/>
+  </ReviewCategoryQuestionSet>
+  <ReviewCategoryQuestionSet public-id="ReviewCatQSet:4">
+    <ElementOrder>4</ElementOrder>
+    <QuestionSet public-id="QuestionSetSPM:3"/>
+    <ReviewCategory>technicians</ReviewCategory>
+    <ReviewType public-id="SPMReviewType:1"/>
+  </ReviewCategoryQuestionSet>
+  <ReviewCategoryQuestionSet public-id="ReviewCatQSet:5">
+    <ElementOrder>5</ElementOrder>
+    <QuestionSet public-id="QuestionSetSPM:4"/>
+    <ReviewCategory>quality</ReviewCategory>
+    <ReviewType public-id="SPMReviewType:1"/>
+  </ReviewCategoryQuestionSet>
+  <ReviewCategoryQuestionSet public-id="ReviewCatQSet:6">
+    <ElementOrder>6</ElementOrder>
+    <QuestionSet public-id="QuestionSetSPM:5"/>
+    <ReviewCategory>accuracy</ReviewCategory>
+    <ReviewType public-id="SPMReviewType:1"/>
+  </ReviewCategoryQuestionSet>
+</import>

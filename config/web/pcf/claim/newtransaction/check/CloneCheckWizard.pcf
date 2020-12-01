@@ -28,6 +28,7 @@
       allowFinish="false"
       id="NewCheckPayees"
       label="DisplayKey.get(&quot;Wizard.NewCheckWizard.NewCheckPayees.Label&quot;)"
+      onEnter="ext.config.check.CheckScreensHelper_Ext.CheckLevyWithholding(check)"
       onExit="wizard.validateAllCheckPayees(); wizard.createNewCheckPortionsIfNecessary();  ext.config.check.CheckScreensHelper_Ext.CheckAddressLinesLength(wizard.Check) ;wizard.refreshBundle()"
       onFirstEnter="wizard.setCheckSetAndCheck(check.CheckSet, check); wizard.setupCheckWizardInfo(claim, null, null, null, null, false); wizard.Check.prepareClone(check); wizard.Check.cloneMailingAddress();"
       screen="CheckWizard_CheckPayeesScreen(claim, wizard)"

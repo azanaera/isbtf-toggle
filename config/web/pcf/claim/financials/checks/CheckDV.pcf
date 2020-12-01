@@ -16,6 +16,10 @@
         value="Check.PayTo"
         visible="Check.PaymentMethod != PaymentMethod.TC_EFT"/>
       <TextInput
+        id="PayTo2_Ext"
+        value="Check.PayTo2_Ext"
+        visible="Check.PaymentMethod != PaymentMethod.TC_EFT"/>
+      <TextInput
         id="MailingAddress"
         label="DisplayKey.get(&quot;NVV.Financials.Check.MailingAddress&quot;)"
         value="Check.FormatAddressSummary(true)"

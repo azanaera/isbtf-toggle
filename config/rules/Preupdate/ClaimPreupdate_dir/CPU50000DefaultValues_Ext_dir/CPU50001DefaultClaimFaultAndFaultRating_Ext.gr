@@ -7,7 +7,7 @@ uses ext.config.claim.LossDetailsHelper_Ext
 internal class CPU50001DefaultClaimFaultAndFaultRating_Ext {
   static function doCondition(claim : entity.Claim) : boolean {
 /*start00rule*/
-return true
+return claim.LossType == LossType.TC_AUTO
 /*end00rule*/
 }
 

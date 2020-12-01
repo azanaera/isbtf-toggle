@@ -43,6 +43,16 @@
           id="PriorClaims_Description"
           label="DisplayKey.get(&quot;LV.Claim.PriorClaims.Description&quot;)"
           value="PriorClaimView.Description"/>
+        <TypeKeyCell
+          id="otherStatus"
+          label="DisplayKey.get(&quot;LV.Claim.DuplicateClaimSearchResults.Claims.Status&quot;)"
+          value="PriorClaimView.State"
+          valueType="typekey.ClaimState"/>
+        <DateCell
+          enableSort="false"
+          id="otherPolicyID"
+          label="DisplayKey.get(&quot;Web.SearchFindPolicyPanelSet.otherClaimLV.Reported.Label&quot;)"
+          value="PriorClaimView.ReportedDate"/>
       </Row>
     </RowIterator>
   </ListViewPanel>

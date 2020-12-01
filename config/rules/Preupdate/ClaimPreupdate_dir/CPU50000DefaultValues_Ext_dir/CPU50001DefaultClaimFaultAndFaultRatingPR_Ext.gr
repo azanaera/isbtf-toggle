@@ -1,0 +1,17 @@
+package rules.Preupdate.ClaimPreupdate_dir.CPU50000DefaultValues_Ext_dir
+uses ext.config.claim.LossDetailsHelper_Ext
+
+@gw.rules.RuleName("CPU 50001 - DefaultClaimFaultAndFaultRatingPR_Ext")
+internal class CPU50001DefaultClaimFaultAndFaultRatingPR_Ext {
+  static function doCondition(claim   :   entity.Claim) : boolean {
+/*start00rule*/
+return claim.LossType == LossType.TC_PR
+/*end00rule*/
+}
+
+  static function doAction(claim   :   entity.Claim, actions : gw.rules.Action) {
+/*start00rule*/
+LossDetailsHelper_Ext.DefaultClaimFaultAndFaultRatingHO(claim)
+/*end00rule*/
+  }
+}

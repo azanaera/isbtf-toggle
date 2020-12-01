@@ -92,4 +92,9 @@
       name="size"
       value="15"/>
   </column>
+  <column
+    desc="Side Hustle Involved?"
+    name="SideHustleInvolved_Ext"
+    nullok="true"
+    type="bit"/>  
 </extension>

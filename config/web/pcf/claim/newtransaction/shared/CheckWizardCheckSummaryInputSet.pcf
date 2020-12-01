@@ -22,6 +22,10 @@
       label="DisplayKey.get(&quot;NVV.Financials.SubView.CheckWizardCheckSummary.Check.PayTo&quot;)"
       value="Check.PayTo"
       visible="!Check.isGroupMember(false) and Check.PaymentMethod == PaymentMethod.TC_CHECK"/>
+    <TextInput
+      id="Check_PayTo2_Ext"
+      value="Check.PayTo2_Ext"
+      visible="!Check.isGroupMember(false) and Check.PaymentMethod == PaymentMethod.TC_CHECK"/>
     <TextAreaInput
       id="PayTo_AccountName"
       label="DisplayKey.get(&quot;Web.Financials.Check.BankData.BankAcctHolderName&quot;)"
