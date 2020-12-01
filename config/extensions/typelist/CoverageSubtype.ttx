@@ -5582,7 +5582,8 @@ all three files for that Coverage. Do not just delete these entries, because the
   <typecode
     code="HOPersLiab_MP_Ext"
     name="Med Pay"
-    desc="Med Pay">
+    desc="Med Pay"
+    retired="true">
     <category
       code="HOPersLiab_Togl_Ext"
       typelist="CoverageType"/>
@@ -5753,6 +5754,17 @@ all three files for that Coverage. Do not just delete these entries, because the
       typelist="CoverageType"/>
     <category
       code="Content"
+      typelist="ExposureType"/>
+  </typecode>
+  <typecode
+    code="HOMedPayToOthers_Togl_Ext"
+    name="Medical Payments to Others"
+    desc="Medical Payments to Others">
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="MedPay"
       typelist="ExposureType"/>
   </typecode>
 

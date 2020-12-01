@@ -1,0 +1,25 @@
+package rules.Preupdate.TransactionSetPreupdate_dir
+
+
+@gw.rules.RuleName("TPU04100 - Update zero dollar check_Ext")
+internal class TPU04100Updatezerodollarcheck_Ext {
+  static function doCondition(transactionSet : entity.TransactionSet) : boolean {
+/*start00rule*/
+return transactionSet.New
+        and transactionSet.Subtype ==  TC_CHECKSET
+        and transactionSet.ApprovalStatus == ApprovalStatus.TC_APPROVED
+        and (((transactionSet as CheckSet).Checks).hasMatch(\chk  -> chk.NetAmount == 0 ))
+/*end00rule*/
+}
+
+  static function doAction(transactionSet : entity.TransactionSet, actions : gw.rules.Action) {
+/*start00rule*/
+//for (check in (transactionSet as CheckSet).Checks) {
+    (transactionSet as CheckSet).Checks.where(\chk -> chk.NetAmount == 0 ).each(\check -> {
+      check.requestCheck()
+      check.acknowledgeSubmission()
+      check.updateCheckStatus(null, gw.api.util.DateUtil.currentDate().toCalendar(), TransactionStatus.TC_CLEARED)
+    } )
+/*end00rule*/
+  }
+}

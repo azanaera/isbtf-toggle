@@ -7813,8 +7813,8 @@
 
   <typecode
     code="SD_HUS_BUS_PRP_PA_EXT"
-    desc="Side Hustle - Contents"
-    name="Side Hustle - Contents">
+    desc="Side Hustle"
+    name="Side Hustle">
     <categorylist
       typelist="CostType"/>
     <category
@@ -7952,20 +7952,21 @@
    <categorylist
       typelist="CoverageType"/>	
   </typecode>
- <typecode
+  <typecode
     code="HOPersLiab_Prop_Togl_Ext"
-    desc="Property Damage"
-    name="Property Damage">
+    desc="Personal Liability"
+    name="Personal Liability">
     <categorylist
       typelist="CostType"/>
     <category
       code="HOPersLiab_Togl_Ext"
       typelist="CoverageType"/>	
-   </typecode>
+   </typecode>   
   <typecode
     code="HOPersLiab_Bod_Togl_Ext"
     desc="Bodily Injury"
-    name="Bodily Injury">
+    name="Bodily Injury"
+    retired="true">
     <categorylist
       typelist="CostType"/>
     <category
@@ -7975,7 +7976,8 @@
   <typecode
     code="HOPersLiab_Med_Togl_Ext"
     desc="Medical"
-    name="Medical">
+    name="Medical"
+	retired="true">
     <categorylist
       typelist="CostType"/>
     <category
@@ -7985,7 +7987,8 @@
   <typecode
     code="HOPersLiab_Gen_Togl_Ext"
     desc="General"
-    name="General">
+    name="General"
+	retired="true">
     <categorylist
       typelist="CostType"/>
     <category
@@ -7994,8 +7997,8 @@
    </typecode>     
    <typecode
     code="HOPersLiab_Side_Togl_Ext"
-    desc="Side Hustle - Liability"
-    name="Side Hustle - Liability">
+    desc="Side Hustle"
+    name="Side Hustle">
     <categorylist
       typelist="CostType"/>
     <category
@@ -8025,7 +8028,8 @@
   <typecode
     code="HOPersLiab_Int_Togl_Ext"
     desc="Interest"
-    name="Interest">
+    name="Interest"
+	retired="true">
     <categorylist
       typelist="CostType"/>
     <category
@@ -8054,8 +8058,8 @@
    </typecode>
    <typecode
     code="HOPersPropActive_Side_Togl_Ext"
-    desc="Side Hustle - Contents"
-    name="Side Hustle - Contents">
+    desc="Side Hustle"
+    name="Side Hustle">
     <categorylist
       typelist="CostType"/>
     <category
@@ -8074,8 +8078,8 @@
    </typecode>
    <typecode
     code="HOPersPropBlanket_Side_Togl_Ext"
-    desc="Side Hustle - Contents"
-    name="Side Hustle - Contents">
+    desc="Side Hustle"
+    name="Side Hustle">
     <categorylist
       typelist="CostType"/>
     <category
@@ -8094,8 +8098,8 @@
    </typecode>
    <typecode
     code="HOPersPropCollect_Side_Togl_Ext"
-    desc="Side Hustle - Contents"
-    name="Side Hustle - Contents">
+    desc="Side Hustle"
+    name="Side Hustle">
     <categorylist
       typelist="CostType"/>
     <category
@@ -8114,8 +8118,8 @@
    </typecode>
    <typecode
     code="HOPersPropCreativeandMaker_Side_Togl_Ext"
-    desc="Side Hustle - Contents"
-    name="Side Hustle - Contents">
+    desc="Side Hustle"
+    name="Side Hustle">
     <categorylist
       typelist="CostType"/>
     <category
@@ -8134,8 +8138,8 @@
    </typecode>
    <typecode
     code="HOPersPropFashionandJewelry_Side_Togl_Ext"
-    desc="Side Hustle - Contents"
-    name="Side Hustle - Contents">
+    desc="Side Hustle"
+    name="Side Hustle">
     <categorylist
       typelist="CostType"/>
     <category
@@ -8154,8 +8158,8 @@
    </typecode>
    <typecode
     code="HOPersPropFurnitureandAppliances_Side_Togl_Ext"
-    desc="Side Hustle - Contents"
-    name="Side Hustle - Contents">
+    desc="Side Hustle"
+    name="Side Hustle">
     <categorylist
       typelist="CostType"/>
     <category
@@ -8174,8 +8178,8 @@
    </typecode>
    <typecode
     code="HOPersPropTechnology_Side_Togl_Ext"
-    desc="Side Hustle - Contents"
-    name="Side Hustle - Contents">
+    desc="Side Hustle"
+    name="Side Hustle">
     <categorylist
       typelist="CostType"/>
     <category
@@ -8204,8 +8208,8 @@
    </typecode>     
    <typecode
     code="HOSideHustleLegalFees_Togl_Ext"
-    desc="Side Hustle - Legal Fees"
-    name="Side Hustle - Legal Fees">
+    desc="Side Hustle"
+    name="Side Hustle">
     <categorylist
       typelist="CostType"/>
     <category
@@ -8214,12 +8218,42 @@
    </typecode>     
    <typecode
     code="HOSideHustleLossIncome_Togl_Ext"
-    desc="Side Hustle - Loss of Income"
-    name="Side Hustle - Loss of Income">
+    desc="Side Hustle"
+    name="Side Hustle">
     <categorylist
       typelist="CostType"/>
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
       typelist="CoverageType"/>	
-   </typecode>     
+   </typecode>
+  <typecode
+    code="HOTempLivingCost_Togl_Ext"
+    desc="Ale"
+    name="Ale">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOTempLivingCost_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>  
+  <typecode
+    code="HOMedPayToOthers_Med_Togl_Ext"
+    desc="Medical"
+    name="Medical">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>   
+  <typecode
+    code="HOMedPayToOthers_Int_Togl_Ext"
+    desc="Interest"
+    name="Interest">
+    <categorylist
+      typelist="CostType"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>   
 </typelistextension>

@@ -923,6 +923,9 @@
     <category
       code="HOSideHustleLossIncome_Togl_Ext"
       typelist="CoverageType"/>
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
+      typelist="CoverageType"/>
   </typecode>
   <typecode
     code="CommercialProperty"

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" name="FireStartedLocn_Ext" desc="Fire Started Location">
+  <typecode
+    code="on_premises_ext"
+    desc="On Premises"
+    name="On Premises"
+    priority="10"/>
+  <typecode
+    code="off_premises_ext"
+    desc="Off Premises"
+    name="Off Premises"
+    priority="20"/>
+</typelist>

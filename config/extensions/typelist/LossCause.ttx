@@ -105,9 +105,6 @@
     name="Earthquake"
     priority="290">
     <category
-      code="PR"
-      typelist="losstype"/>
-    <category
       code="AUTO"
       typelist="LossType"/>
   </typecode>
@@ -115,9 +112,6 @@
     code="explosion"
     desc="Explosion"
     name="Explosion">
-    <category
-      code="PR"
-      typelist="losstype"/>
     <category
       code="GL"
       typelist="losstype"/>
@@ -139,9 +133,6 @@
     desc="Water Damage"
     name="Water damage">
     <category
-      code="PR"
-      typelist="losstype"/>
-    <category
       code="TRAV"
       typelist="losstype"/>
   </typecode>
@@ -150,9 +141,6 @@
     desc="Glass breakage"
     name="Glass breakage"
     priority="10">
-    <category
-      code="PR"
-      typelist="losstype"/>
     <category
       code="GL"
       typelist="losstype"/>
@@ -167,9 +155,6 @@
     priority="170">
     <category
       code="AUTO"
-      typelist="losstype"/>
-    <category
-      code="PR"
       typelist="losstype"/>
     <category
       code="GL"
@@ -194,9 +179,6 @@
     priority="180">
     <category
       code="AUTO"
-      typelist="losstype"/>
-    <category
-      code="PR"
       typelist="losstype"/>
     <category
       code="GL"
@@ -229,9 +211,6 @@
     name="Fire"
     priority="200">
     <category
-      code="PR"
-      typelist="losstype"/>
-    <category
       code="GL"
       typelist="losstype"/>
     <category
@@ -242,37 +221,19 @@
       typelist="losstype"/>
   </typecode>
   <typecode
-    code="wind"
-    desc="Wind"
-    name="Wind">
-    <category
-      code="PR"
-      typelist="losstype"/>
-  </typecode>
-  <typecode
     code="hail"
     desc="Hail"
     name="Hail"
     priority="190">
     <category
-      code="PR"
-      typelist="losstype"/>
-    <category
       code="AUTO"
-      typelist="losstype"/>
-  </typecode>
-  <typecode
-    code="mold"
-    desc="Mold"
-    name="Mold">
-    <category
-      code="PR"
       typelist="losstype"/>
   </typecode>
   <typecode
     code="structfailure"
     desc="Structural failure"
-    name="Structural failure">
+    name="Structural failure"
+    priority="280">    
     <category
       code="PR"
       typelist="losstype"/>
@@ -280,18 +241,17 @@
   <typecode
     code="snowice"
     desc="Snow/ice"
-    name="Snow/ice">
+    name="Snow/ice"
+    priority="270">    
     <category
       code="PR"
-      typelist="losstype"/>
-    <category
-      code="TRAV"
       typelist="losstype"/>
   </typecode>
   <typecode
     code="burglary"
     desc="Burglary"
-    name="Burglary">
+    name="Burglary"
+    retired="true">
     <category
       code="PR"
       typelist="losstype"/>
@@ -302,7 +262,8 @@
   <typecode
     code="animal_bite"
     desc="Animal/insect bite/scratch/sting"
-    name="Animal/insect bite/scratch/sting">
+    name="Animal/insect bite/scratch/sting"
+    priority="10">
     <category
       code="GL"
       typelist="losstype"/>
@@ -625,9 +586,6 @@
     name="Hurricane"
     priority="280">
     <category
-      code="PR"
-      typelist="LossType"/>
-    <category
       code="AUTO"
       typelist="LossType"/>
   </typecode>
@@ -712,4 +670,269 @@
       code="AUTO"
       typelist="losstype"/>
   </typecode>
+  <typecode
+    code="breakage_ext"
+    desc="Breakage"
+    name="Breakage"
+    priority="20">
+    <category
+      code="PR"
+      typelist="losstype"/>
+  </typecode>
+  <typecode
+    code="fire_smoke_ext"
+    desc="Fire/Smoke"
+    name="Fire/Smoke"
+    priority="30">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="iden_theft_ext"
+    desc="Identity Theft"
+    name="Identity Theft"
+    priority="35">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>  
+  <typecode
+    code="lightning_ext"
+    desc="Lightning"
+    name="Lightning"
+    priority="40">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="mold"
+    desc="Mold / Environmental Exposure"
+    name="Mold / Environmental Exposure"
+    priority="50">
+    <category
+      code="PR"
+      typelist="losstype"/>
+  </typecode>  
+  <typecode
+    code="myst_disp_ext"
+    desc="Theft / Mysterious Disappearance"
+    name="Theft / Mysterious Disappearance"
+    priority="60">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="pers_inj_ext"
+    desc="Personal Injury"
+    name="Personal Injury"
+    priority="70">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="powerout_surge_ext"
+    desc="Power Outage or Surge"
+    name="Power Outage or Surge"
+    priority="80">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="sewer_drain_ext"
+    desc="Sewer and Drain Backup"
+    name="Sewer and Drain Backup"
+    priority="90">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="slip_fall_ext"
+    desc="Slip/Fall"
+    name="Slip/Fall"
+    priority="100">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="theft_ext"
+    desc="Theft"
+    name="Theft"
+    priority="110"
+    retired ="true">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="vand_malmis_ext"
+    desc="Vandalism/Malicious Mischief"
+    name="Vandalism/Malicious Mischief"
+    priority="120">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="veh_othr_auto_ext"
+    desc="Vehicle Other than Auto"
+    name="Vehicle Other than Auto"
+    priority="130"
+    retired="true">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="water_ho_ext"
+    desc="Water"
+    name="Water"
+    priority="140">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="wildfire_ext"
+    desc="Wildfire"
+    name="Wildfire"
+    priority="145">
+    <category
+      code="PR"
+      typelist="losstype"/>
+  </typecode>
+  <typecode
+    code="wind"
+    desc="Wind"
+    name="Wind"
+    priority="150">
+    <category
+      code="PR"
+      typelist="losstype"/>
+  </typecode>  
+  <typecode
+    code="earth_mov_ext"
+    desc="Earth Movement"
+    name="Earth Movement"
+    priority="160">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="earthquake_ho_ext"
+    desc="Earthquake"
+    name="Earthquake"
+    priority="170">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="env_exp_ext"
+    desc="Environmental Exposure"
+    name="Environmental Exposure"
+    priority="180"
+    retired="true">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>    
+  <typecode
+    code="explosion_ext"
+    desc="Explosion"
+    name="Explosion"
+    priority="190">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="flood_ho_ext"
+    desc="Flood"
+    name="Flood"
+    priority="200">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="hail_ho_ext"
+    desc="Hail"
+    name="Hail"
+    priority="210">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="hurricane_ho_ext"
+    desc="Hurricane"
+    name="Hurricane"
+    priority="220">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="oth_weat_ext"
+    desc="Other Weather"
+    name="Other Weather"
+    priority="240"
+    retired="true">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="pollution_ext"
+    desc="Pollution"
+    name="Pollution"
+    priority="250">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
+  <typecode
+    code="riotandcivil_ho_ext"
+    desc="Riot and civil commotion"
+    name="Riot and civil commotion"
+    priority="260">
+    <category
+      code="PR"
+      typelist="losstype"/>
+  </typecode>
+  <typecode
+    code="tornado_ho_ext"
+    desc="Tornado"
+    name="Tornado"
+    priority="290">
+    <category
+      code="PR"
+      typelist="losstype"/>
+  </typecode>
+  <typecode
+    code="virus_ext"
+    desc="Virus/Bacterium/Microorganism"
+    name="Virus/Bacterium/Microorganism"
+    priority="300">
+    <category
+      code="PR"
+      typelist="losstype"/>
+  </typecode>
+  <typecode
+    code="other_ho_ext"
+    desc="Other"
+    name="Other"
+    priority="320">
+    <category
+      code="PR"
+      typelist="losstype"/>
+  </typecode>  
 </typelistextension>

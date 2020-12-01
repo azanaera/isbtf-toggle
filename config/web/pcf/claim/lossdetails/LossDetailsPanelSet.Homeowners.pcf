@@ -35,6 +35,7 @@
               id="Description"
               label="DisplayKey.get(&quot;Web.ClaimFile.LossDetails.Homeowners.Description&quot;)"
               numRows="3"
+              required="true"
               value="Claim.Description"/>
             <DateInput
               dateFormat="short"
@@ -55,7 +56,7 @@
               value="Claim.LossCause"
               valueType="typekey.LossCause">
               <PostOnChange
-                onChange="HomeownersHelper.setDamageAccordingToLossCause()"/>
+                onChange="HomeownersHelper.setDamageAccordingToLossCause(); ext.config.claim.LossDetailsHelper_Ext.DefaultClaimFaultAndFaultRatingHO(Claim)"/>
             </TypeKeyInput>
             <TypeKeyInput
               editable="true"
@@ -70,6 +71,14 @@
               label="DisplayKey.get(&quot;Web.ClaimFile.LossDetails.Homeowners.Notification.Fault&quot;)"
               value="Claim.FaultRating"
               valueType="typekey.FaultRating"/>
+            <TextInput
+              editable="true"
+              formatType="percentagePoints"
+              id="Notification_AtFaultPercentage"
+              label="DisplayKey.get(&quot;NVV.Claim.SubView.LossDetailsAuto.Claim.Notification.AtFaultPercentage&quot;)"
+              value="Claim.Fault"
+              valueType="java.math.BigDecimal"
+              visible="true"/>
             <RangeInput
               editable="true"
               id="Catastrophe_CatastropheNumber"
@@ -77,12 +86,34 @@
               required="false"
               value="Claim.Catastrophe"
               valueRange="gw.api.admin.CatastropheUtil.getCatastrophes()"
+              valueType="entity.Catastrophe"
+              __disabled="true"/>
+            <RangeInput
+              editable="true"
+              id="Catastrophe_CatastropheNumber"
+              label="DisplayKey.get(&quot;NVV.Claim.SubView.LossDetailsAuto.Claim.Catastrophe.CatastropheNumber&quot;)"
+              required="false"
+              value="Claim.Catastrophe"
+              valueRange="ext.config.claim.LossDetailsHelper_Ext.getCatastrophes(CatastropheType.TC_INTERNAL)"
+              valueType="entity.Catastrophe"/>
+            <RangeInput
+              editable="true"
+              id="Catastrophe_CatastropheNumber_Ext"
+              label="DisplayKey.get(&quot;Toggle.NVV.Claim.SubView.LossDetailsAuto.Claim.Catastrophe.ISOCatastropheNumber_Ext&quot;)"
+              required="false"
+              value="Claim.ISOCatastrophe_Ext"
+              valueRange="ext.config.claim.LossDetailsHelper_Ext.getCatastrophes(CatastropheType.TC_ISO)"
               valueType="entity.Catastrophe"/>
             <BooleanRadioInput
               editable="true"
               id="WeatherRelated"
               label="DisplayKey.get(&quot;Web.ClaimFile.LossDetails.Homeowners.WeatherRelated&quot;)"
               value="Claim.WeatherRelated"/>
+            <BooleanRadioInput
+              editable="true"
+              id="SideHustleInvolved_Ext"
+              label="DisplayKey.get(&quot;Web.ClaimFile.LossDetails.Homeowners.SideHustleInvolved_Ext&quot;)"
+              value="Claim.SideHustleInvolved_Ext"/>
           </InputColumn>
           <InputColumn>
             <CheckBoxGroupInput
@@ -577,7 +608,8 @@
                 def="EditableOfficialsLV(Claim)"
                 editable="true"
                 label="DisplayKey.get(&quot;Web.ClaimFile.LossDetails.Homeowners.Officials&quot;)"
-                labelAbove="true">
+                labelAbove="true"
+                __disabled="true">
                 <Toolbar>
                   <IteratorButtons
                     iterator="EditableOfficialsLV.EditableOfficialsLV"/>

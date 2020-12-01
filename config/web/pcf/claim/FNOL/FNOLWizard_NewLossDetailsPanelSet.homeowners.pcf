@@ -19,6 +19,7 @@
           id="Description"
           label="DisplayKey.get(&quot;Web.FNOLWizard.LossDetails.Homeowners.Description&quot;)"
           numRows="3"
+          required="true"
           value="claim.Description"/>
         <DateInput
           dateFormat="short"
@@ -311,7 +312,8 @@
             def="EditableOfficialsLV(claim)"
             editable="true"
             label="DisplayKey.get(&quot;Web.FNOLWizard.LossDetails.Homeowners.Officials&quot;)"
-            labelAbove="true">
+            labelAbove="true"
+            __disabled="true">
             <Toolbar>
               <IteratorButtons
                 iterator="EditableOfficialsLV.EditableOfficialsLV"/>

@@ -7,7 +7,8 @@ internal class TXV26000Paytofield_Ext {
 /*start00rule*/
 var lenPayTo : int = 40
     return transactionSet.Subtype == TC_CHECKSET and
-        (transactionSet as CheckSet).Checks.hasMatch(\chk  -> !chk.ManualCheck and chk.PayTo.length > lenPayTo)
+        (transactionSet as CheckSet).Checks.hasMatch(\chk  -> !chk.ManualCheck and (chk.PayTo.length > lenPayTo
+                            or chk.PayTo2_Ext.length > lenPayTo))
 /*end00rule*/
 }
 

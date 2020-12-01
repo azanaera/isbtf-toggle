@@ -212,6 +212,19 @@
         label="DisplayKey.get(&quot;NVV.Exposure.SubView.GeneralDamage.Exposure.Strategy&quot;)"
         value="Exposure.Strategy"
         valueType="typekey.ClaimStrategy"/>
+      <TypeKeyInput
+        editable="true"
+        id="RepresentationLevel_Ext"
+        label="DisplayKey.get(&quot;Toggle_NVV.Exposure.NewPIPSummary.RepresentationLevel_Ext&quot;)"
+        required="true"
+        value="Exposure.RepresentationLevel_Ext"
+        valueType="typekey.RepresentationLevel_Ext"/>
+      <TypeKeyInput
+        editable="true"
+        id="EscalationLevel_Ext"
+        label="DisplayKey.get(&quot;Toggle.NVV.Exposure.NewPIPSummary.EscalationLevel_Ext&quot;)"
+        value="Exposure.EscalationLevel_Ext"
+        valueType="typekey.EscalationLevel_Ext"/>
       <InputDivider/>
       <Label
         label="DisplayKey.get(&quot;NVV.Exposure.SubView.GeneralDamage.OtherCarrierInvolvement&quot;)"/>

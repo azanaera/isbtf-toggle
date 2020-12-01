@@ -25,7 +25,7 @@
           id="HasWaterBeenTurnedOff"
           label="DisplayKey.get(&quot;NVV.Claim.SubView.LossDetailsProperty.Claim.WaterDamage.HasWaterBeenTurnedOff&quot;)"
           value="aClaim.PropertyWaterDamage.HasWaterBeenTurnedOff"
-          visible="aClaim.PropertyWaterDamage.WaterSource == TC_PLUMBING_APPLIANCES"/>
+          visible="aClaim.PropertyWaterDamage.WaterSource == WaterSource.TC_PLUMBING_EXT or aClaim.PropertyWaterDamage.WaterSource == WaterSource.TC_APPLIANCES_EXT"/>
         <BooleanRadioInput
           editable="true"
           id="IsRoofCovered"

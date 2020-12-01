@@ -103,3 +103,41 @@ apply from: 'isbtf-build.gradle'
 dependencies {
   compile files(rootProject.file('modules/configuration/auth/auth.jar'))
 }
+
+apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = "0.8.3"
+}
+
+dependencies {
+    jacocoAnt group:'org.jacoco', name:'org.jacoco.core', version:'0.8.3'
+    jacocoAnt group:'org.jacoco', name:'org.jacoco.report', version:'0.8.3'
+    jacocoAnt group:'org.jacoco', name:'org.jacoco.agent', version:'0.8.3'
+    jacocoAnt group:'org.jacoco', name:'org.jacoco.ant', version:'0.8.3'
+    jacocoAnt group:'org.ow2.asm', name:'asm', version:'7.0'
+    jacocoAnt group:'org.ow2.asm', name:'asm-tree', version:'7.0'
+    jacocoAnt group:'org.ow2.asm', name:'asm-commons', version:'7.0'
+}
+
+jacocoTestReport {
+      group = "Reporting"
+      afterEvaluate {
+        classDirectories.from = files (classDirectories.files.collect {
+          fileTree(
+              dir: "plugins/Gosu/gclasses",
+              include:['toggle/**'])
+        })
+      }
+      sourceDirectories.from = files("gsrc")
+      executionData.from = files (executionData.files.collect {
+              fileTree(
+                  dir: "${buildDir}/jacoco/",
+                  include:['**/*.exec'])
+      })
+      reports {
+        xml.enabled true
+        csv.enabled false
+        html.destination file("${buildDir}/reports/jacoco")
+      }
+}

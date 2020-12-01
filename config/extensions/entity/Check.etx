@@ -58,4 +58,13 @@
     name="VoidStopChkReason_Ext"
     nullok="true"
     typelist="VoidStopReason_Ext"/>
+  <column
+    desc="Pay To line 2."
+    name="PayTo2_Ext"
+    nullok="true"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="100"/>
+  </column>  
 </extension>

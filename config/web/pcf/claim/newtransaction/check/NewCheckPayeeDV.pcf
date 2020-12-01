@@ -124,14 +124,19 @@
         <PostOnChange
           onChange="Check.handleOnPickForPayee(null)"/>
       </RangeRadioInput>
-      <TextAreaInput
+      <TextInput
         boldLabel="true"
         editable="true"
         id="PayTo"
         label="DisplayKey.get(&quot;NVV.Financials.NewCheckPayee.Check.PayTo&quot;)"
-        numRows="1"
         required="Check.PaymentMethod != PaymentMethod.TC_EFT"
         value="Check.PayTo"
+        visible="Check.PaymentMethod != PaymentMethod.TC_EFT"/>
+      <TextInput
+        boldLabel="true"
+        editable="true"
+        id="PayTo2_Ext"
+        value="Check.PayTo2_Ext"
         visible="Check.PaymentMethod != PaymentMethod.TC_EFT"/>
       <InputSet
         id="EFTDataInputSet"

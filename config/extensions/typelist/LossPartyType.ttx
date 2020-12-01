@@ -747,13 +747,16 @@ all three files for that Coverage. Do not just delete these entries, because the
       typelist="CoverageSubType"/>	  
 	  <category
       code="HOSideHustleLossIncome_CO_Ext"
-      typelist="CoverageSubType"/>	    
+      typelist="CoverageSubType"/>
   </typecode>
   <typecode
     code="third_party"
     desc="Third-party liability"
     identifierCode="third_party"
     name="Third-party liability">
+    <category
+      code="HOMedPayToOthers_Togl_Ext"
+      typelist="CoverageSubtype"/>    
     <category
       code="GLCGLCov_ops_bi"
       typelist="CoverageSubType"/>

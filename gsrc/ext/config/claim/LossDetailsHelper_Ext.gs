@@ -22,7 +22,27 @@ class LossDetailsHelper_Ext {
       }
     }
   }
-
+  public static function DefaultClaimFaultAndFaultRatingHO(claim : Claim){
+    var lossCause = claim.LossCause
+    if(lossCause == LossCause.TC_LIGHTNING_EXT
+        or lossCause == LossCause.TC_MYST_DISP_EXT
+        or lossCause == LossCause.TC_WIND
+        or lossCause == LossCause.TC_EARTHQUAKE_HO_EXT
+        or lossCause == LossCause.TC_FLOOD_HO_EXT
+        or lossCause == LossCause.TC_HAIL_HO_EXT
+        or lossCause == LossCause.TC_HURRICANE_HO_EXT
+        or lossCause == LossCause.TC_VIRUS_EXT
+        or lossCause == LossCause.TC_TORNADO_HO_EXT
+        or lossCause == LossCause.TC_WILDFIRE_EXT
+        or lossCause == LossCause.TC_IDEN_THEFT_EXT){
+      if(claim.FaultRating == null){
+        claim.FaultRating = FaultRating.TC_NOFAULT
+      }
+      if(claim.Fault == null){
+        claim.Fault = 0
+      }
+    }
+  }
   /**
    *  checks differentthe claims Loss Cause
    * @param claim

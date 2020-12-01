@@ -93,9 +93,27 @@ abstract class HomeownersHelper {
     case LossCause.TC_FIRE:
       setDamagePresent("PropertyFireDamage")
       break
+      case LossCause.TC_FIRE_SMOKE_EXT:
+        setDamagePresent("PropertyFireDamage")
+        break
+      case LossCause.TC_WILDFIRE_EXT:
+        setDamagePresent("PropertyFireDamage")
+        break
     case LossCause.TC_WATERDAMAGE:
       setDamagePresent("PropertyWaterDamage")
       break
+      case LossCause.TC_SEWER_DRAIN_EXT:
+        setDamagePresent("PropertyWaterDamage")
+        break
+      case LossCause.TC_WATER_HO_EXT:
+        setDamagePresent("PropertyWaterDamage")
+        break
+      case LossCause.TC_FLOOD_HO_EXT:
+        setDamagePresent("PropertyWaterDamage")
+        break
+      case LossCause.TC_SNOWICE:
+        setDamagePresent("PropertyWaterDamage")
+        break
     }      
   }
 

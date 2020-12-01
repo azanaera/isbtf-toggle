@@ -12,14 +12,21 @@
         <BooleanRadioInput
           editable="true"
           id="ArsonInvolved"
-          label="DisplayKey.get(&quot;NVV.Claim.SubView.LossDetailsProperty.Claim.FireDamage.ArsonInvolved&quot;)"
-          value="aClaim.PropertyFireDamage.Arson"/>
+          label="DisplayKey.get(&quot;NVV.Claim.SubView.LossDetailsProperty.Claim.FireDamage.WastheFireAccidental_Ext&quot;)"
+          value="aClaim.PropertyFireDamage.Arson"
+          visible="aClaim.State != ClaimState.TC_DRAFT"/>
         <TextAreaInput
           editable="true"
           id="FireSource"
           label="DisplayKey.get(&quot;NVV.Claim.SubView.LossDetailsProperty.Claim.FireDamage.FireSource&quot;)"
           numRows="2"
           value="aClaim.PropertyFireDamage.FireSource"/>
+        <TypeKeyInput
+          editable="true"
+          id="FireStartedLocn_Ext"
+          label="DisplayKey.get(&quot;NVV.Claim.SubView.LossDetailsProperty.Claim.FireDamage.FireStartedLocn_Ext&quot;)"
+          value="aClaim.PropertyFireDamage.FireStartedLocation_Ext"
+          valueType="typekey.FireStartedLocn_Ext"/>
         <TextAreaInput
           editable="true"
           id="HowWasFireDiscovered"

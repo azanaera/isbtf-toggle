@@ -7,15 +7,26 @@
     code="plumbing_appliances"
     desc="Plumbing Or Appliances"
     name="Plumbing Or Appliances"
-    priority="1"/>
+    priority="1"
+    retired="true"/>
   <typecode
     code="roof"
     desc="Roof"
     name="Roof"
-    priority="2"/>
+    priority="30"/>
   <typecode
     code="other"
     desc="Other"
     name="Other"
-    priority="3"/>
+    priority="40"/>
+  <typecode
+    code="plumbing_ext"
+    desc="Plumbing"
+    name="Plumbing"
+    priority="10"/>
+  <typecode
+    code="appliances_ext"
+    desc="Appliances"
+    name="Appliances"
+    priority="20"/>
 </typelistextension>
