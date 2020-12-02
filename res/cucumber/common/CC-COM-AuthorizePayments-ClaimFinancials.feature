@@ -59,8 +59,10 @@ Feature: Transaction approvals (CC-COM-AuthorizePayments-ClaimFinancials)
     And the claim has a "Collision" exposure
     And the exposure has available reserves for
       | Cost Type  | Cost Category   | Amount |
-      | Claim Cost | Material Damage | 1100  |
-    And a check for "6000" on the exposure requires approval
-    When I "Approve" the payment
+      | Claim Cost | Material Damage | 11000  |
+    When I create a check for "6000" on the exposure
+      | Payment Type | Eroding? |
+      | Partial      | Yes      |
+    And I "Approve" the payment
     Then the check's approval status should be "Pending approval"
     And the payment's approval status should be "Pending approval"
