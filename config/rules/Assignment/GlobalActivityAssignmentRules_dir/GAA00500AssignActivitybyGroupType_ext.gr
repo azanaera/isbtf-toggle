@@ -1,0 +1,22 @@
+package rules.Assignment.GlobalActivityAssignmentRules_dir
+
+
+@gw.rules.RuleName("GAA00500 - Assign Activity by Group Type_ext")
+internal class GAA00500AssignActivitybyGroupType_ext {
+  static function doCondition(activity  :  entity.Activity) : boolean {
+/*start00rule*/
+return activity.SelGrpTypeForAssign_Ext != null
+/*end00rule*/
+}
+
+  static function doAction(activity  :  entity.Activity, actions : gw.rules.Action) {
+/*start00rule*/
+    var grptyp = ext.config.assignment.AssignmentUtil_Ext.getGroupTypeActivity(activity)
+    var rootGroup = ext.config.assignment.AssignmentUtil_Ext.getRootGroupActivity(activity, grptyp)
+    if (activity.CurrentAssignment.assignGroupByLocation(grptyp, activity.Claim.LossLocation, false, rootGroup)) {
+      activity.SelGrpTypeForAssign_Ext = null
+      actions.exit()
+    }
+/*end00rule*/
+  }
+}

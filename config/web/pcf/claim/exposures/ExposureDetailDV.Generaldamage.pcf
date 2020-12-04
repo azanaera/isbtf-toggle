@@ -186,6 +186,7 @@
         id="GeneralDamage_Description"
         label="DisplayKey.get(&quot;NVV.Exposure.SubView.GeneralDamage.Description&quot;)"
         numRows="3"
+        required="true"
         value="Exposure.Incident.Description"/>
       <CurrencyInput
         editable="true"

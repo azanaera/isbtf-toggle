@@ -3,6 +3,7 @@ package rules.Assignment.DefaultGroupExposureAssignmentRules_dir
 uses gw.api.locale.DisplayKey
 uses gw.api.system.CCLoggerCategory
 
+@gw.rules.RuleDisabled
 @gw.rules.RuleName("DGE00500 - Balance workload within group")
 internal class DGE00500Balanceworkloadwithingroup {
   static function doCondition(exposure : entity.Exposure) : boolean {

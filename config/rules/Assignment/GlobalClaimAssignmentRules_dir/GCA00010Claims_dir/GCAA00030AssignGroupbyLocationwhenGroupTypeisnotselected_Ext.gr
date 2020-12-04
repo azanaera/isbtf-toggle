@@ -1,0 +1,38 @@
+package rules.Assignment.GlobalClaimAssignmentRules_dir.GCA00010Claims_dir
+uses gw.api.locale.DisplayKey
+uses gw.api.database.Query
+uses gw.api.util.DisplayableException
+uses gw.surepath.suite.integration.logging.StructuredLogger
+
+@gw.rules.RuleDisabled
+@gw.rules.RuleName("GCAA00030 - Assign Group by Location when Group Type is not selected_Ext")
+internal class GCAA00030AssignGroupbyLocationwhenGroupTypeisnotselected_Ext {
+  static function doCondition(claim     :     entity.Claim) : boolean {
+/*start00rule*/
+    //for FNOL or Group Type is not selected
+    return claim.SelGrpTypeForAssign_Ext == null
+/*end00rule*/
+}
+
+  static function doAction(claim     :     entity.Claim, actions : gw.rules.Action) {
+/*start00rule*/
+    var logger = StructuredLogger.RULES
+    var autoGroupRoot = Query.make(Group).compare(Group#GroupType, Equals, GroupType.TC_AUTONORMAL).select().first()
+    //var hoGroupRoot = Query.make(Group).compare(Group#GroupType, Equals, GroupType.TC_PROPNORMAL).select().first()
+    //var shrdGroupRoot = Query.make(Group).compare(Group#GroupType, Equals, GroupType.TC_HQ).select().first()
+    //var useRootGroup : Group
+
+    
+    if (claim.CurrentAssignment.assignGroupByLocation(claim.SelGrpTypeForAssign_Ext, claim.LossLocation, false, autoGroupRoot)) {
+
+      print("claim.SelGrpTypeForAssign_Ext2:"+claim.SelGrpTypeForAssign_Ext)
+        print(DisplayKey.get("Rules.Assignment.Global.Claim", actions.ShortRuleName))
+        logger.debug(DisplayKey.get("Rules.Assignment.Global.Claim", actions.ShortRuleName))
+        logger.debug(DisplayKey.get("Rules.Assignment.AssignedGroupIs", claim.AssignedGroup))
+        actions.exit()
+      }
+
+
+/*end00rule*/
+  }
+}

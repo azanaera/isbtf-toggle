@@ -7,7 +7,7 @@ internal class DGE02000Defaultusersinteam {
   static function doCondition(exposure : entity.Exposure) : boolean {
     
 /*start00rule*/
-return exposure.CurrentAssignment.AssignedGroup.Users.toList().hasMatch(\ aUser -> true)
+return true// exposure.CurrentAssignment.AssignedGroup.Users.toList().hasMatch(\ aUser -> true)
 /*end00rule*/
 
   }
@@ -16,7 +16,7 @@ return exposure.CurrentAssignment.AssignedGroup.Users.toList().hasMatch(\ aUser 
 
 /*start00rule*/
 
-if (exposure.CurrentAssignment.assignUserByRoundRobin(false, exposure.CurrentAssignment.AssignedGroup)) {
+if (exposure.CurrentAssignment.assignUserByRoundRobin(true, exposure.CurrentAssignment.AssignedGroup)) {
   CCLoggerCategory.ASSIGNMENT.debug(DisplayKey.get("Rules.Assignment.DefaultGroup.Exposure", actions.ShortRuleName))
   CCLoggerCategory.ASSIGNMENT.debug(DisplayKey.get("Rules.Assignment.AssignedUserIs", exposure.AssignedUser))
   actions.exit()

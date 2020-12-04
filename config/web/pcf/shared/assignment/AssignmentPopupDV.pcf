@@ -17,6 +17,10 @@
       initialValue="new gw.api.contact.CCProximitySearchPageHelper()"
       name="proximitySearchPageHelper"
       type="gw.api.contact.CCProximitySearchPageHelper"/>
+    <Variable
+      initialValue="null"
+      name="grpType_Ext"
+      type="GroupType"/>
     <InputColumn>
       <Label
         label="DisplayKey.get(&quot;Web.Assignment.Popup.SelectMethod&quot;)"/>
@@ -34,12 +38,33 @@
           sortValueRange="false"
           value="AssignmentPopup.SelectedFromList"
           valueRange="AssignmentPopup.SuggestedAssignees"
-          valueType="gw.api.assignment.Assignee"/>
+          valueType="gw.api.assignment.Assignee">
+          <PostOnChange
+            onChange="grpType_Ext = null"/>
+        </RangeInput>
+        <RangeInput
+          editable="true"
+          id="GroupType_Ext"
+          label="DisplayKey.get(&quot;Web.Assignment.Popup.SelectFromGroupType_Ext&quot;)"
+          value="grpType_Ext"
+          valueRange="typekey.GroupType.getTypeKeys(false)"
+          valueType="typekey.GroupType"
+          visible="AssignmentPopup typeis gw.api.claim.ClaimAssignmentPopup or AssignmentPopup typeis gw.api.exposure.ExposureAssignmentPopup or AssignmentPopup typeis gw.api.activity.ActivityAssignmentPopup">
+          <PostOnChange
+            onChange="AssignmentPopup.SelectedFromList = null"/>
+        </RangeInput>
         <ButtonInput
           action="if(AssignmentPopup.performAssignment()) CurrentLocation.cancel()"
           id="AssignmentPopupScreen_ButtonButton"
           shortcut="G"
-          value="DisplayKey.get(&quot;Web.Assignment.Popup.Button&quot;)"/>
+          value="DisplayKey.get(&quot;Web.Assignment.Popup.Button&quot;)"
+          visible="grpType_Ext == null"/>
+        <ButtonInput
+          action="if (ext.config.assignment.AssignmentUtil_Ext.updGrpTypeandAssign(AssignmentPopup,grpType_Ext)) CurrentLocation.cancel()"
+          id="AssignmentPopupScreen_ButtonButtonGrpType_Ext"
+          shortcut="G"
+          value="DisplayKey.get(&quot;Web.Assignment.Popup.ButtonbyGrpType_Ext&quot;)"
+          visible="grpType_Ext != null"/>
       </Choice>
       <!-- <InputDivider/> -->
       <Choice
@@ -68,5 +93,14 @@
         </Choice>
       </InputSet>
     </InputColumn>
+    <Code><![CDATA[
+function getGroup() : Group[]{
+
+  return gw.api.database.Query.make(Group).select().toTypedArray()
+
+
+}
+
+]]></Code>
   </DetailViewPanel>
 </PCF>

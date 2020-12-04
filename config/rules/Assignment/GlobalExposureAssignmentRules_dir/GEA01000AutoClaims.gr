@@ -1,5 +1,6 @@
 package rules.Assignment.GlobalExposureAssignmentRules_dir
 
+@gw.rules.RuleDisabled
 @gw.rules.RuleName("GEA01000 - Auto Claims")
 internal class GEA01000AutoClaims {
   static function doCondition(exposure : entity.Exposure) : boolean {

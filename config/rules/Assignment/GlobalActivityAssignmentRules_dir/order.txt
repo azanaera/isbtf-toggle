@@ -1,3 +1,4 @@
+GAA00500AssignActivitybyGroupType_ext
 GAA01000SIAssignclaimreviewtoclaimownersgroup
 GAA02000SIAssignSIUescalationactivitytoSIUgroup
 GAA03000SubroAssigntoSubrogroup

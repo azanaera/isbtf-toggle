@@ -2,7 +2,7 @@
 <plugin
   name="GeocodePlugin">
   <plugin-gosu
-    disabled="true"
+    disabled="false"
     gosuclass="gw.plugin.geocode.impl.BingMapsPluginRest">
     <!-- required parameters  credentials -->
     <param

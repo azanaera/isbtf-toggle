@@ -3,6 +3,11 @@
 <extension
   xmlns="http://guidewire.com/datamodel"
   entityName="Activity">
+  <typekey
+    desc="Selected Group Type For Assignment from the Assignment Screen"
+    name="SelGrpTypeForAssign_Ext"
+    nullok="true"
+    typelist="GroupType"/>
   <index
     desc="Covering index to help speed up the most expensive of the Team stats batch process queries"
     expectedtobecovering="true"

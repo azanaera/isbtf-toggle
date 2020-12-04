@@ -7,8 +7,8 @@ internal class DGA08000Defaultifusersingroup {
   static function doCondition(activity : entity.Activity) : boolean {
     
 /*start00rule*/
-return /* As long as the group contains at least 1 user */
-activity.CurrentAssignment.AssignedGroup.Users.toList().hasMatch(\ aUser -> true)
+return true/* As long as the group contains at least 1 user */
+//activity.CurrentAssignment.AssignedGroup.Users.toList().hasMatch(\ aUser -> true)
 /*end00rule*/
 
   }
@@ -17,7 +17,7 @@ activity.CurrentAssignment.AssignedGroup.Users.toList().hasMatch(\ aUser -> true
 
 /*start00rule*/
 
-if (activity.CurrentAssignment.assignUserByRoundRobin(false, activity.CurrentAssignment.AssignedGroup)) {
+if (activity.CurrentAssignment.assignUserByRoundRobin(true, activity.CurrentAssignment.AssignedGroup)) {
   CCLoggerCategory.ASSIGNMENT.debug(DisplayKey.get("Rules.Assignment.DefaultGroup.Activity", actions.ShortRuleName))
   CCLoggerCategory.ASSIGNMENT.debug(DisplayKey.get("Rules.Assignment.AssignedUserIs", activity.AssignedUser))
   actions.exit()

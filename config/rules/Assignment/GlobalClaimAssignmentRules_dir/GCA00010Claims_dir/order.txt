@@ -1,5 +1,3 @@
-GCAA00010Auto
-GCAP00010Property
-GCAL00010Liability
-GCAWC0010WC
-GCATR0040Travel
+GCAA00030AssignGroupbyLocationwhenGroupTypeisnotselected_Ext
+GCAA00030AssignClaimByGroupTypeandLocation_Ext
+GCAA00040DefaultAssignGroup_Ext

@@ -20,7 +20,10 @@ internal class DGC01000Defaultifusersingroup {
 
 /*start00rule*/
     var logger = StructuredLogger.RULES
+    //if (claim.CurrentAssignment.assignUserByLocation(claim.LossLocation , true, claim.CurrentAssignment.AssignedGroup)) {
+
     if (claim.CurrentAssignment.assignUserByRoundRobin(true, claim.CurrentAssignment.AssignedGroup)) {
+      print(DisplayKey.get("Rules.Assignment.DefaultGroup.Claim", actions.ShortRuleName))
       logger.debug(DisplayKey.get("Rules.Assignment.DefaultGroup.Claim", actions.ShortRuleName))
       logger.debug(DisplayKey.get("Rules.Assignment.AssignedUserIs", claim.AssignedUser))
       actions.exit()
