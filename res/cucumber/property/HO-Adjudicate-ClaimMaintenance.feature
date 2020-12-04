@@ -79,7 +79,7 @@ Feature: Claim Maintenance ~ HO_Adjudicate_ClaimMaintenance
     Given a Homeowners claim
     And the policy on the claim has the following scheduled items
       | Grandfather clock |
-    And the claim loss cause is "Burglary"
+    And the claim loss cause is "Hurricane"
     When I add a personal property incident with line items
     Then a personal property incident should be created on the claim
 

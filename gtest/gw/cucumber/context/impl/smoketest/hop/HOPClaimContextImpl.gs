@@ -102,10 +102,13 @@ class HOPClaimContextImpl extends ClaimContextImpl implements HOPClaimContext {
   }
 
   override function setLossCause(lossCauseText : String) {
-    var lossCause = new TypelistTransformer<LossCause>().transform(lossCauseText)
+//    var lossCause = new TypelistTransformer<LossCause>().transform(lossCauseText,true)
+    var lossType = LossType.AllTypeKeys.singleWhere(\elt -> elt.DisplayName == "Property")
+    var lossCause = LossCause.AllTypeKeys.singleWhere(\elt -> elt.DisplayName == lossCauseText && elt.hasCategory(lossType))
     var wizard = Wizard
     wizard.goToLossDetailsHomeowners()
     wizard.LossDetailsHomeowners.NewLossDetailsHomeownersDV.Claim_LossCause.TypeKeyValue = lossCause
+    wizard.LossDetailsHomeowners.NewLossDetailsHomeownersDV.Description.setValue("test")
   }
 
   override function setLossLocationInState(stateText : String) {
@@ -164,7 +167,9 @@ class HOPClaimContextImpl extends ClaimContextImpl implements HOPClaimContext {
   }
 
   override function verifyClaimLossCause(lossCauseText : String) {
-    var lossCause = new TypelistTransformer<LossCause>().transform(lossCauseText)
+//    var lossCause = new TypelistTransformer<LossCause>().transform(lossCauseText,true)
+    var lossType = LossType.AllTypeKeys.singleWhere(\elt -> elt.DisplayName == "Property")
+    var lossCause = LossCause.AllTypeKeys.singleWhere(\elt -> elt.DisplayName == lossCauseText && elt.hasCategory(lossType))
     var claimLossDetails = new Navigation<ClaimLossDetails>(_proxy)
         .ensureOnPage(\tabBar -> tabBar.goToClaim(_claimWrapper.get()).goToLossDetails(), CurrentUser)
 
@@ -238,6 +243,7 @@ class HOPClaimContextImpl extends ClaimContextImpl implements HOPClaimContext {
 
     var lossDetails = wizard.LossDetailsHomeowners
     for (row in table.asMaps(String, String)) {
+      lossDetails.FireDamageQuestionsPanelSet.FireDamageQuestionsPanelSet.ArsonInvolved.setValue("Yes")
       UIHelper.setFieldValues(lossDetails.FireDamageQuestionsPanelSet.FireDamageQuestionsPanelSet, row)
     }
   }
@@ -572,12 +578,13 @@ class HOPClaimContextImpl extends ClaimContextImpl implements HOPClaimContext {
         .ensureOnPage(\tabBar -> tabBar.goToClaim(_claimWrapper.get()).goToLossDetails(), CurrentUser)
     var newPropertyContentsIncidentPopup = claimLossDetails.goToNewIncidentPopup(IncidentUIHelpers.PROPERTY_CONTENTS.CreateLabel) as NewPropertyContentsIncidentPopup
     var propertyContents = newPropertyContentsIncidentPopup.NewPropertyContentsIncidentScreen.PropertyContentsIncidentPanelSet
+    assertThat(_proxy.CurrentPage typeis NewPropertyContentsIncidentPopup).isTrue()
     propertyContents.Description.Value = "Personal property incident description"
 
-    var chooseProperty = propertyContents.PropertyContentsScheduledItemsLV_tb.Add.click() as ChoosePropertyContentsScheduledItemPopup
-    assertThat(chooseProperty.PropertyItemsLV._Entries).as("None scheduled item exists on the property").isNotEmpty()
-    chooseProperty.PropertyItemsLV._Entries.first()._Checkbox.click()
-    chooseProperty.AddCheckedItems.click()
+//    var chooseProperty = propertyContents.PropertyContentsScheduledItemsLV_tb.Add.click() as ChoosePropertyContentsScheduledItemPopup
+//    assertThat(chooseProperty.PropertyItemsLV._Entries).as("None scheduled item exists on the property").isNotEmpty()
+//    chooseProperty.PropertyItemsLV._Entries.first()._Checkbox.click()
+//    chooseProperty.AddCheckedItems.click()
 
     if (propertyContents.PropertyContentsLineItemsLV._Entries.Empty) {
       propertyContents.PropertyContentsLineItemsLV_tb.Add.click()

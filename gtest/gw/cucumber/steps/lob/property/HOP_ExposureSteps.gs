@@ -22,4 +22,14 @@ class HOP_ExposureSteps {
   public function theExposureShouldReferenceTheDwellingIncident() {
     _contextFactory.getExposureContext<HOPExposureContext>().verifyExposureReferencingDwellingIncident()
   }
+
+  @When("^I add a Blanket exposure$")
+  public function iAddABlanketExposure() {
+    _contextFactory.getExposureContext<HOPExposureContext>().addBlanketExposure()
+  }
+
+  @Then("^the exposure should reference the personal property incident$")
+  public function theExposureShouldReferenceThePersonalPropertyIncident() {
+    _contextFactory.getExposureContext<HOPExposureContext>().verifyExposureReferencingPersonalPropertyIncident()
+  }
 }

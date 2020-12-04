@@ -7,10 +7,9 @@ Feature: Exposure ~ HOP_Exposure_Adjuster
   Background:
     Given I am a user with the "Adjuster" role
 
-  @ignore
-  Scenario: Creating a dwelling exposure on an existing Homeowners claim
+  Scenario: Creating a blanket exposure on an existing Homeowners claim
     Given a Homeowners claim
-    And the claim has a dwelling incident
-    When I add a dwelling exposure referencing the incident
-    Then a "Coverage A - Dwelling" exposure should be created on the claim
-    And the exposure should reference the dwelling incident
+    And I add a personal property incident with line items
+    When I add a Blanket exposure
+    Then a "Blanket" exposure should be created on the claim
+    And the exposure should reference the personal property incident

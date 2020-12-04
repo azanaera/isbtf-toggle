@@ -17,14 +17,14 @@ Feature: New Claim Creation ~ HOP_NewClaimCreation_CSR
 
     Examples:
       | Loss Cause         |
-      | Water damage       |
+      | Water              |
       | Earthquake         |
       | Structural failure |
 
   Scenario Outline: Filing a new Homeowners claim with a fire loss cause and a dwelling incident
     Given a Homeowners policy
     When I start filing a claim
-    And I set claim loss cause to "Fire"
+    And I set claim loss cause to "Fire/Smoke"
     And I add a dwelling incident
       | Damage Description  | <Damage Description> |
       | Materials Damaged   | <Materials Damaged>  |
@@ -32,7 +32,7 @@ Feature: New Claim Creation ~ HOP_NewClaimCreation_CSR
       | Already Repaired?   | <Already Repaired?>  |
     And I finish filing the claim
     Then a "Homeowners" claim should be created
-    And the claim loss cause should be "Fire"
+    And the claim loss cause should be "Fire/Smoke"
     And the following dwelling incident should exist on the claim
       | Damage Description  | <Damage Description> |
       | Materials Damaged   | <Materials Damaged>  |

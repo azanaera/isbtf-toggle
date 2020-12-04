@@ -19,7 +19,7 @@ enhancement FNOLWizard_NewLossDetailsPanelSet_homeownersTestEnhancement : pcftes
 
   function setRequiredFieldsIfNotPresent() {
     if (this.NewLossDetailsHomeownersDV.Claim_LossCause.Value.isEmpty()) {
-      this.LossCause = typekey.LossCause.TC_FIRE
+      this.LossCause = typekey.LossCause.TC_FIRE_SMOKE_EXT
     }
   }
 
