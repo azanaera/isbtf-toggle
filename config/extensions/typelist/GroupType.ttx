@@ -12,7 +12,8 @@
   <typecode
     code="autonormal"
     desc="Auto team"
-    name="Auto"/>
+    name="Auto"
+    priority="500"/>
   <typecode
     code="autocomplex"
     desc="Complex auto team"
@@ -26,7 +27,8 @@
   <typecode
     code="propnormal"
     desc="Property team"
-    name="Property"/>
+    name="Property"
+    priority="500"/>
   <typecode
     code="propcomplex"
     desc="Complex property team"
@@ -70,7 +72,8 @@
   <typecode
     code="general"
     desc="General"
-    name="General"/>
+    name="General"
+    priority="400"/>
   <typecode
     code="regional"
     desc="Regional service center"
@@ -109,7 +112,8 @@
   <typecode
     code="hq"
     desc="Corporate headquarters"
-    name="Corporate headquarters"/>
+    name="Corporate headquarters"
+    priority="500"/>
   <typecode
     code="independent"
     desc="Independent adjusters"
@@ -158,7 +162,8 @@
   <typecode
     code="salvage"
     desc="Salvage unit"
-    name="Salvage unit"/>
+    name="Salvage unit"
+    retired="true"/>
   <typecode
     code="siu"
     desc="Special investigative unit"
@@ -167,11 +172,13 @@
   <typecode
     code="systemadmin"
     desc="System administrators"
-    name="System administrators"/>
+    name="System administrators"
+    priority="500"/>
   <typecode
     code="underwriting"
     desc="Underwriting"
-    name="Underwriting"/>
+    name="Underwriting"
+    retired="true"/>
   <typecode
     code="police"
     desc="Police"
@@ -185,11 +192,13 @@
   <typecode
     code="reinsurance"
     desc="Reinsurance Unit"
-    name="Reinsurance Unit"/>
+    name="Reinsurance Unit"
+    retired="true"/>
   <typecode
     code="genrlistroot_ext"
     desc="Toggle Auto Generalist"
-    name="Toggle Auto Generalist">
+    name="Toggle Auto Generalist"
+    priority="10">
     <category
       code="AUTO"
       typelist="LossType"/>
@@ -202,7 +211,8 @@
   <typecode
     code="nlc_ext"
     desc="Toggle NLC Specialist"
-    name="Toggle NLC Specialist">
+    name="Toggle NLC Specialist"
+    priority="10">
     <category
       code="AUTO"
       typelist="LossType"/>
@@ -210,19 +220,27 @@
   <typecode
     code="claimroot_ext"
     desc="Claim Group"
-    name="Claim Group"/>
+    name="Claim Group"
+    priority="500"/>
   <typecode
     code="rentersroot_ext"
-    desc="Renters Root Group"
-    name="Renters Root Group"/>
+    desc="Toggle Renters Generalist"
+    name="Toggle Renters Generalist"
+    priority="10">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>
   <typecode
     code="proproot_ext"
     desc="Property Root Group"
-    name="Property Root Group"/>
+    name="Property Root Group"
+    retired="true"/>
   <typecode
     code="autoexthndler_ext"
     desc="Toggle Auto Extended Handler"
-    name="Toggle Auto Extended Handler">
+    name="Toggle Auto Extended Handler"
+    priority="10">
     <category
       code="AUTO"
       typelist="LossType"/>
@@ -230,7 +248,8 @@
   <typecode
     code="autoapdsplst_ext"
     desc="Toggle APD Specialist"
-    name="Toggle APD Specialist">
+    name="Toggle APD Specialist"
+    priority="10">
     <category
       code="AUTO"
       typelist="LossType"/>
@@ -238,7 +257,8 @@
   <typecode
     code="automedpip_ext"
     desc="Toggle Med/PIP Specialist"
-    name="Toggle Med/PIP Specialist">
+    name="Toggle Med/PIP Specialist"
+    priority="10">
     <category
       code="AUTO"
       typelist="LossType"/>
@@ -246,7 +266,8 @@
   <typecode
     code="autosalvage_ext"
     desc="Toggle Auto Salvage "
-    name="Toggle Auto Salvage ">
+    name="Toggle Auto Salvage "
+    priority="10">
     <category
       code="AUTO"
       typelist="LossType"/>
@@ -254,7 +275,8 @@
   <typecode
     code="hoconeval_ext"
     desc="Toggle Contents Evaluator "
-    name="Toggle Contents Evaluator ">
+    name="Toggle Contents Evaluator "
+    priority="10">
     <category
       code="PR"
       typelist="LossType"/>
@@ -262,7 +284,8 @@
   <typecode
     code="hogenrlistroot_ext"
     desc="Toggle Renters Generalist"
-    name="Toggle Renters Generalist">
+    name="Toggle Renters Generalist"
+    retired="true">
     <category
       code="PR"
       typelist="LossType"/>
@@ -270,7 +293,8 @@
   <typecode
     code="hoexthandler_ext"
     desc="Toggle Renters Extended Handler"
-    name="Toggle Renters Extended Handler">
+    name="Toggle Renters Extended Handler"
+    priority="10">
     <category
       code="PR"
       typelist="LossType"/>
@@ -278,7 +302,8 @@
   <typecode
     code="holithndler_ext"
     desc="Toggle Renters Litigation Handler"
-    name="Toggle Renters Litigation Handler">
+    name="Toggle Renters Litigation Handler"
+    priority="10">
     <category
       code="PR"
       typelist="LossType"/>
@@ -286,7 +311,8 @@
   <typecode
     code="hoceahndler_ext"
     desc="Toggle Renters CEA Handler"
-    name="Toggle Renters CEA Handler">
+    name="Toggle Renters CEA Handler"
+    priority="10">
     <category
       code="PR"
       typelist="LossType"/>
@@ -294,9 +320,19 @@
   <typecode
     code="hosalvage_ext"
     desc="Toggle Renters Salvage"
-    name="Toggle Renters Salvage">
+    name="Toggle Renters Salvage"
+    priority="10">
     <category
       code="PR"
       typelist="LossType"/>
   </typecode>
+  <typecode
+    code="hopropdmgeval_ext"
+    desc="Toggle Property Damage Evaluator"
+    name="Toggle Property Damage Evaluator"
+    priority="10">
+    <category
+      code="PR"
+      typelist="LossType"/>
+  </typecode>    
 </typelistextension>

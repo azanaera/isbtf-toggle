@@ -180,7 +180,8 @@
         id="GeneralDamage_Severity"
         label="DisplayKey.get(&quot;NVV.Exposure.SubView.GeneralDamage.Severity&quot;)"
         value="Exposure.Incident.Severity"
-        valueType="typekey.SeverityType"/>
+        valueType="typekey.SeverityType"
+        __disabled="true"/>
       <TextAreaInput
         editable="true"
         id="GeneralDamage_Description"

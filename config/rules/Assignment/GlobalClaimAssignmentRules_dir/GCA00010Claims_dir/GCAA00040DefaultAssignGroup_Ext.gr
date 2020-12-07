@@ -22,7 +22,7 @@ var logger = StructuredLogger.RULES
       rootGroup = Query.make(Group).compare(Group#Name, Equals, ScriptParameters.DefaultGroupName_Auto_Ext).select().first()
     }
     else if (claim.LossType == LossType.TC_PR){
-      rootGroup = Query.make(Group).compare(Group#GroupType, Equals, ScriptParameters.DefaultGroupName_HOwn_Ext).select().first()
+      rootGroup = Query.make(Group).compare(Group#Name, Equals, ScriptParameters.DefaultGroupName_HOwn_Ext).select().first()
     }
     if (claim.CurrentAssignment.assignGroup(rootGroup)) {
         claim.SelGrpTypeForAssign_Ext= null
