@@ -79,12 +79,12 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
     And I set claim loss cause to "Fire/Smoke"
     And I set the damage type to "Fire"
     And I answer the fire questions
-      | Was the Fire Accidental? | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
-      | Yes             | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
+      | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
+      | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
     And I finish filing the claim
     Then the fire questions should be answered on the claim
-      | Was the Fire Accidental? | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
-      | Yes             | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
+      | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
+      | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
 
   @23740-GW
   Scenario: Filing a new Homeowners claim with a Water loss cause
@@ -111,8 +111,8 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
     And I set claim loss cause to "Fire/Smoke"
     And I set the damage type to "Fire"
     And I answer the fire questions
-      | Arson Involved? | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
-      | Yes             | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
+      | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
+      | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
     And I add a dwelling incident
       | Damage Description  | <Damage Description> |
       | Materials Damaged   | <Materials Damaged>  |
@@ -126,8 +126,8 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
     And I finish filing the claim
     Then the claim loss cause should be "Fire/Smoke"
     And the fire questions should be answered on the claim
-      | Arson Involved? | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
-      | Yes             | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
+      | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
+      | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
     And the following dwelling incident should exist on the claim
       | Damage Description  | <Damage Description> |
       | Materials Damaged   | <Materials Damaged>  |

@@ -341,7 +341,6 @@ class HOPClaimContextImpl extends ClaimContextImpl implements HOPClaimContext {
 
   override function verifyFireQuestionsOnClaim(table : DataTable) {
     for (row in table.asMaps(String, String)) {
-      assertThat(_claimWrapper.get().PropertyFireDamage.Arson).isEqualTo(row.get(DK_ARSONINVOLVED) == YesNo.TC_YES.DisplayName)
       assertThat(_claimWrapper.get().PropertyFireDamage.FireSource).isEqualTo(row.get(DK_FIRESOURCE))
       assertThat(_claimWrapper.get().PropertyFireDamage.HowWasFireDiscovered).isEqualTo(row.get(DK_HOWWASFIREDISCOVERED))
       assertThat(_claimWrapper.get().PropertyFireDamage.FireDeptResponded).isEqualTo(row.get(DK_FIREDEPTRESPONDED) == YesNo.TC_YES.DisplayName)
