@@ -243,7 +243,6 @@ class HOPClaimContextImpl extends ClaimContextImpl implements HOPClaimContext {
 
     var lossDetails = wizard.LossDetailsHomeowners
     for (row in table.asMaps(String, String)) {
-      lossDetails.FireDamageQuestionsPanelSet.FireDamageQuestionsPanelSet.ArsonInvolved.setValue("Yes")
       UIHelper.setFieldValues(lossDetails.FireDamageQuestionsPanelSet.FireDamageQuestionsPanelSet, row)
     }
   }
