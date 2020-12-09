@@ -29,7 +29,7 @@ class BingMapsPluginRest extends AbstractGeocodePlugin implements InitializableP
   private static var _logger = StructuredLogger.INTEGRATION
 
   // application key
-  public static final var BING_MAPS : String = "BingMapsAppKey"
+  public static final var BING_MAPS : String = "BING_MAPS_APP_KEY"
   private static final var APPLICATION_KEY = "applicationKey"
   private static var _applicationKey : String
 
