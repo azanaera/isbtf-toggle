@@ -40,4 +40,24 @@ class HOPExposureContextImpl extends ExposureContextImpl implements HOPExposureC
     assertThat(exposureDetail.ExposureDetailScreen.ExposureDetailDV_Dwelling.PropertyDamageDV.PropertyIncidentInputSet_Dwelling.Dwelling_Incident.Text)
         .isEqualTo(_incidentWrapper.get().DisplayName)
   }
+
+  override function addBlanketExposure() {
+    var claimSummary = new Navigation<ClaimSummary>(_proxy).ensureOnPage(\tabBar -> tabBar.goToClaim(_claimWrapper.get()), CurrentUser)
+    var newExposure = claimSummary.goToNewExposureByCoverageSubtype(CoverageSubtype.TC_HOPERSPROPBLANKET_CO_EXT)
+    newExposure.NewExposureScreen.NewExposureDV_Content.NewClaimContentsDamageDV.ExposureDetailInputSet.Claimant_Picker.selectFirstValidOption()
+    newExposure.NewExposureScreen.NewExposureDV_Content.NewClaimContentsDamageDV.ExposureDetailInputSet.Claimant_Type.selectFirstValidOption()
+    newExposure.NewExposureScreen.NewExposureDV_Content.NewClaimContentsDamageDV.Property_Contents_Incident.getOptionByLabel(_incidentWrapper.get().DisplayName).click()
+
+    var claimExposures = newExposure.update()
+    UIHelper.assertNoMessages(claimExposures)
+  }
+
+  override function verifyExposureReferencingPersonalPropertyIncident() {
+    var claim = _claimWrapper.get()
+    var exposure = _exposureWrapper.get() ?: claim.Exposures.single()
+    var claimExposures = new Navigation<ClaimExposures>(_proxy).ensureOnPage(\tabBar -> tabBar.goToClaim(claim).goToExposures(), CurrentUser)
+    var exposureDetail = claimExposures.ClaimExposuresScreen.ExposuresLV._Entries.singleWhere(\e -> e.Order.Text == exposure.ClaimOrder.toString()).Order.click()
+    assertThat(exposureDetail.ExposureDetailScreen.ExposureDetailDV_Content.ContentsDamageDV.Property_Contents_Incident.Text)
+        .isEqualTo(_incidentWrapper.get().DisplayName)
+  }
 }

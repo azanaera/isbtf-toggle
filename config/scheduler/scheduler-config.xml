@@ -144,11 +144,11 @@
 -->
 
   <!-- New addresses searched for geocoding at 1:30 am -->
-<!--
+
   <ProcessSchedule process="Geocode">
       <CronSchedule hours="1" minutes="30"/>
   </ProcessSchedule>
--->
+  
   <!-- Create a new ExchangeRateSet every day at 2 am; requires IExchangeRateSetPlugin to be configured and enabled -->
 <!--
   <ProcessSchedule process="ExchangeRate">

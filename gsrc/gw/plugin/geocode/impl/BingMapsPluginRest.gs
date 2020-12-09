@@ -6,23 +6,30 @@ uses gw.api.contact.MapImageUrl
 uses gw.api.database.spatial.SpatialPoint
 uses gw.api.geocode.AbstractGeocodePlugin
 uses gw.api.system.PLLoggerCategory
+uses gw.api.util.DisplayableException
 uses gw.plugin.InitializablePlugin
 uses gw.plugin.PluginParameter
+uses gw.plugin.Plugins
+uses gw.plugin.credentials.CredentialsPlugin
+uses gw.surepath.suite.integration.logging.StructuredLogger
 uses org.apache.commons.lang.StringUtils
 
 uses java.util.regex.Pattern
 
 @Export
-@PluginParameter(:name="applicationKey", :type=String, :required=true)
-@PluginParameter(:name="geocodeDirectionsCulture", :type=String)
-@PluginParameter(:name="imageryCulture", :type=String)
-@PluginParameter(:name="mapUrlWidth", :type=Integer)
-@PluginParameter(:name="mapUrlHeight", :type=Integer)
-@PluginParameter(:name="hostName", :type=String, :required=true)
-@PluginParameter(:name="version", :type=String)
+@PluginParameter(:name = "applicationKey", :type = String)
+@PluginParameter(:name = "geocodeDirectionsCulture", :type = String)
+@PluginParameter(:name = "imageryCulture", :type = String)
+@PluginParameter(:name = "mapUrlWidth", :type = Integer)
+@PluginParameter(:name = "mapUrlHeight", :type = Integer)
+@PluginParameter(:name = "hostName", :type = String, :required = true)
+@PluginParameter(:name = "version", :type = String)
 class BingMapsPluginRest extends AbstractGeocodePlugin implements InitializablePlugin {
-  
+
+  private static var _logger = StructuredLogger.INTEGRATION
+
   // application key
+  public static final var BING_MAPS : String = "BING_MAPS_APP_KEY"
   private static final var APPLICATION_KEY = "applicationKey"
   private static var _applicationKey : String
 
@@ -39,32 +46,32 @@ class BingMapsPluginRest extends AbstractGeocodePlugin implements InitializableP
   private static final var IMAGERY_CULTURE = "imageryCulture"
   private static var _geocodeDirectionsCulture : String = _mapping.LocCodes.get(javaLocale)
   private static var _imageryCulture : String = _mapping.ImageCodes.get(javaLocale)
-  
+
   // map url
   private static final var MAP_URL_WIDTH = "mapUrlWidth"
   private static var _mapUrlWidth : String = "500"
   private static final var MAP_URL_HEIGHT = "mapUrlHeight"
   private static var _mapUrlHeight : String = "500"
-  
+
   // regex for markup tags
-  private static final var REGEX_MARKUP_TAG = Pattern.compile( "<[^>]*>" )
+  private static final var REGEX_MARKUP_TAG = Pattern.compile("<[^>]*>")
 
-  override property set Parameters( parameters : Map<Object,Object> ) {
-    _applicationKey = initParameter( parameters, APPLICATION_KEY, _applicationKey, true )
-    
-    _geocodeDirectionsCulture = initParameter( parameters, GEOCODE_DIRECTIONS_CULTURE, 
-      _geocodeDirectionsCulture == null ? "en-US" : _geocodeDirectionsCulture, false )
-    _imageryCulture = initParameter( parameters, IMAGERY_CULTURE, 
-      _imageryCulture == null ? "en-US" : _imageryCulture, false )
-    
-    _mapUrlWidth = initParameter( parameters, MAP_URL_WIDTH, _mapUrlWidth, false )
-    _mapUrlHeight = initParameter( parameters, MAP_URL_HEIGHT, _mapUrlHeight, false )
+  override property set Parameters(parameters : Map<Object, Object>) {
+    _applicationKey = initParameter(parameters, APPLICATION_KEY, _applicationKey, false)
 
-    _hostName = initParameter( parameters, HOST_NAME, _hostName, false )
-    _version = initParameter( parameters, VERSION, _version, false )
+    _geocodeDirectionsCulture = initParameter(parameters, GEOCODE_DIRECTIONS_CULTURE,
+        _geocodeDirectionsCulture == null ? "en-US" : _geocodeDirectionsCulture, false)
+    _imageryCulture = initParameter(parameters, IMAGERY_CULTURE,
+        _imageryCulture == null ? "en-US" : _imageryCulture, false)
+
+    _mapUrlWidth = initParameter(parameters, MAP_URL_WIDTH, _mapUrlWidth, false)
+    _mapUrlHeight = initParameter(parameters, MAP_URL_HEIGHT, _mapUrlHeight, false)
+
+    _hostName = initParameter(parameters, HOST_NAME, _hostName, false)
+    _version = initParameter(parameters, VERSION, _version, false)
   }
 
-  override protected function _geocodeAddressBestMatch( address : Address ) : Address {
+  override protected function _geocodeAddressBestMatch(address : Address) : Address {
     // create request
     var context = createContextWithUserLocale()
     var geocodeRequest = GeocodingUtil.geocodeAddress(context, address)
@@ -75,17 +82,17 @@ class BingMapsPluginRest extends AbstractGeocodePlugin implements InitializableP
 
     // convert response into address
     var returnAddress = new Address()
-    if ( !geocodeResult.successful() || geocodeResult.Result == null || geocodeResult.Result?.Empty) {
+    if (!geocodeResult.successful() || geocodeResult.Result == null || geocodeResult.Result?.Empty) {
       logXmlForDebug("Geocoding Response", "There were no results returned from Bing Maps")
       returnAddress.GeocodeStatus = GeocodeStatus.TC_FAILURE;
     } else {
-      returnAddress = extractAddressFromBingMapsGeocodingResult( geocodeResult.Result.get(0) )
+      returnAddress = extractAddressFromBingMapsGeocodingResult(geocodeResult.Result.get(0))
     }
-    
+
     return returnAddress
   }
 
-  private function updateRequestConfig(request: PendingResultBase) {
+  private function updateRequestConfig(request : PendingResultBase) {
     if (StringUtils.isNotBlank(_hostName)) {
       request.Config.HostName = _hostName
     }
@@ -105,9 +112,9 @@ class BingMapsPluginRest extends AbstractGeocodePlugin implements InitializableP
     var geocodeResult = geocodeRequest.execute()
 
     // convert response into address list
-    var addressList = new ArrayList<Address>( );
+    var addressList = new ArrayList<Address>();
 
-    if ( !geocodeResult.successful() || geocodeResult.Result == null || geocodeResult.Result?.Empty) {
+    if (!geocodeResult.successful() || geocodeResult.Result == null || geocodeResult.Result?.Empty) {
       var returnAddress = new Address()
       logXmlForDebug("Geocoding Response", "There were no results returned from Bing Maps")
       returnAddress.GeocodeStatus = GeocodeStatus.TC_FAILURE;
@@ -117,11 +124,11 @@ class BingMapsPluginRest extends AbstractGeocodePlugin implements InitializableP
     }
     return addressList
   }
-  
-  override protected function _getDrivingDirections( startAddress : Address, finishAddress : Address, unit : UnitOfDistance ) : DrivingDirections {
-    var startLatLong = getLatLongFromAddress( startAddress )
-    var finishLatLong = getLatLongFromAddress( finishAddress )
-    
+
+  override protected function _getDrivingDirections(startAddress : Address, finishAddress : Address, unit : UnitOfDistance) : DrivingDirections {
+    var startLatLong = getLatLongFromAddress(startAddress)
+    var finishLatLong = getLatLongFromAddress(finishAddress)
+
     // create request
     var context = createContextWithUserLocale()
     var routeRequest = RoutingUtil.calculateSimpleDrivingRoute(context, startLatLong, finishLatLong, unit.toString())
@@ -131,37 +138,38 @@ class BingMapsPluginRest extends AbstractGeocodePlugin implements InitializableP
     var routeResult = routeRequest.execute()
 
     // convert response into driving directions to return
-    var drivingDirections = extractDrivingDirectionsFromBingMapsCalculateRouteResponse( routeResult, startAddress, finishAddress, unit )
-    
+    var drivingDirections = extractDrivingDirectionsFromBingMapsCalculateRouteResponse(routeResult, startAddress, finishAddress, unit)
+
     // set driving directions map overview url
-    setMapOverviewUrlForDrivingDirections( drivingDirections, startLatLong, finishLatLong )
-    
+    setMapOverviewUrlForDrivingDirections(drivingDirections, startLatLong, finishLatLong)
+
     return drivingDirections
   }
-  
-  override public function getMapForAddress( address : Address, unit : UnitOfDistance ) : MapImageUrl {
-    address = tryGetValidAddress( address )
-    if ( !isValidLatLong( address ) ) {
+
+  override public function getMapForAddress(address : Address, unit : UnitOfDistance) : MapImageUrl {
+    address = tryGetValidAddress(address)
+    if (!isValidLatLong(address)) {
       return null
     }
-    
-    var centerPoint = getPoint( getLatLongFromAddress( address ) )
+
+    var centerPoint = getPoint(getLatLongFromAddress(address))
     // zoom level is required: 1 - 22 
     var zoomLevel = "15"
-    var mapUrl = getBingMapsImageryRESTUrl( centerPoint + "/" + zoomLevel )
-    
+    var mapUrl = getBingMapsImageryRESTUrl(centerPoint + "/" + zoomLevel)
+
     // pushpin
     // syntax: pp=latitude,longitude;iconStyle;label
     var iconStyle = "15"
     mapUrl += "&pp=" + centerPoint + ";" + iconStyle
-    
+
     var mapImageUrl = new MapImageUrl()
     mapImageUrl.MapImageUrl = mapUrl
-     
+
     return mapImageUrl
   }
 
   private function createContextWithUserLocale() : Context {
+    updateApplicationKey()
     var context = new Context()
     context.BingMapsApiKey = _applicationKey
     var localLocale = User.util.CurrentLanguage.JavaLocale
@@ -169,33 +177,33 @@ class BingMapsPluginRest extends AbstractGeocodePlugin implements InitializableP
     context.Culture = localCulture ?: _geocodeDirectionsCulture
     return context
   }
-  
-  private function initParameter( parameters : Map<Object,Object>, parameterKey : String, initialParameterValue : String, requiredParameter : boolean ) : String {
-    var parameterValue = parameters.get( parameterKey ) as String
 
-    if ( parameterValue == null || parameterValue.trim().Empty ) {
-      if ( requiredParameter ) {
-        throw new Exception( "You must supply a value for the \"" + parameterKey + "\" parameter in GeocodePlugin.xml" )
+  private function initParameter(parameters : Map<Object, Object>, parameterKey : String, initialParameterValue : String, requiredParameter : boolean) : String {
+    var parameterValue = parameters.get(parameterKey) as String
+
+    if (parameterValue == null || parameterValue.trim().Empty) {
+      if (requiredParameter) {
+        throw new Exception("You must supply a value for the \"" + parameterKey + "\" parameter in GeocodePlugin.xml")
       } else {
         parameterValue = initialParameterValue
       }
     }
 
-    return parameterValue    
+    return parameterValue
   }
-  
-  private function logXmlForDebug( label : String, xml : String ) {
-    PLLoggerCategory.GEODATA.debug( "\n" + label + ":\n" + xml )
+
+  private function logXmlForDebug(label : String, xml : String) {
+    PLLoggerCategory.GEODATA.debug("\n" + label + ":\n" + xml)
   }
-  
-  private function extractAddressFromBingMapsGeocodingResult( geocodeResult : GeocodingResult) : Address {
+
+  private function extractAddressFromBingMapsGeocodingResult(geocodeResult : GeocodingResult) : Address {
     var address = new Address()
 
     // confidence can be "High", "Medium". or "Low"
     var confidence = geocodeResult.Confidence
-    if ( confidence == "High" ) {
+    if (confidence == "High") {
       address.GeocodeStatus = GeocodeStatus.TC_EXACT
-    } else if ( confidence == "Medium" ) {
+    } else if (confidence == "Medium") {
       address.GeocodeStatus = GeocodeStatus.TC_POSTALCODE
     } else if (confidence == "Low") {
       address.GeocodeStatus = GeocodeStatus.TC_CITY
@@ -207,20 +215,20 @@ class BingMapsPluginRest extends AbstractGeocodePlugin implements InitializableP
     var bingMapsAddress = geocodeResult.Address
     address.AddressLine1 = bingMapsAddress.AddressLine
     address.City = bingMapsAddress.Locality
-    address.State = getStateByNameOrCode( bingMapsAddress.AdminDistrict )
+    address.State = getStateByNameOrCode(bingMapsAddress.AdminDistrict)
     address.PostalCode = bingMapsAddress.PostalCode
-    address.Country = getCountryTypeCodeByName( bingMapsAddress.CountryRegion )
-    
+    address.Country = getCountryTypeCodeByName(bingMapsAddress.CountryRegion)
+
     // get the first location from the list
     var latLong = geocodeResult.Point.Coordinates
-    
+
     address.SpatialPoint = new SpatialPoint(latLong.get(1), latLong.get(0))
-    
+
     return address
   }
 
-  private function extractDrivingDirectionsFromBingMapsCalculateRouteResponse(calculateRouteResponse : RoutingResponse, startAddress : Address, finishAddress : Address, unit : UnitOfDistance ) : DrivingDirections {
-    var drivingDirections = DrivingDirections.createPreparedDrivingDirections( startAddress, finishAddress, unit )
+  private function extractDrivingDirectionsFromBingMapsCalculateRouteResponse(calculateRouteResponse : RoutingResponse, startAddress : Address, finishAddress : Address, unit : UnitOfDistance) : DrivingDirections {
+    var drivingDirections = DrivingDirections.createPreparedDrivingDirections(startAddress, finishAddress, unit)
     var result = calculateRouteResponse.Result?.first()
     var calcTotalTime : java.math.BigDecimal = 0
     var calcTotalDistance : java.math.BigDecimal = 0
@@ -232,17 +240,17 @@ class BingMapsPluginRest extends AbstractGeocodePlugin implements InitializableP
     }
 
     var routeLegs = result.RouteLegs
-    for ( var routeLeg in routeLegs ) {
+    for (var routeLeg in routeLegs) {
       var itineraryItems = routeLeg.ItineraryItems
-      for ( var itineraryItem in itineraryItems ) {
+      for (var itineraryItem in itineraryItems) {
         var itineraryItemInstruction = itineraryItem.Instruction
         calcTotalTime += itineraryItem.TravelDuration
         calcTotalDistance += itineraryItem.TravelDistance
-        var instruction = removeVirtualEarthMarkupTags( itineraryItemInstruction.FormattedText ?: itineraryItemInstruction.Text )
+        var instruction = removeVirtualEarthMarkupTags(itineraryItemInstruction.FormattedText ?: itineraryItemInstruction.Text)
         var childItineraryItems = itineraryItem.ChildItineraryItems
         for (var child in childItineraryItems) {
-          var childInstruction = removeVirtualEarthMarkupTags( child.Instruction.FormattedText ?: child.Instruction.Text )
-          drivingDirections.addNewElement( formatDrivingInstruction( instruction + "\n" + childInstruction), itineraryItem.TravelDistance, itineraryItem.TravelDuration as Integer )
+          var childInstruction = removeVirtualEarthMarkupTags(child.Instruction.FormattedText ?: child.Instruction.Text)
+          drivingDirections.addNewElement(formatDrivingInstruction(instruction + "\n" + childInstruction), itineraryItem.TravelDistance, itineraryItem.TravelDuration as Integer)
         }
         if (childItineraryItems == null || childItineraryItems.Empty) {
           drivingDirections.addNewElement(formatDrivingInstruction(instruction), itineraryItem.TravelDistance, itineraryItem.TravelDuration as Integer)
@@ -254,46 +262,60 @@ class BingMapsPluginRest extends AbstractGeocodePlugin implements InitializableP
     return drivingDirections
   }
 
-  private function removeVirtualEarthMarkupTags( itineraryItemText : String ) : String {
-    final var matcher = REGEX_MARKUP_TAG.matcher( itineraryItemText )
+  private function removeVirtualEarthMarkupTags(itineraryItemText : String) : String {
+    final var matcher = REGEX_MARKUP_TAG.matcher(itineraryItemText)
     return matcher.replaceAll("")
   }
 
-  private function setMapOverviewUrlForDrivingDirections( drivingDirections : DrivingDirections, startLatLong : LatLong, finishLatLong : LatLong ) : void {
-    var mapOverviewUrl = getBingMapsImageryRESTUrl( "Routes" )
+  private function setMapOverviewUrlForDrivingDirections(drivingDirections : DrivingDirections, startLatLong : LatLong, finishLatLong : LatLong) : void {
+    var mapOverviewUrl = getBingMapsImageryRESTUrl("Routes")
 
     // set waypoint params
-    mapOverviewUrl += "&wp.0=" + getPoint( startLatLong )
-    mapOverviewUrl += "&wp.1=" + getPoint( finishLatLong )
+    mapOverviewUrl += "&wp.0=" + getPoint(startLatLong)
+    mapOverviewUrl += "&wp.1=" + getPoint(finishLatLong)
 
-    drivingDirections.setMapOverviewUrl( mapOverviewUrl )
+    drivingDirections.setMapOverviewUrl(mapOverviewUrl)
   }
 
-  private function getBingMapsImageryRESTUrl( RESTEntryPoint : String ) : String {
+  private function getBingMapsImageryRESTUrl(RESTEntryPoint : String) : String {
     var bingMapsImageryRESTUrl = "http://dev.virtualearth.net/REST/v1/Imagery/Map/Road/" + RESTEntryPoint
 
     // set application key
+    updateApplicationKey()
     bingMapsImageryRESTUrl += "?key=" + _applicationKey
     // set culture
     var localLocale = User.util.CurrentLanguage.JavaLocale
     var localCulture = _mapping.ImageCodes.get(localLocale)
     bingMapsImageryRESTUrl += "&c=" + (localCulture == null ? _imageryCulture : localCulture)
     // set map size in pixels
-     bingMapsImageryRESTUrl += "&mapSize=" + _mapUrlWidth + "," + _mapUrlHeight
+    bingMapsImageryRESTUrl += "&mapSize=" + _mapUrlWidth + "," + _mapUrlHeight
 
     return bingMapsImageryRESTUrl
   }
 
-  private function getPoint( latLong : LatLong ) : String {
+  private function getPoint(latLong : LatLong) : String {
     return latLong._latitude + "," + latLong._longitude
   }
-  
+
   override public function pluginSupportsDrivingDirections() : boolean {
     return true
   }
 
   override public function pluginReturnsOverviewMapWithDrivingDirections() : boolean {
     return true
+  }
+
+  private function updateApplicationKey() : void {
+    if (StringUtils.isBlank(_applicationKey)) {
+      try {
+        var plugin = Plugins.get(CredentialsPlugin)
+        var cred = plugin.retrieveUsernameAndPassword(BING_MAPS)
+        _applicationKey = cred.getPassword()
+      } catch (e : NullPointerException) {
+        _logger.error("Exception retrieving Bing Maps application key", null, e)
+        throw new DisplayableException("Exception retrieving Bing Maps application key", e)
+      }
+    }
   }
 
 }

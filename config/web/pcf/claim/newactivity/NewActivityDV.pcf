@@ -144,7 +144,17 @@
         required="true"
         sortValueRange="false"
         value="AssigneeHolder[0]"
-        valueRange="Activity.SuggestedAssignees"/>
+        valueRange="Activity.SuggestedAssignees">
+        <PostOnChange
+          onChange="Activity.SelGrpTypeForAssign_Ext = null"/>
+      </CCAssigneeInput>
+      <TypeKeyInput
+        available="AssigneeHolder[0].toString() == DisplayKey.get(&quot;NVV.Activity.NewActivity.Activity.AutoAssign_Ext&quot;) "
+        editable="true"
+        id="GroupType_Ext"
+        label="DisplayKey.get(&quot;NVV.Activity.NewActivity.Activity.GroupType_Ext&quot;)"
+        value="Activity.SelGrpTypeForAssign_Ext"
+        valueType="typekey.GroupType"></TypeKeyInput>
       <InputDivider/>
       <InputSetRef
         def="ActivityDocumentInputSet(Activity)"

@@ -127,12 +127,14 @@
         id="Severity"
         label="DisplayKey.get(&quot;NVV.Exposure.SubView.NewGeneralDamage.Severity&quot;)"
         value="Exposure.Incident.Severity"
-        valueType="typekey.SeverityType"/>
+        valueType="typekey.SeverityType"
+        __disabled="true"/>
       <TextAreaInput
         editable="true"
         id="Description"
         label="DisplayKey.get(&quot;NVV.Exposure.SubView.NewGeneralDamage.Description&quot;)"
         numRows="3"
+        required="true"
         value="Exposure.Incident.Description"/>
       <CurrencyInput
         editable="true"

@@ -61,6 +61,11 @@ enhancement GWClaimantEnhancement : entity.Person {
                                   this.PassportNumber = null
                                   this.VisaNumber = null
                                   break
+      case null:                  this.GreenCardNumber = null
+                                  this.JurisdictionAssignedID = null
+                                  this.PassportNumber = null
+                                  this.VisaNumber = null
+                                  break
 
       default:                    throw new IllegalArgumentException("Invalid ClaimantIDType set to the Person.ClaimantIDType.")
 

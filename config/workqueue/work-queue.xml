@@ -74,7 +74,7 @@
   </work-queue>
 
   <work-queue workQueueClass="com.guidewire.pl.domain.geodata.geocode.GeocodeWorkQueue" progressinterval="600000">
-    <worker instances="1" batchsize="100"/>
+    <worker instances="10" batchsize="100"/>
   </work-queue>
 
   <work-queue workQueueClass="com.guidewire.cc.domain.claim.impl.ClaimValidationWorkQueue" progressinterval="600000">

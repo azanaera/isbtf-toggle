@@ -191,6 +191,8 @@
         </Toolbar>
       </ListViewInput>
       <InputDivider/>
+      <Label
+        label="DisplayKey.get(&quot;NVV.Exposure.SubView.NewGeneralDamage.Exposure.Coding&quot;)"/>
       <TypeKeyInput
         editable="true"
         id="RepresentationLevel_Ext"

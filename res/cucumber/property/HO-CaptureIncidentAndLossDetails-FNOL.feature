@@ -54,7 +54,7 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
   Scenario: Capture property damage information during FNOL for a Homeowners policy
     Given a Homeowners policy
     When I start filing a claim
-    And I set claim loss cause to "Fire"
+    And I set claim loss cause to "Hurricane"
     And I add a property damage liability
       | Property Description | Damage Description | Loss Estimate | Address 1     | City          | State      |
       | Prop description     | Damage description | 500           | 1 Main Street | San Francisco | California |
@@ -67,7 +67,7 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
   Scenario: Capture Bodily Injury Information
     Given a Homeowners policy
     When I start filing a claim
-    And I set claim loss cause to "Fire"
+    And I set claim loss cause to "Hurricane"
     And I add an "Insured's loss" injury incident
     And I finish filing the claim
     Then an injury incident should be created on the claim
@@ -76,21 +76,21 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
   Scenario: Filing a new Homeowners claim with a fire loss cause
     Given a Homeowners policy
     When I start filing a claim
-    And I set claim loss cause to "Fire"
+    And I set claim loss cause to "Fire/Smoke"
     And I set the damage type to "Fire"
     And I answer the fire questions
-      | Arson Involved? | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
-      | Yes             | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
+      | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
+      | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
     And I finish filing the claim
     Then the fire questions should be answered on the claim
-      | Arson Involved? | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
-      | Yes             | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
+      | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
+      | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
 
   @23740-GW
   Scenario: Filing a new Homeowners claim with a Water loss cause
     Given a Homeowners policy
     When I start filing a claim
-    And I set claim loss cause to "Water damage"
+    And I set claim loss cause to "Water"
     And I set the damage type to "Water"
     And I answer the water questions
       | Source Of The Water | Is The Roof Damage Covered? |
@@ -108,11 +108,11 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
     And the claim was reported by the Insured
     And I add a person contact with "Other" role
     And I add a note
-    And I set claim loss cause to "Fire"
+    And I set claim loss cause to "Fire/Smoke"
     And I set the damage type to "Fire"
     And I answer the fire questions
-      | Arson Involved? | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
-      | Yes             | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
+      | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
+      | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
     And I add a dwelling incident
       | Damage Description  | <Damage Description> |
       | Materials Damaged   | <Materials Damaged>  |
@@ -124,10 +124,10 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
     And I add a "Insured's loss" injury incident
     And I add a bodily injury exposure
     And I finish filing the claim
-    Then the claim loss cause should be "Fire"
+    Then the claim loss cause should be "Fire/Smoke"
     And the fire questions should be answered on the claim
-      | Arson Involved? | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
-      | Yes             | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
+      | Source Of The Fire   | How Was The Fire Discovered? | Fire Department Responded? | Is Anyone Injured? | Smoke Damage Only? | Is The Home Habitable? | Is The Home Secure? |
+      | Gasoline soaked rags | I saw it on fire             | Yes                        | No                 | No                 | No                     | No                  |
     And the following dwelling incident should exist on the claim
       | Damage Description  | <Damage Description> |
       | Materials Damaged   | <Materials Damaged>  |

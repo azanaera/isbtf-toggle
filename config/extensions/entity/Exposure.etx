@@ -42,4 +42,9 @@
     name="ClaimantRepresentation_Ext"
     nullok="true"
     type="bit"/>
+  <typekey
+    desc="Selected Group Type For Assignment from the Assignment Screen"
+    name="SelGrpTypeForAssign_Ext"
+    nullok="true"
+    typelist="GroupType"/>  
 </extension>

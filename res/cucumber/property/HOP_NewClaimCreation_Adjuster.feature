@@ -21,11 +21,11 @@ Feature: New Claim Creation ~ HOP_NewClaimCreation_Adjuster
     # Given no existing "Homeowners" policy
     When I start filing a claim
     And I create an unverified Homeowners policy
-    And I set claim loss cause to "Fire"
+    And I set claim loss cause to "Fire/Smoke"
     And I add a "Insured's loss" injury incident
     And I finish filing the claim
     Then a "Homeowners" claim should be created
-    And the claim loss cause should be "Fire"
+    And the claim loss cause should be "Fire/Smoke"
     And an injury incident should be created on the claim
     And the injury loss party type should be "Insured's loss"
     And the policy on the claim should be unverified

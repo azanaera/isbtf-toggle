@@ -44,13 +44,37 @@ enhancement ScriptParametersEnhancement: ScriptParameters {
   public static property get ParentGroupType_Generalists_Ext(): String {
     return ScriptParameters.getParameterValue("ParentGroupType_Generalists_Ext") as String;
   }
+  public static property get ParentGroupType_Renters_Ext(): String {
+    return ScriptParameters.getParameterValue("ParentGroupType_Renters_Ext") as String;
+  }
+  public static property get ParentGroupType_Claims_Ext(): String {
+    return ScriptParameters.getParameterValue("ParentGroupType_Claims_Ext") as String;
+  }
+  public static property get ParentGroupType_Shared_Ext(): String {
+    return ScriptParameters.getParameterValue("ParentGroupType_Shared_Ext") as String;
+  }
 
+  public static property get ParentGroupType_HOwn_Ext(): String {
+    return ScriptParameters.getParameterValue("ParentGroupType_HOwn_Ext") as String;
+  }
+  public static property get AllSharedServices_Ext(): String {
+    return ScriptParameters.getParameterValue("AllSharedServices_Ext") as String;
+  }
   public static property get VendorAvailability_Ext(): String {
     return ScriptParameters.getParameterValue("VendorAvailability_Ext") as String;
   }
+  public static property get DefaultGroupName_Auto_Ext(): String {
+    return ScriptParameters.getParameterValue("DefaultGroupName_Auto_Ext") as String;
+  }
 
+  public static property get DefaultGroupName_HOwn_Ext(): String {
+    return ScriptParameters.getParameterValue("DefaultGroupName_HOwn_Ext") as String;
+  }
   public static property get BoxDevToken_Temp_Ext(): String {
     return ScriptParameters.getParameterValue("BoxDevToken_Temp_Ext") as String;
+  }
+  public static property get ParentGroupType_Auto_Ext(): String {
+    return ScriptParameters.getParameterValue("ParentGroupType_Auto_Ext") as String;
   }
 
   public static property get CA_State_Withholding_Ext(): Double {

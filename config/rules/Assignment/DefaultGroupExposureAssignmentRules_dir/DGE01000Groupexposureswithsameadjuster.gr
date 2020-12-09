@@ -2,6 +2,7 @@ package rules.Assignment.DefaultGroupExposureAssignmentRules_dir
 uses gw.api.locale.DisplayKey
 uses gw.api.system.CCLoggerCategory
 
+@gw.rules.RuleDisabled
 @gw.rules.RuleName("DGE01000 - Group exposures with same adjuster")
 internal class DGE01000Groupexposureswithsameadjuster {
   static function doCondition(exposure : entity.Exposure) : boolean {

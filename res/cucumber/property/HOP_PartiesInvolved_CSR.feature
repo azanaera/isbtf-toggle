@@ -11,6 +11,7 @@ Feature: Parties Involved ~ HOP_PartiesInvolved_CSR
     Given a Homeowners policy
     When I start filing a claim
     And I add a person contact with "Other" role
+    And I set claim loss cause to "Fire/Smoke"
     And I finish filing the claim
     Then a "Homeowners" claim should be created
     And a person contact with "Other" role should be on the claim

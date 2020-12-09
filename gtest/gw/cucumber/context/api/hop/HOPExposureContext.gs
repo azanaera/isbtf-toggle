@@ -17,4 +17,13 @@ interface HOPExposureContext extends ExposureContext {
    */
   function verifyExposureReferencingDwellingIncident()
 
+  /**
+   * Create a blanket exposure on claim
+   */
+  function addBlanketExposure()
+
+  /**
+   * Verify the blanket exposure on claim references the personal property incident
+   */
+  function verifyExposureReferencingPersonalPropertyIncident()
 }

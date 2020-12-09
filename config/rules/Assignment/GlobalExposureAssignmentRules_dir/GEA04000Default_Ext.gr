@@ -1,0 +1,24 @@
+package rules.Assignment.GlobalExposureAssignmentRules_dir
+uses gw.api.locale.DisplayKey
+uses gw.api.system.CCLoggerCategory
+uses gw.surepath.suite.integration.logging.StructuredLogger
+
+@gw.rules.RuleName("GEA04000 - Default_Ext")
+internal class GEA04000Default_Ext {
+  static function doCondition(exposure  :  entity.Exposure) : boolean {
+/*start00rule*/
+    return true
+/*end00rule*/
+}
+
+  static function doAction(exposure  :  entity.Exposure, actions : gw.rules.Action) {
+/*start00rule*/
+    var logger = StructuredLogger.RULES
+    exposure.CurrentAssignment.assignToIssueOwner()
+    logger.debug(DisplayKey.get("Rules.Assignment.Global.Exposure", actions.ShortRuleName))
+    logger.debug(DisplayKey.get("Rules.Assignment.AssignedGroupIs", exposure.AssignedGroup))
+    logger.debug(DisplayKey.get("Rules.Assignment.AssignedUserIs", exposure.AssignedUser))
+    actions.exit()
+/*end00rule*/
+  }
+}

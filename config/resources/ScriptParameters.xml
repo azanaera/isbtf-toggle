@@ -48,6 +48,38 @@
       <ResourceContexts length="50"/>
       <ParamValue>GENRLISTROOT_EXT</ParamValue>
     </ScriptParameterPack>
+    <ScriptParameterPack ParamName="ParentGroupType_Renters_Ext" ParamType="varchar">
+      <ResourceContexts length="50"/>
+      <ParamValue>RENTERSROOT_EXT</ParamValue>
+    </ScriptParameterPack>
+    <ScriptParameterPack ParamName="ParentGroupType_Auto_Ext" ParamType="varchar">
+      <ResourceContexts length="50"/>
+      <ParamValue>autonormal</ParamValue>
+    </ScriptParameterPack>
+    <ScriptParameterPack ParamName="ParentGroupType_HOwn_Ext" ParamType="varchar">
+      <ResourceContexts length="50"/>
+      <ParamValue>propnormal</ParamValue>
+    </ScriptParameterPack>
+    <ScriptParameterPack ParamName="ParentGroupType_Shared_Ext" ParamType="varchar">
+      <ResourceContexts length="50"/>
+      <ParamValue>hq</ParamValue>
+    </ScriptParameterPack>
+    <ScriptParameterPack ParamName="DefaultGroupName_Auto_Ext" ParamType="varchar">
+      <ResourceContexts length="100"/>
+      <ParamValue>Toggle Auto East Zone Generalist Claims</ParamValue>
+    </ScriptParameterPack>
+    <ScriptParameterPack ParamName="DefaultGroupName_HOwn_Ext" ParamType="varchar">
+      <ResourceContexts length="100"/>
+      <ParamValue>Toggle Renters Claims MGR 1</ParamValue>
+    </ScriptParameterPack>
+    <ScriptParameterPack ParamName="AllSharedServices_Ext" ParamType="varchar">
+      <ResourceContexts length="255"/>
+      <ParamValue>salvage,siu,autosalvage_ext,hosalvage_ext</ParamValue>
+    </ScriptParameterPack>
+    <ScriptParameterPack ParamName="ParentGroupType_Claims_Ext" ParamType="varchar">
+      <ResourceContexts length="50"/>
+      <ParamValue>CLAIMROOT_EXT</ParamValue>
+    </ScriptParameterPack>
     <ScriptParameterPack ParamName="VendorAvailability_Ext" ParamType="varchar">
       <ResourceContexts length="50"/>
       <ParamValue>available</ParamValue>

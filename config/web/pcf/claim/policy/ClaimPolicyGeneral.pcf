@@ -100,6 +100,10 @@
           id="ViewInPC"
           label="DisplayKey.get(&quot;Button.ViewInPC&quot;)"
           visible="gw.api.system.CCConfigParameters.PolicySystemURL.Value.HasContent and perm.System.viewpolicysystem"/>
+        <ToolbarButton
+          action="CurrentLocation.startEditing();Claim.Policy.Verified = true;CurrentLocation.commit()"
+          id="TempButton_Ext"
+          label="&quot;Temporary Button to Verify Policy&quot;"/>
       </Toolbar>
       <PanelRef
         def="PolicyGeneralPanelSet(Claim.Policy, Claim)"

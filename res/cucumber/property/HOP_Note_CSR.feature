@@ -10,6 +10,7 @@ Feature: Note ~ HOP_Note_CSR
   Scenario: Adding a note to a new Homeowners claim
     Given a Homeowners policy
     When I start filing a claim
+    And I set claim loss cause to "Fire/Smoke"
     And I add a note
     And I finish filing the claim
     Then a "Homeowners" claim should be created

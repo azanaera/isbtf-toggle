@@ -1,0 +1,741 @@
+<?xml version="1.0"?>
+<import xmlns="http://guidewire.com/cc/exim/import" version="p8.50.a13.301.179">
+  <Region public-id="demo_sample:5">
+    <Name>Alexandria Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:53">
+        <Code>DC</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:5"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:54">
+        <Code>MD</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:5"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:55">
+        <Code>NC</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:5"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:56">
+        <Code>VA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:5"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:57">
+        <Code>WV</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:5"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:6">
+    <Name>Birmingham Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:58">
+        <Code>AL</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:6"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:59">
+        <Code>KY</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:6"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:60">
+        <Code>MS</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:6"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:61">
+        <Code>TN</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:6"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:7">
+    <Name>Boise Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:62">
+        <Code>ID</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:7"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:63">
+        <Code>MT</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:7"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:8">
+    <Name>Boston Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:64">
+        <Code>MA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:8"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:65">
+        <Code>ME</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:8"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:66">
+        <Code>NH</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:8"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:67">
+        <Code>VT</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:8"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:9">
+    <Name>Bridgeport Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:68">
+        <Code>CT</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:9"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:69">
+        <Code>NY</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:9"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:70">
+        <Code>RI</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:9"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:10">
+    <Name>Cleveland Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:71">
+        <Code>IL</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:10"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:72">
+        <Code>IN</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:10"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:73">
+        <Code>MI</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:10"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:74">
+        <Code>OH</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:10"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:75">
+        <Code>WI</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:10"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:11">
+    <Name>Dallas Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:76">
+        <Code>AR</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:11"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:77">
+        <Code>LA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:11"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:78">
+        <Code>OK</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:11"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:79">
+        <Code>TX</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:11"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:12">
+    <Name>Denver Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:80">
+        <Code>CO</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:12"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:81">
+        <Code>WY</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:12"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:3">
+    <Name>Eastern Part of Mid-west</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:33">
+        <Code>AL</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:3"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:34">
+        <Code>IL</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:3"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:35">
+        <Code>IN</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:3"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:36">
+        <Code>KY</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:3"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:37">
+        <Code>MI</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:3"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:38">
+        <Code>MS</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:3"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:39">
+        <Code>TN</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:3"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:40">
+        <Code>OH</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:3"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:41">
+        <Code>WI</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:3"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:2">
+    <Name>Eastern Region</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:14">
+        <Code>CT</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:15">
+        <Code>DC</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:16">
+        <Code>DE</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:17">
+        <Code>FL</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:18">
+        <Code>GA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:19">
+        <Code>MA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:20">
+        <Code>MD</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:21">
+        <Code>ME</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:22">
+        <Code>NC</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:23">
+        <Code>NH</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:24">
+        <Code>NJ</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:25">
+        <Code>NY</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:26">
+        <Code>PA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:27">
+        <Code>PR</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:28">
+        <Code>RI</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:29">
+        <Code>SC</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:30">
+        <Code>VA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:31">
+        <Code>VT</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:32">
+        <Code>WV</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:2"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:13">
+    <Name>Los Angeles Claims Center - HI</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:82">
+        <Code>HI</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:13"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:15">
+    <Name>Minneapolis Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:93">
+        <Code>MN</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:15"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:94">
+        <Code>ND</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:15"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:95">
+        <Code>SD</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:15"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:16">
+    <Name>Phoenix Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:96">
+        <Code>AZ</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:16"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:97">
+        <Code>NM</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:16"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:17">
+    <Name>Portland Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:100">
+        <Code>WA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:17"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:98">
+        <Code>AK</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:17"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:99">
+        <Code>OR</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:17"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:19">
+    <Name>Salt Lake City Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:149">
+        <Code>NV</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:19"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:150">
+        <Code>UT</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:19"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:20">
+    <Name>St. Louis Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:151">
+        <Code>IA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:20"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:152">
+        <Code>KS</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:20"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:153">
+        <Code>MO</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:20"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:154">
+        <Code>NE</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:20"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:21">
+    <Name>Tampa Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:155">
+        <Code>FL</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:21"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:156">
+        <Code>GA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:21"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:157">
+        <Code>PR</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:21"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:158">
+        <Code>SC</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:21"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:22">
+    <Name>Trenton Claims Center</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:159">
+        <Code>DE</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:22"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:160">
+        <Code>NJ</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:22"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:161">
+        <Code>PA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:22"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:4">
+    <Name>Western Part of Mid-west</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:42">
+        <Code>AR</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:4"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:43">
+        <Code>IA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:4"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:44">
+        <Code>KS</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:4"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:45">
+        <Code>LA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:4"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:46">
+        <Code>MN</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:4"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:47">
+        <Code>OK</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:4"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:48">
+        <Code>MO</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:4"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:49">
+        <Code>ND</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:4"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:50">
+        <Code>NE</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:4"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:51">
+        <Code>SD</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:4"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:52">
+        <Code>TX</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:4"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+  <Region public-id="demo_sample:1">
+    <Name>Western Region</Name>
+    <Name_L10N_ARRAY/>
+    <RegionZones>
+      <RegionZone public-id="demo_sample:1">
+        <Code>AK</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:10">
+        <Code>OR</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:11">
+        <Code>UT</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:12">
+        <Code>WA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:13">
+        <Code>WY</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:2">
+        <Code>AZ</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:3">
+        <Code>CA</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:4">
+        <Code>CO</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:5">
+        <Code>HI</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:6">
+        <Code>ID</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:7">
+        <Code>MT</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:8">
+        <Code>NM</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+      <RegionZone public-id="demo_sample:9">
+        <Code>NV</Code>
+        <Country>US</Country>
+        <Region public-id="demo_sample:1"/>
+        <ZoneType>state</ZoneType>
+      </RegionZone>
+    </RegionZones>
+  </Region>
+</import>
