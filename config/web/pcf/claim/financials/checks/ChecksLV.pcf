@@ -25,12 +25,13 @@
           label="DisplayKey.get(&quot;LV.Financials.Checks.CheckNumber&quot;)"
           printWidth="0.15"
           value="CheckView.CheckNumber"/>
-        <TextCell
+        <TextAreaCell
           align="left"
           id="PayTo"
           label="DisplayKey.get(&quot;LV.Financials.Checks.PayTo&quot;)"
+          numRows="2"
           printWidth="0.20"
-          value="CheckView.PayTo2_Ext != null ? CheckView.PayTo + CheckView.PayTo2_Ext : CheckView.PayTo"/>
+          value="CheckView.PayTo2_Ext != null ? CheckView.PayTo + &quot;\n&quot; + CheckView.PayTo2_Ext : CheckView.PayTo"/>
         <CurrencyCell
           action="ClaimFinancialsChecksDetail.go(Claim, CheckView.Check)"
           formatType="currency"

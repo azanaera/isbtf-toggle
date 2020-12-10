@@ -10,14 +10,10 @@
     <InputColumn>
       <Label
         label="DisplayKey.get(&quot;NVV.Financials.Check&quot;)"/>
-      <TextInput
+      <TextAreaInput
         id="PayTo"
         label="DisplayKey.get(&quot;NVV.Financials.Check.PayTo&quot;)"
-        value="Check.PayTo"
-        visible="Check.PaymentMethod != PaymentMethod.TC_EFT"/>
-      <TextInput
-        id="PayTo2_Ext"
-        value="Check.PayTo2_Ext"
+        value="Check.PayTo2_Ext != null ? Check.PayTo + &quot;\n&quot; + Check.PayTo2_Ext : Check.PayTo"
         visible="Check.PaymentMethod != PaymentMethod.TC_EFT"/>
       <TextInput
         id="MailingAddress"
