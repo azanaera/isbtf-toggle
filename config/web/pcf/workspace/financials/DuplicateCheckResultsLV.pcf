@@ -14,11 +14,11 @@
       value="CheckList"
       valueType="entity.Check[]">
       <Row>
-        <TextCell
+        <TextAreaCell
           id="PayTo"
           label="DisplayKey.get(&quot;LV.Financials.DuplicateCheckResults.PayTo&quot;)"
           sortOrder="1"
-          value="Check.PayTo"/>
+          value="Check.PayTo2_Ext != null ? Check.PayTo + &quot;\n&quot; + Check.PayTo2_Ext : Check.PayTo"/>
         <TextCell
           id="MailingAddress"
           label="DisplayKey.get(&quot;LV.Financials.DuplicateCheckResults.MailingAddress&quot;)"

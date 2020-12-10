@@ -15,10 +15,10 @@
       label="DisplayKey.get(&quot;NVV.Financials.SubView.TransactionPaymentDetails.Payment.Check.Status&quot;)"
       value="Payment.Check.Status"
       valueType="typekey.TransactionStatus"/>
-    <TextInput
+    <TextAreaInput
       id="Check_PayTo"
       label="DisplayKey.get(&quot;NVV.Financials.SubView.TransactionPaymentDetails.Payment.Check.PayTo&quot;)"
-      value="Payment.Check.PayTo"/>
+      value="Payment.Check.PayTo2_Ext != null ? Payment.Check.PayTo + &quot;\n&quot; + Payment.Check.PayTo2_Ext : Payment.Check.PayTo"/>
     <CurrencyInput
       id="Check_NetAmount"
       label="DisplayKey.get(&quot;NVV.Financials.SubView.TransactionPaymentDetails.Payment.Check.NetAmount&quot;)"

@@ -658,18 +658,46 @@
   </typelist>
 
   <typelist name="LossCause">
-    <mapping typecode="glassbreakage" namespace="iso" alias="GLSS"/>
-    <mapping typecode="tow_and_roadside_ext" namespace="iso" alias="TOWL"/>
     <mapping typecode="animal" namespace="iso" alias="ANML"/>
-    <mapping typecode="theftparts" namespace="iso" alias="PTFT"/>
-    <mapping typecode="theftentire" namespace="iso" alias="THFT"/>
-    <mapping typecode="vandalism" namespace="iso" alias="VAMM"/>
-    <mapping typecode="riotandcivil" namespace="iso" alias="VAMM"/>
-    <mapping typecode="hail" namespace="iso" alias="HAIL"/>
+    <mapping typecode="animal_bite" namespace="iso" alias="OTPR"/>
+    <mapping typecode="breakage_ext" namespace="iso" alias="OTPR"/>
+    <mapping typecode="burglary" namespace="iso" alias="BURG"/>
+    <mapping typecode="earth_mov_ext" namespace="iso" alias="ERTH"/>
+    <mapping typecode="earthquake_ho_ext" namespace="iso" alias="ERTH"/>
+    <mapping typecode="explosion_ext" namespace="iso" alias="EXPL"/>
     <mapping typecode="fire" namespace="iso" alias="FIRE"/>
-    <mapping typecode="smoke_ext" namespace="iso" alias="FIRE"/>
+    <mapping typecode="fire_smoke_ext" namespace="iso" alias="FIRE"/>
     <mapping typecode="flood_ext" namespace="iso" alias="FLOD"/>
+    <mapping typecode="glassbreakage" namespace="iso" alias="GLSS"/>
+    <mapping typecode="hail" namespace="iso" alias="HAIL"/>
+    <mapping typecode="hurricane_ho_ext" namespace="iso" alias="OTPR"/>
+    <mapping typecode="iden_theft_ext" namespace="iso" alias="OTPR"/>
+    <mapping typecode="lightning_ext" namespace="iso" alias="LGHT"/>
+    <mapping typecode="mold" namespace="iso" alias="MOLD"/>
+    <mapping typecode="myst_disp_ext" namespace="iso" alias="MYSD"/>
     <mapping typecode="other_ext" namespace="iso" alias="OTAU"/>
+    <mapping typecode="other_ho_ext" namespace="iso" alias="OTPR"/>
+    <mapping typecode="pers_inj_ext" namespace="iso" alias="OTPR"/>
+    <mapping typecode="pollution_ext" namespace="iso" alias="CNTP"/>
+    <mapping typecode="powerout_surge_ext" namespace="iso" alias="ELEC"/>
+    <mapping typecode="riotandcivil" namespace="iso" alias="VAMM"/>
+    <mapping typecode="riotandcivil_ho_ext" namespace="iso" alias="RIOT"/>
+    <mapping typecode="sewer_drain_ext" namespace="iso" alias="OTPR"/>
+    <mapping typecode="slip_fall_ext" namespace="iso" alias="OTPR"/>
+    <mapping typecode="smoke_ext" namespace="iso" alias="FIRE"/>
+    <mapping typecode="snowice" namespace="iso" alias="WISS"/>
+    <mapping typecode="structfailure" namespace="iso" alias="CLPS"/>
+    <mapping typecode="theft_ext" namespace="iso" alias="THFT"/>
+    <mapping typecode="theftentire" namespace="iso" alias="THFT"/>
+    <mapping typecode="theftparts" namespace="iso" alias="PTFT"/>
+    <mapping typecode="tornado_ext" namespace="iso" alias="OTPR"/>
+    <mapping typecode="tow_and_roadside_ext" namespace="iso" alias="TOWL"/>
+    <mapping typecode="vand_malmis_ext" namespace="iso" alias="VAMM"/>
+    <mapping typecode="vandalism" namespace="iso" alias="VAMM"/>
+    <mapping typecode="virus_ext" namespace="iso" alias="OTPR"/>
+    <mapping typecode="water_ho_ext" namespace="iso" alias="WATR"/>
+    <mapping typecode="wildfire_ext" namespace="iso" alias="FIRE"/>
+    <mapping typecode="wind" namespace="iso" alias="WIND"/>
   </typelist>
 
   <typelist name="AddressType">
