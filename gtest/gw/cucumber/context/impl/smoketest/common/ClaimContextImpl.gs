@@ -39,6 +39,9 @@ abstract class ClaimContextImpl extends CucumberStepBase implements ClaimContext
   protected var _policyDataSetWrapper : DataWrapper<PolicyDataSet>
 
   @Inject
+  protected var _policyWrapper : DataWrapper<Policy>
+
+  @Inject
   protected var _claimWrapper : DataWrapper<Claim>
 
   @Inject
@@ -735,6 +738,8 @@ abstract class ClaimContextImpl extends CucumberStepBase implements ClaimContext
     var criteria = searchCriteria.get()
 
     wizard.SelectPolicy.setToFindMode()
+    wizard.SelectPolicy.SearchPanel.date.setDateValue(Date.Today)
+    wizard.SelectPolicy.SearchPanel.policyNumber.setValue(_policyDataSetWrapper.get().PolicyNumber)
     wizard.SelectPolicy.setFirstName(criteria.get(DisplayKey.get("Web.ContactDetail.Person.FirstName")))
     wizard.SelectPolicy.setLastName(criteria.get(DisplayKey.get("Web.ContactDetail.Person.LastName")))
     wizard.SelectPolicy.setOrganizationName(criteria.get(DisplayKey.get("Web.AddressBook.Search.OrganizationName")))
@@ -756,7 +761,18 @@ abstract class ClaimContextImpl extends CucumberStepBase implements ClaimContext
   }
 
   override function setSearchCriteria(table : DataTable) {
-    searchCriteria.set(_policySearchData.get(table.asMaps(String, String).first().get("Search Data")))
+
+    var policy = _policyWrapper.get()
+    var polSearchData = new HashMap<String, Map<String, String>>()
+    {
+        "Search by name, SSN and VIN" -> {"First Name" -> policy.insured.Person.FirstName, "Last Name" -> policy.insured.Person.LastName, "VIN" -> policy.Vehicles[0].Vehicle.Vin},
+        "Search by Organization Name" -> {"Organization Name" -> ""},
+        "Search by City" -> {"Country" -> policy.insured.AllAddresses.first().Country.Value.DisplayName, "City" -> policy.insured.AllAddresses.first().City},
+        "Search by Policy Type" -> {"Policy Type" -> policy.PolicyType.DisplayName},
+        "Search by State" -> {"Country" -> policy.insured.AllAddresses.first().Country.DisplayName, "State" -> policy.insured.AllAddresses.first().State.DisplayName},
+        "Search by Zip Code" -> {"Country" -> "United States", "ZIP Code" -> _policyWrapper.get().insured.AllAddresses.first().CityStateZip}
+    }
+    searchCriteria.set(polSearchData.get(table.asMaps(String, String).first().get("Search Data")))
   }
 
   @SuppressWarnings("Method2Property")

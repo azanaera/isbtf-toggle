@@ -17,7 +17,8 @@ Feature: Search Verified Policies (Common-FNOL-03-Common_CSR)
 
   @23390-GW @ignore
   Scenario Outline: 2. Search for a policy to file a claim against verified policies
-    Given I have the following search data:
+    Given a Personal Auto policy
+    And I have the following search data:
       | Search Data   |
       | <Search Data> |
     When I search for a policy
