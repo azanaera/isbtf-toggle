@@ -1,6 +1,6 @@
 package rules.Assignment.GlobalExposureAssignmentRules_dir
+uses ext.config.assignment.AssignmentUtil_Ext
 uses gw.api.locale.DisplayKey
-uses gw.api.util.DisplayableException
 uses gw.surepath.suite.integration.logging.StructuredLogger
 
 @gw.rules.RuleName("GEA03000 - Assign Exposure By GroupType and Location_Ext")
@@ -16,7 +16,7 @@ internal class GEA03000AssignExposureByGroupTypeandLocation_Ext {
     var logger = StructuredLogger.RULES
     var grptyp = ext.config.assignment.AssignmentUtil_Ext.getGroupTypeExposure(exposure)
     var rootGroup = ext.config.assignment.AssignmentUtil_Ext.getRootGroupExposure(exposure, grptyp)
-    if (exposure.CurrentAssignment.assignGroupByLocation(grptyp, exposure.Claim.LossLocation, false, rootGroup)) {
+    if (exposure.CurrentAssignment.assignGroupByLocation(grptyp, AssignmentUtil_Ext.getAssignmentLocn(exposure.Claim), false, rootGroup)) {
       exposure.SelGrpTypeForAssign_Ext = null
       logger.debug(DisplayKey.get("Rules.Assignment.Global.Claim", actions.ShortRuleName))
       logger.debug(DisplayKey.get("Rules.Assignment.AssignedGroupIs", exposure.AssignedGroup))

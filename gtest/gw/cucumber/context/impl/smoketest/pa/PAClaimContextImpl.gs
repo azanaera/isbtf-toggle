@@ -43,7 +43,9 @@ class PAClaimContextImpl extends ClaimContextImpl implements PAClaimContext {
   protected var _exposureWrapper : DataWrapper<Exposure>
 
   override function createPolicyDataSet() {
-    var policy = new PolicyBuilder()
+    var policy : Policy
+    gw.transaction.Transaction.runWithNewBundle(\bundle -> {
+        policy = new PolicyBuilder()
         .uiReadyPersonalAuto()
         .withVerified(true)
         .withRiskUnit(new VehicleRUBuilder()
@@ -53,8 +55,9 @@ class PAClaimContextImpl extends ClaimContextImpl implements PAClaimContext {
                 .withIncidentLimit(15000bd.ofDefaultCurrency())
                 .withType(TC_COL_PA_EXT)))
         .create()
+      }, CurrentUser)
     (_policyDataSetWrapper.get() as PolicyDataSet).PolicyNumber = policy.PolicyNumber
-
+    _policyWrapper.set(policy)
     var policyPlugin = Plugins.get(IPolicySearchAdapter) as PolicyStorePlugin
     policyPlugin.addPolicy(policy)
   }

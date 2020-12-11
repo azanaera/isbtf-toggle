@@ -1,9 +1,7 @@
 package rules.Assignment.GlobalClaimAssignmentRules_dir.GCA00010Claims_dir
 uses gw.api.locale.DisplayKey
-uses gw.api.database.Query
-uses gw.api.util.DisplayableException
 uses gw.surepath.suite.integration.logging.StructuredLogger
-
+uses ext.config.assignment.AssignmentUtil_Ext
 @gw.rules.RuleName("GCAA00030 - Assign Claim By GroupType and Location_Ext")
 internal class GCAA00030AssignClaimByGroupTypeandLocation_Ext {
   static function doCondition(claim        :        entity.Claim) : boolean {
@@ -18,7 +16,7 @@ internal class GCAA00030AssignClaimByGroupTypeandLocation_Ext {
     var logger = StructuredLogger.RULES
     var grptyp = ext.config.assignment.AssignmentUtil_Ext.getGroupTypeClaim(claim)
     var rootGroup = ext.config.assignment.AssignmentUtil_Ext.getRootGroupClaim(claim, grptyp)
-    if (claim.CurrentAssignment.assignGroupByLocation(grptyp, claim.LossLocation, false, rootGroup)) {
+    if (claim.CurrentAssignment.assignGroupByLocation(grptyp, AssignmentUtil_Ext.getAssignmentLocn(claim), false, rootGroup)) {
       claim.SelGrpTypeForAssign_Ext = null
       logger.debug(DisplayKey.get("Rules.Assignment.Global.Claim", actions.ShortRuleName))
       logger.debug(DisplayKey.get("Rules.Assignment.AssignedGroupIs", claim.AssignedGroup))
