@@ -1,0 +1,225 @@
+[
+    {
+        "id": "b561f231-9884-4957-9127-d35fc458247e",
+        "status": "renewed",
+        "policy_number": "3450848191",
+        "service": {
+            "starts_at": "2020-04-25T00:33:00Z",
+            "renewal_cadence": "semi_annual"
+        },
+        "term_number": 1,
+        "starts_at": "2020-04-25T00:33:00Z",
+        "ends_at": "2020-10-24T00:00:00Z",
+        "canceled_at": null,
+        "created_at": "2020-04-25T00:34:22.512527Z",
+        "farmers_drivers": [
+            {
+                "id": "2f5f4b4f-1a9a-4beb-8ef0-36546d45abc7",
+                "person": {
+                    "id": "f0b8d98c-dc51-42db-aab7-eec0a4587df0",
+                    "first_name": "BELLE",
+                    "last_name": "DANIBIL",
+                    "email": null,
+                    "phone_number": null,
+                    "business_name": null,
+                    "company_name": null,
+                    "address": null,
+                    "dob": "1965-03-28",
+                    "marital_status": "married"
+                },
+                "add_date": "2020-04-25",
+                "deleted": null,
+                "relationship_to_insured": "self",
+                "role": "pni",
+                "driving_license_number": "00069024",
+                "driving_license_state": "TX",
+                "non_driver_reason": null
+            }
+        ],
+        "farmers_vehicles": [
+            {
+                "id": 350,
+                "make": "SUBARU",
+                "model": "LEGACY",
+                "style": "STATION WAGON",
+                "year": 1996,
+                "vin": "4S3BK4252T6309490",
+                "garage_address": {
+                    "id": "82dafcca-ed59-4b88-a92d-51f055e58d48",
+                    "line1": "109 York Place",
+                    "line2": null,
+                    "city": "Goose Creek",
+                    "county": "Berkeley County",
+                    "region": {
+                        "id": 41,
+                        "name": "South Carolina",
+                        "code": "SC"
+                    },
+                    "country": {
+                        "id": 1,
+                        "name": "United States",
+                        "alpha2": "US"
+                    },
+                    "postal": "29445",
+                    "timezone": null
+                },
+                "rideshare_use": false,
+                "add_date": "2020-04-25",
+                "deleted": null,
+                "lienholder": null,
+                "variables": [
+                    {
+                        "effective_date": "2020-04-25T00:34:22.676049Z",
+                        "variable": "towing_road_services",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-04-25T00:34:22.674273Z",
+                        "variable": "ridesharing",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-04-25T00:34:22.672954Z",
+                        "variable": "oem_parts",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-04-25T00:34:22.671531Z",
+                        "variable": "new_car_replacement",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-04-25T00:34:22.669150Z",
+                        "variable": "loan_lease_payoff",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-04-25T00:34:22.664440Z",
+                        "variable": "comprehensive_deductible",
+                        "value": "1000",
+                        "limit_of_occurrence": null,
+                        "purchased": true,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-04-25T00:34:22.659890Z",
+                        "variable": "collision_deductible",
+                        "value": "1000",
+                        "limit_of_occurrence": null,
+                        "purchased": true,
+                        "deleted": null
+                    }
+                ],
+                "new_ventures_vehicle_id": 1
+            }
+        ],
+        "coverage_variables": [
+            {
+                "effective_date": "2020-04-25T00:34:22.689159Z",
+                "variable": "bodily_injury_limit",
+                "value": "25000",
+                "limit_of_occurrence": "50000",
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-04-25T00:34:22.689217Z",
+                "variable": "medical_limit",
+                "value": null,
+                "limit_of_occurrence": null,
+                "purchased": false,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-04-25T00:34:22.689319Z",
+                "variable": "property_damage_limit",
+                "value": "25000",
+                "limit_of_occurrence": null,
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-04-25T00:34:22.689426Z",
+                "variable": "underinsured_motorist_bodily_injury_limit",
+                "value": "25000",
+                "limit_of_occurrence": "50000",
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-04-25T00:34:22.689472Z",
+                "variable": "underinsured_motorist_property_damage_limit",
+                "value": "25000",
+                "limit_of_occurrence": null,
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-04-25T00:34:22.689518Z",
+                "variable": "uninsured_motorist_bodily_injury_limit",
+                "value": "25000",
+                "limit_of_occurrence": "50000",
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-04-25T00:34:22.689563Z",
+                "variable": "uninsured_motorist_property_damage_limit",
+                "value": "25000",
+                "limit_of_occurrence": null,
+                "purchased": true,
+                "deleted": null
+            }
+        ],
+        "farmers_endorsements": [
+            {
+                "id": "8cf5122e-6fb7-4c74-b616-f74965a36fd7",
+                "vehicle_id": null,
+                "form_code": "SC943279",
+                "form_edition": "1ST",
+                "description": "Undisclosed Driver",
+                "created_at": "2020-04-25T00:34:22.686304Z",
+                "deleted": null
+            }
+        ],
+        "rating_address": {
+            "id": "7c04f51d-df4b-47c9-a6c1-ef6199f1cb61",
+            "line1": "109 York Place",
+            "line2": null,
+            "city": "Goose Creek",
+            "county": "Berkeley County",
+            "region": {
+                "id": 41,
+                "name": "South Carolina",
+                "code": "SC"
+            },
+            "country": {
+                "id": 1,
+                "name": "United States",
+                "alpha2": "US"
+            },
+            "postal": "29445",
+            "timezone": "America/New_York"
+        },
+        "company_code": "21687",
+        "company_name": "Mid-Century Insurance Company",
+        "state": "SC",
+        "edition_number": "1ST",
+        "form_number": "566180"
+    }
+]

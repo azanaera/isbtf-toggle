@@ -36,7 +36,7 @@
             focusOnStartEditing="true"
             id="policyNumber"
             label="DisplayKey.get(&quot;Web.SearchFindPolicyPanelSet.SearchPanel.PolicyNumber.Label&quot;)"
-            maxChars="20"
+            maxChars="50"
             required="true"
             value="policySearchCriteria.PolicyNumber"/>
           <InputSetRef

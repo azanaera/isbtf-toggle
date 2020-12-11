@@ -1,0 +1,358 @@
+[
+    {
+        "id": "919f9b55-da1d-4b19-aeed-f6c5eca487ef",
+        "status": "inforce",
+        "policy_number": "3421012536",
+        "service": {
+            "starts_at": "2020-01-28T05:00:00Z",
+            "renewal_cadence": "semi_annual"
+        },
+        "term_number": 1,
+        "starts_at": "2020-01-28T05:00:00Z",
+        "ends_at": "2020-07-28T00:00:00Z",
+        "canceled_at": null,
+        "created_at": "2020-01-23T14:50:09.756889Z",
+        "farmers_drivers": [
+            {
+                "id": "34adf820-b6a5-42a1-ac1d-66d39067799a",
+                "person": {
+                    "id": "23151b0b-557b-44d5-bed3-8e7a337cc5f4",
+                    "first_name": "DELLA",
+                    "last_name": "DURIGA",
+                    "email": null,
+                    "phone_number": null,
+                    "business_name": null,
+                    "company_name": null,
+                    "address": null,
+                    "dob": "1964-06-11",
+                    "marital_status": "married"
+                },
+                "add_date": "2020-01-28",
+                "deleted": null,
+                "relationship_to_insured": "self",
+                "role": "pni",
+                "driving_license_number": "69023",
+                "driving_license_state": "TX",
+                "non_driver_reason": null
+            },
+            {
+                "id": "aca99a99-f752-4026-860e-217bd73405fe",
+                "person": {
+                    "id": "ca46433d-387b-447d-a5fd-7ae45494ac06",
+                    "first_name": "JAMIE",
+                    "last_name": "DURIGA",
+                    "email": null,
+                    "phone_number": null,
+                    "business_name": null,
+                    "company_name": null,
+                    "address": null,
+                    "dob": "2000-06-11",
+                    "marital_status": null
+                },
+                "add_date": "2020-01-28",
+                "deleted": null,
+                "relationship_to_insured": "child",
+                "role": "driver",
+                "driving_license_number": "69027",
+                "driving_license_state": "TX",
+                "non_driver_reason": null
+            },
+            {
+                "id": "aff38bb0-6f6e-43ca-818d-19797766d3ba",
+                "person": {
+                    "id": "9136cdf8-0d02-4c1e-98dc-9d8f8080f620",
+                    "first_name": "Belle",
+                    "last_name": "Danbil",
+                    "email": null,
+                    "phone_number": null,
+                    "business_name": null,
+                    "company_name": null,
+                    "address": {
+                        "id": "c42ebd6c-4b4d-495d-95d4-bb8d011c29d9",
+                        "line1": "2706 Old Easley Bridge Road",
+                        "line2": null,
+                        "city": "Greenville",
+                        "county": null,
+                        "region": {
+                            "id": 41,
+                            "name": "South Carolina",
+                            "code": "SC"
+                        },
+                        "country": {
+                            "id": 1,
+                            "name": "United States",
+                            "alpha2": "US"
+                        },
+                        "postal": "29611",
+                        "timezone": "America/New_York"
+                    },
+                    "dob": "1965-03-28",
+                    "marital_status": "married"
+                },
+                "add_date": "2020-01-23",
+                "deleted": null,
+                "relationship_to_insured": "spouse",
+                "role": "driver",
+                "driving_license_number": "69024",
+                "driving_license_state": "TX",
+                "non_driver_reason": null
+            }
+        ],
+        "farmers_vehicles": [
+            {
+                "id": 247,
+                "make": "SUBARU",
+                "model": "LEGACY",
+                "style": "STATION WAGON",
+                "year": 1996,
+                "vin": "4S3BK4252T6309490",
+                "garage_address": {
+                    "id": "98578caf-2f5f-44e9-a057-c35f8cbcea55",
+                    "line1": "2706 Old Easley Bridge Road",
+                    "line2": null,
+                    "city": "Greenville",
+                    "county": null,
+                    "region": {
+                        "id": 41,
+                        "name": "South Carolina",
+                        "code": "SC"
+                    },
+                    "country": {
+                        "id": 1,
+                        "name": "United States",
+                        "alpha2": "US"
+                    },
+                    "postal": "29611",
+                    "timezone": null
+                },
+                "rideshare_use": false,
+                "add_date": "2020-01-28",
+                "deleted": null,
+                "lienholder": null,
+                "variables": [
+                    {
+                        "effective_date": "2020-01-23T14:50:09.817211Z",
+                        "variable": "towing_road_services",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": true,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-23T14:50:09.816528Z",
+                        "variable": "ridesharing",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-23T14:50:09.815710Z",
+                        "variable": "oem_parts",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-23T14:50:09.815002Z",
+                        "variable": "new_car_replacement",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-23T14:50:09.814243Z",
+                        "variable": "loss_of_use",
+                        "value": "30",
+                        "limit_of_occurrence": null,
+                        "purchased": true,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-23T14:50:09.813551Z",
+                        "variable": "loan_lease_payoff",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-23T14:50:09.812821Z",
+                        "variable": "comprehensive_deductible",
+                        "value": "500",
+                        "limit_of_occurrence": null,
+                        "purchased": true,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-23T14:50:09.811773Z",
+                        "variable": "collision_deductible",
+                        "value": "500",
+                        "limit_of_occurrence": null,
+                        "purchased": true,
+                        "deleted": null
+                    }
+                ],
+                "new_ventures_vehicle_id": 1
+            }
+        ],
+        "coverage_variables": [
+            {
+                "effective_date": "2020-01-23T14:50:09.822060Z",
+                "variable": "bodily_injury_limit",
+                "value": "100000",
+                "limit_of_occurrence": "300000",
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-01-23T14:50:09.822209Z",
+                "variable": "medical_limit",
+                "value": null,
+                "limit_of_occurrence": null,
+                "purchased": false,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-01-23T14:50:09.822264Z",
+                "variable": "property_damage_limit",
+                "value": "100000",
+                "limit_of_occurrence": null,
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-01-23T14:50:09.822311Z",
+                "variable": "underinsured_motorist_bodily_injury_limit",
+                "value": "100000",
+                "limit_of_occurrence": "300000",
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-01-23T14:50:09.822357Z",
+                "variable": "underinsured_motorist_property_damage_limit",
+                "value": "100000",
+                "limit_of_occurrence": null,
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-01-23T14:50:09.822403Z",
+                "variable": "uninsured_motorist_bodily_injury_limit",
+                "value": "100000",
+                "limit_of_occurrence": "300000",
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-01-23T14:50:09.822448Z",
+                "variable": "uninsured_motorist_property_damage_limit",
+                "value": "100000",
+                "limit_of_occurrence": null,
+                "purchased": true,
+                "deleted": null
+            }
+        ],
+        "farmers_endorsements": [
+            {
+                "id": "93ca2d97-72a8-460e-b7b4-9a83958a3805",
+                "vehicle_id": null,
+                "form_code": "SC943279",
+                "form_edition": "1ST",
+                "description": "Undisclosed Driver",
+                "created_at": "2020-01-23T14:50:09.819512Z",
+                "deleted": null
+            },
+            {
+                "id": "d6c811ef-ef10-4fff-beb7-fceab7c781d8",
+                "vehicle_id": 247,
+                "form_code": "937205",
+                "form_edition": "1ST",
+                "description": "Loss of Use",
+                "created_at": "2020-01-23T14:50:09.821196Z",
+                "deleted": null
+            },
+            {
+                "id": "f04755cf-7b0c-4cd6-9ead-9a36b9fb8f56",
+                "vehicle_id": null,
+                "form_code": "SC943279",
+                "form_edition": "1ST",
+                "description": "Undisclosed Driver",
+                "created_at": "2020-01-23T14:53:32.241389Z",
+                "deleted": null
+            },
+            {
+                "id": "af2a0b1e-89a4-40d7-b082-1bbfe7a97899",
+                "vehicle_id": 247,
+                "form_code": "937205",
+                "form_edition": "1ST",
+                "description": "Loss of Use",
+                "created_at": "2020-01-23T14:53:32.244033Z",
+                "deleted": null
+            },
+            {
+                "id": "4a4bfa64-81f5-4bea-aa9d-a02285517465",
+                "vehicle_id": null,
+                "form_code": "SC943279",
+                "form_edition": "1ST",
+                "description": "Undisclosed Driver",
+                "created_at": "2020-01-23T14:55:31.858881Z",
+                "deleted": null
+            },
+            {
+                "id": "84466794-0f1a-4c2f-82e5-a2620c31d5b5",
+                "vehicle_id": 247,
+                "form_code": "937205",
+                "form_edition": "1ST",
+                "description": "Loss of Use",
+                "created_at": "2020-01-23T14:55:31.861285Z",
+                "deleted": null
+            },
+            {
+                "id": "951dff3a-94af-4f2a-bf08-cdb3ccac2b56",
+                "vehicle_id": null,
+                "form_code": "SC943279",
+                "form_edition": "1ST",
+                "description": "Undisclosed Driver",
+                "created_at": "2020-01-23T15:02:07.218997Z",
+                "deleted": null
+            },
+            {
+                "id": "40876a5d-7b5d-4100-a7ae-53e1fff34282",
+                "vehicle_id": 247,
+                "form_code": "937205",
+                "form_edition": "1ST",
+                "description": "Loss of Use",
+                "created_at": "2020-01-23T15:02:07.221347Z",
+                "deleted": null
+            }
+        ],
+        "rating_address": {
+            "id": "c42ebd6c-4b4d-495d-95d4-bb8d011c29d9",
+            "line1": "2706 Old Easley Bridge Road",
+            "line2": null,
+            "city": "Greenville",
+            "county": null,
+            "region": {
+                "id": 41,
+                "name": "South Carolina",
+                "code": "SC"
+            },
+            "country": {
+                "id": 1,
+                "name": "United States",
+                "alpha2": "US"
+            },
+            "postal": "29611",
+            "timezone": "America/New_York"
+        },
+        "company_code": "21687",
+        "company_name": "Mid-Century Insurance Company",
+        "state": "SC",
+        "edition_number": "1ST",
+        "form_number": "566180"
+    }
+]

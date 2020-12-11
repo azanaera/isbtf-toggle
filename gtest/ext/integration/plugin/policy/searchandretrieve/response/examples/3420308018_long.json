@@ -1,0 +1,225 @@
+[
+    {
+        "id": "75f94111-6b28-4dbd-9e14-c7cba45d6fe8",
+        "status": "inforce",
+        "policy_number": "3420308018",
+        "service": {
+            "starts_at": "2020-01-27T18:48:00Z",
+            "renewal_cadence": "semi_annual"
+        },
+        "term_number": 1,
+        "starts_at": "2020-01-27T18:48:00Z",
+        "ends_at": "2020-07-27T00:00:00Z",
+        "canceled_at": null,
+        "created_at": "2020-01-27T18:48:45.248539Z",
+        "farmers_drivers": [
+            {
+                "id": "9090741d-aaab-4cf8-8ce9-e1c0e0723a24",
+                "person": {
+                    "id": "f7588f1b-9ab4-44b9-a1e8-2f5d92026e9e",
+                    "first_name": "TESTERQK",
+                    "last_name": "SOUTHCAR",
+                    "email": null,
+                    "phone_number": null,
+                    "business_name": null,
+                    "company_name": null,
+                    "address": null,
+                    "dob": "1989-05-08",
+                    "marital_status": "single"
+                },
+                "add_date": "2020-01-27",
+                "deleted": null,
+                "relationship_to_insured": "self",
+                "role": "pni",
+                "driving_license_number": "69019",
+                "driving_license_state": "TX",
+                "non_driver_reason": null
+            }
+        ],
+        "farmers_vehicles": [
+            {
+                "id": 261,
+                "make": "SUBARU",
+                "model": "LEGACY",
+                "style": "STATION WAGON",
+                "year": 1996,
+                "vin": "4S3BK4252T6309490",
+                "garage_address": {
+                    "id": "debeec42-8c46-44f9-a2ee-5c69f8dc1509",
+                    "line1": "3 Longcreek Drive",
+                    "line2": null,
+                    "city": "Murrells Inlet",
+                    "county": null,
+                    "region": {
+                        "id": 41,
+                        "name": "South Carolina",
+                        "code": "SC"
+                    },
+                    "country": {
+                        "id": 1,
+                        "name": "United States",
+                        "alpha2": "US"
+                    },
+                    "postal": "29576",
+                    "timezone": null
+                },
+                "rideshare_use": false,
+                "add_date": "2020-01-27",
+                "deleted": null,
+                "lienholder": null,
+                "variables": [
+                    {
+                        "effective_date": "2020-01-27T18:48:45.314099Z",
+                        "variable": "towing_road_services",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-27T18:48:45.313132Z",
+                        "variable": "ridesharing",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-27T18:48:45.309145Z",
+                        "variable": "oem_parts",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-27T18:48:45.304230Z",
+                        "variable": "new_car_replacement",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-27T18:48:45.303497Z",
+                        "variable": "loan_lease_payoff",
+                        "value": null,
+                        "limit_of_occurrence": null,
+                        "purchased": false,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-27T18:48:45.302723Z",
+                        "variable": "comprehensive_deductible",
+                        "value": "500",
+                        "limit_of_occurrence": null,
+                        "purchased": true,
+                        "deleted": null
+                    },
+                    {
+                        "effective_date": "2020-01-27T18:48:45.301561Z",
+                        "variable": "collision_deductible",
+                        "value": "500",
+                        "limit_of_occurrence": null,
+                        "purchased": true,
+                        "deleted": null
+                    }
+                ],
+                "new_ventures_vehicle_id": 1
+            }
+        ],
+        "coverage_variables": [
+            {
+                "effective_date": "2020-01-27T18:48:45.321291Z",
+                "variable": "bodily_injury_limit",
+                "value": "50000",
+                "limit_of_occurrence": "100000",
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-01-27T18:48:45.321349Z",
+                "variable": "medical_limit",
+                "value": null,
+                "limit_of_occurrence": null,
+                "purchased": false,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-01-27T18:48:45.321397Z",
+                "variable": "property_damage_limit",
+                "value": "50000",
+                "limit_of_occurrence": null,
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-01-27T18:48:45.321443Z",
+                "variable": "underinsured_motorist_bodily_injury_limit",
+                "value": "50000",
+                "limit_of_occurrence": "100000",
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-01-27T18:48:45.321489Z",
+                "variable": "underinsured_motorist_property_damage_limit",
+                "value": "50000",
+                "limit_of_occurrence": null,
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-01-27T18:48:45.321534Z",
+                "variable": "uninsured_motorist_bodily_injury_limit",
+                "value": "50000",
+                "limit_of_occurrence": "100000",
+                "purchased": true,
+                "deleted": null
+            },
+            {
+                "effective_date": "2020-01-27T18:48:45.321580Z",
+                "variable": "uninsured_motorist_property_damage_limit",
+                "value": "50000",
+                "limit_of_occurrence": null,
+                "purchased": true,
+                "deleted": null
+            }
+        ],
+        "farmers_endorsements": [
+            {
+                "id": "524c9f4e-97f2-4c76-a618-ab175066a7a7",
+                "vehicle_id": null,
+                "form_code": "SC943279",
+                "form_edition": "1ST",
+                "description": "Undisclosed Driver",
+                "created_at": "2020-01-27T18:48:45.319408Z",
+                "deleted": null
+            }
+        ],
+        "rating_address": {
+            "id": "c089145b-ed11-4c54-9920-01de408e999b",
+            "line1": "3 Longcreek Drive",
+            "line2": null,
+            "city": "Murrells Inlet",
+            "county": null,
+            "region": {
+                "id": 41,
+                "name": "South Carolina",
+                "code": "SC"
+            },
+            "country": {
+                "id": 1,
+                "name": "United States",
+                "alpha2": "US"
+            },
+            "postal": "29576",
+            "timezone": "America/New_York"
+        },
+        "company_code": "21687",
+        "company_name": "Mid-Century Insurance Company",
+        "state": "SC",
+        "edition_number": "1ST",
+        "form_number": "566180"
+    }
+]

@@ -12,4 +12,8 @@
     code="boxprop_ext"
     desc="Properties for BOX DMS "
     name="Box Properties"/>
+  <typecode
+    code="surepolicy_ext"
+    desc="Sure Policy Service Properties"
+    name="Sure Policy Service Properties"/>
 </typelistextension>
