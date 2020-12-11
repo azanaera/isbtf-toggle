@@ -1,0 +1,910 @@
+Request:
+https://api.trysurepolicy.com/api/management/v1/policies/123cb009-88fe-4aa4-bad3-62fa8091b897
+
+
+response:
+{
+    "id": "123cb009-88fe-4aa4-bad3-62fa8091b897",
+    "client": {
+        "id": "917a8624-9d1a-4618-bba7-849ac7bd05b6",
+        "person": {
+            "id": "ff21c404-6979-4e1a-b047-b4d7e778b84d",
+            "first_name": "Michelle",
+            "last_name": "Dornfeld"
+        }
+    },
+    "vertical": {
+        "code": "farmers_renters",
+        "name": "Toggle Renters"
+    },
+    "partner": null,
+    "bills": [
+        {
+            "id": "58cdb02d-d75f-4a80-8018-28240d6577f7",
+            "currency": {
+                "code": "USD"
+            },
+            "paid_at": "2020-08-27T00:00:35.305374Z",
+            "refunded_amount": "0.00",
+            "total_amount": "49.50",
+            "subtotal_amount": "49.50",
+            "total_taxes_amount": "0.00",
+            "payment_method": {
+                "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+                "name": "Visa *4242 (Exp 03/22)",
+                "payment_method_type": "card",
+                "deleted": null,
+                "details": {
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "exp_month": "3",
+                    "exp_year": "2022",
+                    "holder_name": "Michelle Dornfeld",
+                    "funding": "credit"
+                }
+            },
+            "line_items": [],
+            "details": {
+                "trx_id": "txn_1HKYXgJ0mUidvLfTJQs1UKp2",
+                "trx_gross_amount": 49.5,
+                "trx_fee_amount": 1.74,
+                "trx_net_amount": 47.76,
+                "trx_fee_details": [
+                    {
+                        "type": "stripe_fee",
+                        "amount": 174,
+                        "currency": "usd",
+                        "application": null,
+                        "description": "Stripe processing fees"
+                    }
+                ],
+                "charge": {
+                    "charge_id": "ch_1HKYXfJ0mUidvLfTp52k7oXF",
+                    "customer_id": "cus_DgFJ9LdsE86PL6",
+                    "source_id": "card_1DEsoMJ0mUidvLfT6H6Ajy5r",
+                    "source_object": "card",
+                    "source_last4": "4242",
+                    "source_brand": "Visa",
+                    "source_exp_month": "3",
+                    "source_exp_year": "2022",
+                    "source_bank_name": null,
+                    "source_account_holder_name": null,
+                    "source_routing_number": null,
+                    "amount": "4950",
+                    "status": "succeeded"
+                },
+                "refunds": [],
+                "disputes": [],
+                "created_hrq_id": "hrq_4f1f720462f94ae287b6f0ee4853d2c6"
+            },
+            "refunds": []
+        },
+        {
+            "id": "026e7370-ad17-4397-a947-8f80ae049a7c",
+            "currency": {
+                "code": "USD"
+            },
+            "paid_at": "2020-07-27T00:00:32.908235Z",
+            "refunded_amount": "0.00",
+            "total_amount": "49.50",
+            "subtotal_amount": "49.50",
+            "total_taxes_amount": "0.00",
+            "payment_method": {
+                "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+                "name": "Visa *4242 (Exp 03/22)",
+                "payment_method_type": "card",
+                "deleted": null,
+                "details": {
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "exp_month": "3",
+                    "exp_year": "2022",
+                    "holder_name": "Michelle Dornfeld",
+                    "funding": "credit"
+                }
+            },
+            "line_items": [],
+            "details": {
+                "trx_id": "txn_1H9JleJ0mUidvLfTpFrKLAEd",
+                "trx_gross_amount": 49.5,
+                "trx_fee_amount": 1.74,
+                "trx_net_amount": 47.76,
+                "trx_fee_details": [
+                    {
+                        "type": "stripe_fee",
+                        "amount": 174,
+                        "currency": "usd",
+                        "application": null,
+                        "description": "Stripe processing fees"
+                    }
+                ],
+                "charge": {
+                    "charge_id": "ch_1H9JldJ0mUidvLfT0XEP3qdC",
+                    "customer_id": "cus_DgFJ9LdsE86PL6",
+                    "source_id": "card_1DEsoMJ0mUidvLfT6H6Ajy5r",
+                    "source_object": "card",
+                    "source_last4": "4242",
+                    "source_brand": "Visa",
+                    "source_exp_month": "3",
+                    "source_exp_year": "2022",
+                    "source_bank_name": null,
+                    "source_account_holder_name": null,
+                    "source_routing_number": null,
+                    "amount": "4950",
+                    "status": "succeeded"
+                },
+                "refunds": null,
+                "disputes": null,
+                "created_hrq_id": "hrq_874b540718b547b5b7f60f18c199092e"
+            },
+            "refunds": null
+        },
+        {
+            "id": "08c4c93f-a0b3-4081-ad06-cc1a6d2b325b",
+            "currency": {
+                "code": "USD"
+            },
+            "paid_at": "2020-06-27T00:00:35.505998Z",
+            "refunded_amount": "0.00",
+            "total_amount": "49.50",
+            "subtotal_amount": "49.50",
+            "total_taxes_amount": "0.00",
+            "payment_method": {
+                "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+                "name": "Visa *4242 (Exp 03/22)",
+                "payment_method_type": "card",
+                "deleted": null,
+                "details": {
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "exp_month": "3",
+                    "exp_year": "2022",
+                    "holder_name": "Michelle Dornfeld",
+                    "funding": "credit"
+                }
+            },
+            "line_items": [],
+            "details": {
+                "trx_id": "txn_1GyRTEJ0mUidvLfTAfA3lqhB",
+                "trx_gross_amount": 49.5,
+                "trx_fee_amount": 1.74,
+                "trx_net_amount": 47.76,
+                "trx_fee_details": [
+                    {
+                        "type": "stripe_fee",
+                        "amount": 174,
+                        "currency": "usd",
+                        "application": null,
+                        "description": "Stripe processing fees"
+                    }
+                ],
+                "charge": {
+                    "charge_id": "ch_1GyRTEJ0mUidvLfT9vdZ6SdY",
+                    "customer_id": "cus_DgFJ9LdsE86PL6",
+                    "source_id": "card_1DEsoMJ0mUidvLfT6H6Ajy5r",
+                    "source_object": "card",
+                    "source_last4": "4242",
+                    "source_brand": "Visa",
+                    "source_exp_month": "3",
+                    "source_exp_year": "2022",
+                    "source_bank_name": null,
+                    "source_account_holder_name": null,
+                    "source_routing_number": null,
+                    "amount": "4950",
+                    "status": "succeeded"
+                },
+                "refunds": null,
+                "disputes": null,
+                "created_hrq_id": "hrq_2166290d6fbb48deaa09a0959eaef097"
+            },
+            "refunds": null
+        },
+        {
+            "id": "aef73bcd-3dc3-4380-bced-dae9b769a985",
+            "currency": {
+                "code": "USD"
+            },
+            "paid_at": "2020-01-27T00:00:40.127870Z",
+            "refunded_amount": "0.00",
+            "total_amount": "49.50",
+            "subtotal_amount": "49.50",
+            "total_taxes_amount": "0.00",
+            "payment_method": {
+                "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+                "name": "Visa *4242 (Exp 03/22)",
+                "payment_method_type": "card",
+                "deleted": null,
+                "details": {
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "exp_month": "3",
+                    "exp_year": "2022",
+                    "holder_name": "Michelle Dornfeld",
+                    "funding": "credit"
+                }
+            },
+            "line_items": [],
+            "details": {
+                "trx_id": "txn_1G5L1wJ0mUidvLfTGaoy0vyg",
+                "trx_gross_amount": 49.5,
+                "trx_fee_amount": 1.74,
+                "trx_net_amount": 47.76,
+                "trx_fee_details": [
+                    {
+                        "type": "stripe_fee",
+                        "amount": 174,
+                        "currency": "usd",
+                        "application": null,
+                        "description": "Stripe processing fees"
+                    }
+                ],
+                "charge": {
+                    "charge_id": "ch_1G5L1vJ0mUidvLfTuJcc5K7y",
+                    "customer_id": "cus_DgFJ9LdsE86PL6",
+                    "source_id": "card_1DEsoMJ0mUidvLfT6H6Ajy5r",
+                    "source_object": "card",
+                    "source_last4": "4242",
+                    "source_brand": "Visa",
+                    "source_exp_month": "3",
+                    "source_exp_year": "2022",
+                    "source_bank_name": null,
+                    "source_account_holder_name": null,
+                    "source_routing_number": null,
+                    "amount": "4950",
+                    "status": "succeeded"
+                },
+                "refunds": null,
+                "disputes": null,
+                "created_hrq_id": "hrq_e7a4c13c965a45329e9e3dab0c367a98"
+            },
+            "refunds": null
+        },
+        {
+            "id": "280811d6-f2f2-485d-a6d8-9c134440b568",
+            "currency": {
+                "code": "USD"
+            },
+            "paid_at": "2019-12-27T00:00:33.960739Z",
+            "refunded_amount": "0.00",
+            "total_amount": "49.50",
+            "subtotal_amount": "49.50",
+            "total_taxes_amount": "0.00",
+            "payment_method": {
+                "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+                "name": "Visa *4242 (Exp 03/22)",
+                "payment_method_type": "card",
+                "deleted": null,
+                "details": {
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "exp_month": "3",
+                    "exp_year": "2022",
+                    "holder_name": "Michelle Dornfeld",
+                    "funding": "credit"
+                }
+            },
+            "line_items": [],
+            "details": {
+                "trx_id": "txn_1Fu6FqJ0mUidvLfTsDbpMDgf",
+                "trx_gross_amount": 49.5,
+                "trx_fee_amount": 1.74,
+                "trx_net_amount": 47.76,
+                "trx_fee_details": [
+                    {
+                        "type": "stripe_fee",
+                        "amount": 174,
+                        "currency": "usd",
+                        "application": null,
+                        "description": "Stripe processing fees"
+                    }
+                ],
+                "charge": {
+                    "charge_id": "ch_1Fu6FpJ0mUidvLfT5BXmwIyq",
+                    "customer_id": "cus_DgFJ9LdsE86PL6",
+                    "source_id": "card_1DEsoMJ0mUidvLfT6H6Ajy5r",
+                    "source_object": "card",
+                    "source_last4": "4242",
+                    "source_brand": "Visa",
+                    "source_exp_month": "3",
+                    "source_exp_year": "2022",
+                    "source_bank_name": null,
+                    "source_account_holder_name": null,
+                    "source_routing_number": null,
+                    "amount": "4950",
+                    "status": "succeeded"
+                },
+                "refunds": null,
+                "disputes": null,
+                "created_hrq_id": "hrq_1a7c7007ed8a4386a86e6537c1c5c6da"
+            },
+            "refunds": null
+        },
+        {
+            "id": "9ffb6fcd-ce50-4f8b-89ef-88f9eeadb90d",
+            "currency": {
+                "code": "USD"
+            },
+            "paid_at": "2020-05-27T00:00:27.092412Z",
+            "refunded_amount": "0.00",
+            "total_amount": "49.50",
+            "subtotal_amount": "49.50",
+            "total_taxes_amount": "0.00",
+            "payment_method": {
+                "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+                "name": "Visa *4242 (Exp 03/22)",
+                "payment_method_type": "card",
+                "deleted": null,
+                "details": {
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "exp_month": "3",
+                    "exp_year": "2022",
+                    "holder_name": "Michelle Dornfeld",
+                    "funding": "credit"
+                }
+            },
+            "line_items": [],
+            "details": {
+                "trx_id": "txn_1GnCh6J0mUidvLfTTyU0ON5U",
+                "trx_gross_amount": 49.5,
+                "trx_fee_amount": 1.74,
+                "trx_net_amount": 47.76,
+                "trx_fee_details": [
+                    {
+                        "type": "stripe_fee",
+                        "amount": 174,
+                        "currency": "usd",
+                        "application": null,
+                        "description": "Stripe processing fees"
+                    }
+                ],
+                "charge": {
+                    "charge_id": "ch_1GnCh5J0mUidvLfTsDxTXjOw",
+                    "customer_id": "cus_DgFJ9LdsE86PL6",
+                    "source_id": "card_1DEsoMJ0mUidvLfT6H6Ajy5r",
+                    "source_object": "card",
+                    "source_last4": "4242",
+                    "source_brand": "Visa",
+                    "source_exp_month": "3",
+                    "source_exp_year": "2022",
+                    "source_bank_name": null,
+                    "source_account_holder_name": null,
+                    "source_routing_number": null,
+                    "amount": "4950",
+                    "status": "succeeded"
+                },
+                "refunds": null,
+                "disputes": null,
+                "created_hrq_id": "hrq_b906a445c39f49bda00c638e23fc40e2"
+            },
+            "refunds": null
+        },
+        {
+            "id": "8427d0ec-8386-4898-8251-2626615acd9d",
+            "currency": {
+                "code": "USD"
+            },
+            "paid_at": "2019-11-27T00:00:33.582452Z",
+            "refunded_amount": "0.00",
+            "total_amount": "49.50",
+            "subtotal_amount": "49.50",
+            "total_taxes_amount": "0.00",
+            "payment_method": {
+                "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+                "name": "Visa *4242 (Exp 03/22)",
+                "payment_method_type": "card",
+                "deleted": null,
+                "details": {
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "exp_month": "3",
+                    "exp_year": "2022",
+                    "holder_name": "Michelle Dornfeld",
+                    "funding": "credit"
+                }
+            },
+            "line_items": [],
+            "details": {
+                "trx_id": "txn_1FjDxNJ0mUidvLfT4vZNsNr8",
+                "trx_gross_amount": 49.5,
+                "trx_fee_amount": 1.74,
+                "trx_net_amount": 47.76,
+                "trx_fee_details": [
+                    {
+                        "type": "stripe_fee",
+                        "amount": 174,
+                        "currency": "usd",
+                        "application": null,
+                        "description": "Stripe processing fees"
+                    }
+                ],
+                "charge": {
+                    "charge_id": "ch_1FjDxNJ0mUidvLfTs9llPV8p",
+                    "customer_id": "cus_DgFJ9LdsE86PL6",
+                    "source_id": "card_1DEsoMJ0mUidvLfT6H6Ajy5r",
+                    "source_object": "card",
+                    "source_last4": "4242",
+                    "source_brand": "Visa",
+                    "source_exp_month": "3",
+                    "source_exp_year": "2022",
+                    "source_bank_name": null,
+                    "source_account_holder_name": null,
+                    "source_routing_number": null,
+                    "amount": "4950",
+                    "status": "succeeded"
+                },
+                "refunds": null,
+                "disputes": null,
+                "created_hrq_id": "hrq_0f0d1c0672cf440ca02e4263c8203fa8"
+            },
+            "refunds": null
+        },
+        {
+            "id": "da41639f-1bd9-4df9-bea5-767fae71c8e8",
+            "currency": {
+                "code": "USD"
+            },
+            "paid_at": "2020-04-27T00:00:37.510465Z",
+            "refunded_amount": "0.00",
+            "total_amount": "49.50",
+            "subtotal_amount": "49.50",
+            "total_taxes_amount": "0.00",
+            "payment_method": {
+                "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+                "name": "Visa *4242 (Exp 03/22)",
+                "payment_method_type": "card",
+                "deleted": null,
+                "details": {
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "exp_month": "3",
+                    "exp_year": "2022",
+                    "holder_name": "Michelle Dornfeld",
+                    "funding": "credit"
+                }
+            },
+            "line_items": [],
+            "details": {
+                "trx_id": "txn_1GcKOnJ0mUidvLfTCEPbrKPo",
+                "trx_gross_amount": 49.5,
+                "trx_fee_amount": 1.74,
+                "trx_net_amount": 47.76,
+                "trx_fee_details": [
+                    {
+                        "type": "stripe_fee",
+                        "amount": 174,
+                        "currency": "usd",
+                        "application": null,
+                        "description": "Stripe processing fees"
+                    }
+                ],
+                "charge": {
+                    "charge_id": "ch_1GcKOnJ0mUidvLfTfAQNnjMP",
+                    "customer_id": "cus_DgFJ9LdsE86PL6",
+                    "source_id": "card_1DEsoMJ0mUidvLfT6H6Ajy5r",
+                    "source_object": "card",
+                    "source_last4": "4242",
+                    "source_brand": "Visa",
+                    "source_exp_month": "3",
+                    "source_exp_year": "2022",
+                    "source_bank_name": null,
+                    "source_account_holder_name": null,
+                    "source_routing_number": null,
+                    "amount": "4950",
+                    "status": "succeeded"
+                },
+                "refunds": null,
+                "disputes": null,
+                "created_hrq_id": "hrq_8b5d311e2bbc44f18cd517270c8d568b"
+            },
+            "refunds": null
+        },
+        {
+            "id": "e4c7778e-df36-4f58-9b52-2097bb6cf6ab",
+            "currency": {
+                "code": "USD"
+            },
+            "paid_at": "2019-10-27T00:00:35.299593Z",
+            "refunded_amount": "0.00",
+            "total_amount": "49.50",
+            "subtotal_amount": "49.50",
+            "total_taxes_amount": "0.00",
+            "payment_method": {
+                "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+                "name": "Visa *4242 (Exp 03/22)",
+                "payment_method_type": "card",
+                "deleted": null,
+                "details": {
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "exp_month": "3",
+                    "exp_year": "2022",
+                    "holder_name": "Michelle Dornfeld",
+                    "funding": "credit"
+                }
+            },
+            "line_items": [],
+            "details": {
+                "trx_id": "txn_1FXzBPJ0mUidvLfThPsR0jPC",
+                "trx_gross_amount": 49.5,
+                "trx_fee_amount": 1.74,
+                "trx_net_amount": 47.76,
+                "trx_fee_details": [
+                    {
+                        "type": "stripe_fee",
+                        "amount": 174,
+                        "currency": "usd",
+                        "application": null,
+                        "description": "Stripe processing fees"
+                    }
+                ],
+                "charge": {
+                    "charge_id": "ch_1FXzBOJ0mUidvLfTnO6506II",
+                    "customer_id": "cus_DgFJ9LdsE86PL6",
+                    "source_id": "card_1DEsoMJ0mUidvLfT6H6Ajy5r",
+                    "source_object": "card",
+                    "source_last4": "4242",
+                    "source_brand": "Visa",
+                    "source_exp_month": "3",
+                    "source_exp_year": "2022",
+                    "source_bank_name": null,
+                    "source_account_holder_name": null,
+                    "source_routing_number": null,
+                    "amount": "4950",
+                    "status": "succeeded"
+                },
+                "refunds": null,
+                "disputes": null,
+                "created_hrq_id": "hrq_6d014392452f40df9ec21d9797c86e60"
+            },
+            "refunds": null
+        },
+        {
+            "id": "9e2425cf-9280-44e8-bd68-b11eed19c7ce",
+            "currency": {
+                "code": "USD"
+            },
+            "paid_at": "2020-02-28T00:00:38.114551Z",
+            "refunded_amount": "0.00",
+            "total_amount": "49.50",
+            "subtotal_amount": "49.50",
+            "total_taxes_amount": "0.00",
+            "payment_method": {
+                "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+                "name": "Visa *4242 (Exp 03/22)",
+                "payment_method_type": "card",
+                "deleted": null,
+                "details": {
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "exp_month": "3",
+                    "exp_year": "2022",
+                    "holder_name": "Michelle Dornfeld",
+                    "funding": "credit"
+                }
+            },
+            "line_items": [],
+            "details": {
+                "trx_id": "txn_1GGwHSJ0mUidvLfTyfCLfJea",
+                "trx_gross_amount": 49.5,
+                "trx_fee_amount": 1.74,
+                "trx_net_amount": 47.76,
+                "trx_fee_details": [
+                    {
+                        "type": "stripe_fee",
+                        "amount": 174,
+                        "currency": "usd",
+                        "application": null,
+                        "description": "Stripe processing fees"
+                    }
+                ],
+                "charge": {
+                    "charge_id": "ch_1GGwHRJ0mUidvLfTLFrLk1yn",
+                    "customer_id": "cus_DgFJ9LdsE86PL6",
+                    "source_id": "card_1DEsoMJ0mUidvLfT6H6Ajy5r",
+                    "source_object": "card",
+                    "source_last4": "4242",
+                    "source_brand": "Visa",
+                    "source_exp_month": "3",
+                    "source_exp_year": "2022",
+                    "source_bank_name": null,
+                    "source_account_holder_name": null,
+                    "source_routing_number": null,
+                    "amount": "4950",
+                    "status": "succeeded"
+                },
+                "refunds": null,
+                "disputes": null,
+                "created_hrq_id": "hrq_aec26dd52069454fa2f8300ea09b5a36"
+            },
+            "refunds": null
+        },
+        {
+            "id": "52cd64b7-878f-44ff-84ec-583c57dc6e9c",
+            "currency": {
+                "code": "USD"
+            },
+            "paid_at": "2020-03-27T00:00:32.666105Z",
+            "refunded_amount": "0.00",
+            "total_amount": "49.50",
+            "subtotal_amount": "49.50",
+            "total_taxes_amount": "0.00",
+            "payment_method": {
+                "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+                "name": "Visa *4242 (Exp 03/22)",
+                "payment_method_type": "card",
+                "deleted": null,
+                "details": {
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "exp_month": "3",
+                    "exp_year": "2022",
+                    "holder_name": "Michelle Dornfeld",
+                    "funding": "credit"
+                }
+            },
+            "line_items": [],
+            "details": {
+                "trx_id": "txn_1GR5ciJ0mUidvLfTUCVfdEen",
+                "trx_gross_amount": 49.5,
+                "trx_fee_amount": 1.74,
+                "trx_net_amount": 47.76,
+                "trx_fee_details": [
+                    {
+                        "type": "stripe_fee",
+                        "amount": 174,
+                        "currency": "usd",
+                        "application": null,
+                        "description": "Stripe processing fees"
+                    }
+                ],
+                "charge": {
+                    "charge_id": "ch_1GR5ciJ0mUidvLfTp6MmS1Km",
+                    "customer_id": "cus_DgFJ9LdsE86PL6",
+                    "source_id": "card_1DEsoMJ0mUidvLfT6H6Ajy5r",
+                    "source_object": "card",
+                    "source_last4": "4242",
+                    "source_brand": "Visa",
+                    "source_exp_month": "3",
+                    "source_exp_year": "2022",
+                    "source_bank_name": null,
+                    "source_account_holder_name": null,
+                    "source_routing_number": null,
+                    "amount": "4950",
+                    "status": "succeeded"
+                },
+                "refunds": null,
+                "disputes": null,
+                "created_hrq_id": "hrq_4ecdee360e584696a92348ac802c3d6d"
+            },
+            "refunds": null
+        },
+        {
+            "id": "ebc19ca9-2c7a-479c-ad73-e612aa69aa69",
+            "currency": {
+                "code": "USD"
+            },
+            "paid_at": "2019-09-27T00:00:45.980712Z",
+            "refunded_amount": "0.00",
+            "total_amount": "49.50",
+            "subtotal_amount": "49.50",
+            "total_taxes_amount": "0.00",
+            "payment_method": {
+                "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+                "name": "Visa *4242 (Exp 03/22)",
+                "payment_method_type": "card",
+                "deleted": null,
+                "details": {
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "exp_month": "3",
+                    "exp_year": "2022",
+                    "holder_name": "Michelle Dornfeld",
+                    "funding": "credit"
+                }
+            },
+            "line_items": [],
+            "details": {
+                "trx_id": "txn_1FN6t8J0mUidvLfTLrq7TRgC",
+                "trx_gross_amount": 49.5,
+                "trx_fee_amount": 1.74,
+                "trx_net_amount": 47.76,
+                "trx_fee_details": [
+                    {
+                        "type": "stripe_fee",
+                        "amount": 174,
+                        "currency": "usd",
+                        "application": null,
+                        "description": "Stripe processing fees"
+                    }
+                ],
+                "charge": {
+                    "charge_id": "ch_1FN6t7J0mUidvLfT9rDPhRm8",
+                    "customer_id": "cus_DgFJ9LdsE86PL6",
+                    "source_id": "card_1DEsoMJ0mUidvLfT6H6Ajy5r",
+                    "source_object": "card",
+                    "source_last4": "4242",
+                    "source_brand": "Visa",
+                    "source_exp_month": "3",
+                    "source_exp_year": "2022",
+                    "source_bank_name": null,
+                    "source_account_holder_name": null,
+                    "source_routing_number": null,
+                    "amount": "4950",
+                    "status": "succeeded"
+                },
+                "refunds": null,
+                "disputes": null,
+                "created_hrq_id": "hrq_700a84a695b1445eb85bd62e02fe50e1"
+            },
+            "refunds": null
+        }
+    ],
+    "plan": {
+        "id": "1824d254-6836-4ab5-93dd-34e40fca628b",
+        "vertical": {
+            "code": "farmers_renters",
+            "name": "Toggle Renters"
+        },
+        "carrier": {
+            "code": "farmers",
+            "name": "Farmers Insurance Group"
+        },
+        "plan_type": "farmers_renters",
+        "settings": {
+            "plan_title": "Premium",
+            "sample_policy_url": "",
+            "price": "0"
+        }
+    },
+    "payment_method": {
+        "id": "40ae468e-5b66-4c4e-9636-81e9d1800951",
+        "name": "Visa *4242 (Exp 03/22)",
+        "payment_method_type": "card",
+        "deleted": null,
+        "details": {
+            "last4": "4242",
+            "brand": "Visa",
+            "exp_month": "3",
+            "exp_year": "2022",
+            "holder_name": "Michelle Dornfeld",
+            "funding": "credit"
+        }
+    },
+    "billing_cadence": "monthly",
+    "rating_address": {
+        "id": "1e6f7bb3-1546-431f-91c2-efdb523a8d4b",
+        "line1": "2965 Grant Street",
+        "line2": null,
+        "city": "Evanston",
+        "county": null,
+        "region": {
+            "id": 14,
+            "name": "Illinois",
+            "code": "IL"
+        },
+        "country": {
+            "id": 1,
+            "name": "United States",
+            "alpha2": "US"
+        },
+        "postal": "60201",
+        "timezone": "America/Chicago"
+    },
+    "policy_holders": [
+        {
+            "id": "a1ecd489-c844-4ed5-bf64-375e7a3b0c1e",
+            "person": {
+                "id": "07c4cf89-1680-44de-a39b-54901572e24c",
+                "first_name": "Michelle",
+                "last_name": "Dornfeld",
+                "email": "michelle+45@gettoggle.com",
+                "phone_number": "818-281-1625",
+                "business_name": null,
+                "company_name": null,
+                "address": {
+                    "id": "4d4e6ad4-668a-4585-ba89-978e22807f2c",
+                    "line1": "2965 Grant Street",
+                    "line2": null,
+                    "city": "Evanston",
+                    "county": null,
+                    "region": {
+                        "id": 14,
+                        "name": "Illinois",
+                        "code": "IL"
+                    },
+                    "country": {
+                        "id": 1,
+                        "name": "United States",
+                        "alpha2": "US"
+                    },
+                    "postal": "60201",
+                    "timezone": "America/Chicago"
+                },
+                "dob": "1975-11-12",
+                "marital_status": null
+            },
+            "position_on_policy": 1
+        },
+        {
+            "id": "efb323f6-a181-41d4-9c84-7afbd5903664",
+            "person": {
+                "id": "f2d2dd83-e44c-4f11-9bdd-a2de578a6fab",
+                "first_name": "Phil",
+                "last_name": "Dornfeld",
+                "email": null,
+                "phone_number": null,
+                "business_name": null,
+                "company_name": null,
+                "address": null,
+                "dob": null,
+                "marital_status": null
+            },
+            "position_on_policy": 2
+        }
+    ],
+    "beneficiaries": [],
+    "policy_documents": [
+        {
+            "url": "https://s3.amazonaws.com/sure-sandbox-host/userfiles/fb591/ce93a/5d54a0b71cf66f04926265aa/policy_dec_page_20190927_TOLASL3QAX.pdf",
+            "name": "Proof of Insurance",
+            "document_type": "declaration",
+            "created_at": "2019-08-15T00:00:59.018846Z",
+            "is_self_service_document": true
+        },
+        {
+            "url": "https://s3.amazonaws.com/sure-sandbox-host/userfiles/3ea61/8a025/5d54a0ba1cf66f04926265ab/policy_contract_20190927_TOLASL3QAX.pdf",
+            "name": "Policy Contract",
+            "document_type": "contract",
+            "created_at": "2019-08-15T00:00:59.021833Z",
+            "is_self_service_document": true
+        }
+    ],
+    "renewal_offer": {
+        "updated_at": "2020-09-27T00:00:41.412365Z",
+        "url": "https://s3.amazonaws.com/sure-sandbox-host/userfiles/71b46/f3e78/5f3482a592b0cffcbc9ce639/policy_dec_page_20200927_TOLASL3QAX.pdf",
+        "renewal_offer_documents": []
+    },
+    "service": {
+        "auto_renewal": true,
+        "renews_at": "2021-09-27T00:00:00Z",
+        "renewal_canceled_at": null,
+        "renewal_canceled_reason": null
+    },
+    "status": "renewed",
+    "policy_number": "TOLASL3QAX",
+    "details": {
+        "interested_party": null,
+        "variables": {
+            "tech_limit": 10000,
+            "adventure_limit": 10000,
+            "creative_limit": 10000,
+            "fashion_limit": 10000,
+            "furnishings_limit": 20000,
+            "collectibles_limit": 10000,
+            "additional_living_limit": 150,
+            "contents_replacement_cost": true,
+            "pet_lover": true,
+            "id_theft": true,
+            "side_hustle": true,
+            "liability_limit": 300000,
+            "deductible": 1000,
+            "is_tech_siasl": true,
+            "is_fashion_siasl": true,
+            "is_creative_siasl": true,
+            "is_adventure_siasl": true,
+            "is_collectibles_siasl": true,
+            "dog_bite_history": true
+        },
+        "amounts": {
+            "monthly_premium": "49.5",
+            "monthly_total_amount": "49.5",
+            "monthly_subtotal_amount": "49.5",
+            "monthly_total_taxes_amount": "0"
+        }
+    },
+    "starts_at": "2019-09-27T06:17:00Z",
+    "ends_at": "2020-09-27T00:00:00Z",
+    "canceled_at": null,
+    "created_at": "2019-08-15T00:00:54.626711Z"
+}

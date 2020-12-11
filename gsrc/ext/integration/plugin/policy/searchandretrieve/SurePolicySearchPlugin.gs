@@ -1,6 +1,6 @@
 package ext.integration.plugin.policy.searchandretrieve
 
-uses ext.integration.plugin.policy.SurePersonalAuto
+uses ext.integration.plugin.policy.SurePolicyService
 uses gw.plugin.policy.search.IPolicySearchAdapter
 
 class SurePolicySearchPlugin implements IPolicySearchAdapter{
@@ -14,8 +14,12 @@ class SurePolicySearchPlugin implements IPolicySearchAdapter{
   override function retrievePolicyFromPolicySummary(policySummary : PolicySummary) : PolicyRetrievalResultSet {
     var resultSet = new PolicyRetrievalResultSet()
 
-    resultSet = SurePersonalAuto.retrievePersonalAutoPolicy(policySummary)
-
+    var service = new SurePolicyService()
+    if (policySummary.PolicyType == PolicyType.TC_HOPHOMEOWNERS) {
+      resultSet = service.retrieveRenterPolicy(policySummary)
+    } else {
+      resultSet = service.retrievePersonalAutoPolicy(policySummary)
+    }
     return resultSet
   }
 
@@ -27,9 +31,12 @@ class SurePolicySearchPlugin implements IPolicySearchAdapter{
    */
   override function retrievePolicyFromPolicy(policy : Policy) : PolicyRetrievalResultSet {
     var resultSet = new PolicyRetrievalResultSet()
-
-    resultSet = SurePersonalAuto.retrievePersonalAutoPolicyFromPolicy(policy.PolicyNumber, policy.Claim.LossDate)
-
+    var service = new SurePolicyService()
+    if (policy.PolicyType == PolicyType.TC_HOPHOMEOWNERS) {
+      resultSet = service.retrievePersonalAutoPolicyFromPolicy(policy.PolicyNumber, policy.Claim.LossDate)
+    } else {
+      resultSet = service.retrievePersonalAutoPolicyFromPolicy(policy.PolicyNumber, policy.Claim.LossDate)
+    }
     return resultSet
   }
 
@@ -43,7 +50,13 @@ class SurePolicySearchPlugin implements IPolicySearchAdapter{
   override function searchPolicies(criteria : PolicySearchCriteria) : PolicySearchResultSet {
     var resultsToReturn = new PolicySearchResultSet()
 
-    resultsToReturn = SurePersonalAuto.searchForPersonalAutoPolicies(criteria)
+    var service = new SurePolicyService()
+    if (criteria.PolicyType == PolicyType.TC_HOPHOMEOWNERS) {
+      resultsToReturn = service.searchForRenterPolicies(criteria)
+    } else {
+      resultsToReturn = service.searchForPersonalAutoPolicies(criteria)
+    }
+
 
     return resultsToReturn
   }
