@@ -97,5 +97,11 @@ class AssignmentUtil_Ext {
     }
     return retGroup
   }
-
+  static function getAssignmentLocn(claim:Claim):Address{
+    if (claim.LossLocation.Country == Country.TC_US) {
+      return claim.LossLocation
+    } else {
+        return claim.Policy.Addresses[0]
+    }
+  }
 }

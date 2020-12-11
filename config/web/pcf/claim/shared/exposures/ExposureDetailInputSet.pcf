@@ -25,7 +25,8 @@
       label="DisplayKey.get(&quot;NVV.Exposure.SubView.GeneralDamage.Severity&quot;)"
       value="Exposure.Incident.Severity"
       valueType="typekey.SeverityType"
-      visible="isNewExposure == false"/>
+      visible="isNewExposure == false"
+      __disabled="true"/>
     <DateInput
       id="ClosedDate"
       label="DisplayKey.get(&quot;NVV.Exposure.SubView.Baggage.Exposure.ClosedDate&quot;)"
