@@ -65,6 +65,26 @@ class HOPClaimContextImpl extends ClaimContextImpl implements HOPClaimContext {
     var policyPlugin = Plugins.get(IPolicySearchAdapter) as PolicyStorePlugin
     policyPlugin.addPolicy(policy)
   }
+  override function createPolicyDataSet(state : State) {
+    var policy = new PolicyBuilder()
+        .uiReadyHOPHomeowners()
+        .withVerified(true)
+        .withPolicyLocation(new PolicyLocationBuilder()
+            .withAddress(new AddressBuilder()
+                              .asHomeAddress()
+                              .withUniqueAddressLine1()
+                              .withState(state)))
+        .withCoverage(new PolicyCoverageBuilder()
+                            .withType(CoverageType.TC_CPBLANKETCOV)
+                            .withExposureLimit(500bd.ofDefaultCurrency())
+                            .withIncidentLimit(500bd.ofDefaultCurrency()))
+
+    .create()
+    (_policyDataSetWrapper.get() as PolicyDataSet).PolicyNumber = policy.PolicyNumber
+
+    var policyPlugin = Plugins.get(IPolicySearchAdapter) as PolicyStorePlugin
+    policyPlugin.addPolicy(policy)
+  }
 
   override function createUnverifiedPolicy() {
     var wizard = Wizard

@@ -10,6 +10,7 @@ uses gw.cucumber.context.api.hop.HOPClaimContext
 uses gw.cucumber.setup.ClaimMode
 uses gw.cucumber.setup.PolicyDataSet
 uses gw.cucumber.testdata.DataWrapper
+uses gw.cucumber.transformer.TypelistTransformer
 
 @SuppressWarnings("unused")
 @Export
@@ -28,6 +29,18 @@ class HOP_NewClaimCreationSteps {
       _policyDataSetWrapper.get().ClaimMode = ClaimMode.HOPHomeowners
     }
     _contextFactory.getClaimContext().createPolicyDataSet()
+  }
+
+  @Given("^a Homeowners policy in the state of \"([^\"]*)\"$")
+  function aHomeownersPolicyInTheStateOf( stateString : String) : void {
+    var state = new TypelistTransformer<State>().transform(stateString)
+    if (_policyDataSetWrapper.get() == null) {
+      _policyDataSetWrapper.set(new PolicyDataSet(PolicyType.TC_HOPHOMEOWNERS, ClaimMode.HOPHomeowners))
+    } else {
+      _policyDataSetWrapper.get().ClaimMode = ClaimMode.HOPHomeowners
+    }
+    _contextFactory.getClaimContext<HOPClaimContext>().createPolicyDataSet(state)
+
   }
 
   @Given("^a Homeowners claim$")
@@ -189,4 +202,5 @@ class HOP_NewClaimCreationSteps {
   public function verifyBodilyInjuryIncidentShouldBeCreatedOnTheClaim(table : DataTable) {
     _contextFactory.getClaimContext<HOPClaimContext>().verifyASpecificBodilyInjuryIncidentExist(table)
   }
+
 }

@@ -305,4 +305,9 @@ interface HOPClaimContext extends ClaimContext {
    * Create a dwelling incident for a fire in the living room on the claim using builders
    */
   function createDwellingIncidentForLivingRoomFireAfterACandleFell()
+
+  /**
+   * Create a {@link gw.cucumber.setup.PolicyDataSet} object to hold policy type and sample policy number with state parameter
+   */
+  function createPolicyDataSet(state : State)
 }
