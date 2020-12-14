@@ -724,7 +724,8 @@ abstract class ClaimContextImpl extends CucumberStepBase implements ClaimContext
     assertThat(policyDataSet).as("Policy data set should not be null").isNotNull()
     assertThat(policyDataSet.PolicyNumber).as("Policy number should not be null").isNotNull()
     var policyNumber = policyDataSet.PolicyNumber
-    wizard.SelectPolicy.findPolicy(policyNumber)
+    var searchPanel = wizard.SelectPolicy.findPolicy(policyNumber,Date.Today)
+    searchPanel.Search.click()
   }
 
   override function verifyPoliciesMatchAGivenPolicyNumber() {
@@ -770,7 +771,7 @@ abstract class ClaimContextImpl extends CucumberStepBase implements ClaimContext
         "Search by City" -> {"Country" -> policy.insured.AllAddresses.first().Country.Value.DisplayName, "City" -> policy.insured.AllAddresses.first().City},
         "Search by Policy Type" -> {"Policy Type" -> policy.PolicyType.DisplayName},
         "Search by State" -> {"Country" -> policy.insured.AllAddresses.first().Country.DisplayName, "State" -> policy.insured.AllAddresses.first().State.DisplayName},
-        "Search by Zip Code" -> {"Country" -> "United States", "ZIP Code" -> _policyWrapper.get().insured.AllAddresses.first().CityStateZip}
+        "Search by Zip Code" -> {"Country" -> "United States", "ZIP Code" -> _policyWrapper.get().insured.AllAddresses.first().PostalCode}
     }
     searchCriteria.set(polSearchData.get(table.asMaps(String, String).first().get("Search Data")))
   }

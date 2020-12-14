@@ -9,6 +9,7 @@ Feature: New Claim Creation ~ HOP_NewClaimCreation_CSR
 
   Scenario Outline: Filing a new Homeowners claim with a loss cause
     Given a Homeowners policy
+    And a Homeowners policy in the state of "California"
     When I start filing a claim
     And I set claim loss cause to "<Loss Cause>"
     And I finish filing the claim
@@ -23,6 +24,7 @@ Feature: New Claim Creation ~ HOP_NewClaimCreation_CSR
 
   Scenario Outline: Filing a new Homeowners claim with a fire loss cause and a dwelling incident
     Given a Homeowners policy
+    And a Homeowners policy in the state of "California"
     When I start filing a claim
     And I set claim loss cause to "Fire/Smoke"
     And I add a dwelling incident

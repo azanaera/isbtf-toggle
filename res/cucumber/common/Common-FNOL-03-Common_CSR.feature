@@ -9,13 +9,13 @@ Feature: Search Verified Policies (Common-FNOL-03-Common_CSR)
 
   # TODO ignoring S1 and SO2: Does this need a mock integration?
   # This file is identical to CC-COM-SearchForPolicy-Common, which has been removed from the code base
-  @23390-GW @ignore
+  @23390-GW
   Scenario: 1. Search for a PA policy to file claims against verified PA policies
     Given a Personal Auto policy
     When I search for a known policy by policy number
     Then I can lodge a claim against that policy
 
-  @23390-GW @ignore
+  @23390-GW
   Scenario Outline: 2. Search for a policy to file a claim against verified policies
     Given a Personal Auto policy
     And I have the following search data:

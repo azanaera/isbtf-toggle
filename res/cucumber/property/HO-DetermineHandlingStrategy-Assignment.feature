@@ -14,7 +14,7 @@ Feature: Assignment ~ HO_DetermineHandlingStrategy_Assignment
     And the claim loss location is in state "California"
     # And gosu rules to automatically assign the claim: GCAP00010 - If the claim loss type is property, this rule uses the loss type and claim segment to get the top two matching group type choices for assigning this claim.
     When I reassign the claim through automated assignment
-    Then the claim should be assigned to a user in "Claim Organization" group
+    Then the claim should be assigned to a user in "Toggle Renters Claims Group 2" group
 
   @23860-GW
   Scenario: Manually reassigning an existing Homeowners claim

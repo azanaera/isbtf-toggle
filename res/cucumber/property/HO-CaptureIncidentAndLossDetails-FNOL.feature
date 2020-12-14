@@ -12,6 +12,7 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
   @23390.8-GW-6 @23730-GW
   Scenario: Capture basic information during FNOL for a Homeowners policy
     Given a Homeowners policy
+    And a Homeowners policy in the state of "California"
     When I start filing a claim
     And I set the Loss Date to "Today"
     And the claim was reported by the Insured
@@ -22,6 +23,7 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
   @23410.3-GW
   Scenario Outline: Capture property damage information during FNOL for a Homeowners policy
     Given a Homeowners policy
+    And a Homeowners policy in the state of "California"
     When I start filing a claim
     And I set the Loss Date to "Today"
     And the claim was reported by the Insured
@@ -53,6 +55,7 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
   @23410.3-GW
   Scenario: Capture property damage information during FNOL for a Homeowners policy
     Given a Homeowners policy
+    And a Homeowners policy in the state of "California"
     When I start filing a claim
     And I set claim loss cause to "Hurricane"
     And I add a property damage liability
@@ -66,6 +69,7 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
   @23740.1-GW
   Scenario: Capture Bodily Injury Information
     Given a Homeowners policy
+    And a Homeowners policy in the state of "California"
     When I start filing a claim
     And I set claim loss cause to "Hurricane"
     And I add an "Insured's loss" injury incident
@@ -75,6 +79,7 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
   @23740-GW
   Scenario: Filing a new Homeowners claim with a fire loss cause
     Given a Homeowners policy
+    And a Homeowners policy in the state of "California"
     When I start filing a claim
     And I set claim loss cause to "Fire/Smoke"
     And I set the damage type to "Fire"
@@ -89,6 +94,7 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
   @23740-GW
   Scenario: Filing a new Homeowners claim with a Water loss cause
     Given a Homeowners policy
+    And a Homeowners policy in the state of "California"
     When I start filing a claim
     And I set claim loss cause to "Water"
     And I set the damage type to "Water"
@@ -103,6 +109,7 @@ Feature: Define financial summary presentation ~ HO_CaptureIncidentAndLossDetail
   @23740-GW
   Scenario Outline: End to End FNOL Scenario to capture all steps of FNOL wizard and create a HO claim for verified policy
     Given a Homeowners policy
+    And a Homeowners policy in the state of "California"
     When I start filing a claim
     And I set the Loss Date to "Today"
     And the claim was reported by the Insured

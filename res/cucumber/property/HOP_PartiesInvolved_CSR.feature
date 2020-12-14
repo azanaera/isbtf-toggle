@@ -9,6 +9,7 @@ Feature: Parties Involved ~ HOP_PartiesInvolved_CSR
 
   Scenario: Adding a contact to a new Homeowners claim
     Given a Homeowners policy
+    And a Homeowners policy in the state of "California"
     When I start filing a claim
     And I add a person contact with "Other" role
     And I set claim loss cause to "Fire/Smoke"
