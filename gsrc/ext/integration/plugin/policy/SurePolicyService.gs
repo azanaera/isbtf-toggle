@@ -214,12 +214,12 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
       searchResultSet = RenterAutoMapper.createPolicySummaries(result, criteria.LossDate)
 
     } catch (exception : FeignException) {
-      if (exception.status() == 429) {
+      if (exception.status() == 404) {
         _logger.info("No results found: ", :parameters = {"Policy Number" -> criteria.PolicyNumber, "Loss Date" -> String.valueOf(criteria.LossDate)},
             :method = SurePolicyService#searchForRenterPolicies(PolicySearchCriteria))
         _logger.debug("Exiting Policy Search")
         return searchResultSet
-      } else if (exception.status() == 404) {
+      } else if (exception.status() == 429) {
         _logger.warn("Rate Limit exceeded for policy search", SurePolicyService#searchForRenterPolicies(PolicySearchCriteria), exception,
             :parameters = {"Policy Number" -> criteria.PolicyNumber, "Loss Date" -> String.valueOf(criteria.LossDate)})
         throw new DisplayableException("Policy Search service search limit reached. Please wait 5 minutes and try again")
@@ -258,11 +258,9 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
       var utcLossDate = PersonalAutoMapper.formatServerDateWithUTCTimeZone(policySummary.LossDate)
       var lossDate = DateUtil.dateToYYYY_MM_DD_Ext(utcLossDate)
 
-
       var client = new SureHOClient()
       var api = client.createClient()
       var result = api.policyIdGet(polNum, xSpace)
-      print(result)
       retrievalResultSet = RenterAutoMapper.createPolicyDetails(result, policySummary.LossDate)
       retrievalResultSet.NotUnique = false
       _logger.debug("Retrieving full policy details for Policy Number: " + polNum + ", Loss Date: " +  lossDate)

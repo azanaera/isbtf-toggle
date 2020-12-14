@@ -1,0 +1,20 @@
+package rules.Validation.PolicyValidationRules_dir
+uses gw.api.locale.DisplayKey
+
+@gw.rules.RuleName("POV04000 - Policy Address_Ext")
+internal class POV04000PolicyAddress_Ext {
+  static function doCondition(policy  :  entity.Policy) : boolean {
+/*start00rule*/
+return policy.Addresses.Count == 0
+/*end00rule*/
+}
+
+  static function doAction(policy  :  entity.Policy, actions : gw.rules.Action) {
+/*start00rule*/
+
+      policy.reject(TC_NEWLOSS, 
+        DisplayKey.get("Rules.Validation.Policy.PolicyAddressMissing_Ext"), null, null)
+
+/*end00rule*/
+  }
+}

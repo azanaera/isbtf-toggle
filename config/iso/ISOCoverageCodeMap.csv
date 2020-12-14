@@ -337,10 +337,10 @@ HOPHomeowners,,zd7gujr17mccs3puv5jreeu1e59,zd7gujr17mccs3puv5jreeu1e59BI,PPHO,LI
 HOPHomeowners,,zd7gujr17mccs3puv5jreeu1e59,zd7gujr17mccs3puv5jreeu1e59PD,PPHO,LIAB,LIAB
 HOPHomeowners,,zd7gujr17mccs3puv5jreeu1e59,zd7gujr17mccs3puv5jreeu1e59GD,PPHO,LIAB,LIAB
 HOPHomeowners,,HOIdentityProtect_Togl_Ext,HOIdentityProtect_GN_Ext,PPHO,,LossCause/OTPR
-HOPHomeowners,,HOPersLiab_Togl_Ext,HOPersLiab_BI_Ext,PPHO,LIAB,LIAB
-HOPHomeowners,,HOPersLiab_Togl_Ext,HOPersLiab_GN_Ext,PPHO,PINJ,OTPR
-HOPHomeowners,,HOPersLiab_Togl_Ext,HOPersLiab_MP_Ext,PPHO,MPAY,OTPR
-HOPHomeowners,,HOPersLiab_Togl_Ext,HOPersLiab_PR_Ext,PPHO,LIAB,OTPR
+HOPHomeowners,,HOPersLiab_Togl_Ext,HOPersLiab_BI_Ext,PPHO,LIAB,BODI
+HOPHomeowners,,HOPersLiab_Togl_Ext,HOPersLiab_GN_Ext,PPHO,PINJ,OTPI
+HOPHomeowners,,HOPersLiab_Togl_Ext,HOPersLiab_PR_Ext,PPHO,LIAB,LIAB
+HOPHomeowners,,HOMedPayToOthers_Togl_Ext,HOMedPayToOthers_Togl_Ext,PPHO,MPAY,MPAY
 HOPHomeowners,,HOPersPropActive_Togl_Ext,HOPersPropActive_CO_Ext,PPHO,,LossCause/OTPR
 HOPHomeowners,,HOPersPropActiveSIM_Togl_Ext,,PPHO,,LossCause/OTPR
 HOPHomeowners,,HOPersPropBlanket_Togl_Ext,HOPersPropBlanket_CO_Ext,PPHO,,LossCause/OTPR

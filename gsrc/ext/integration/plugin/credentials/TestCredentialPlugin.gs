@@ -27,7 +27,7 @@ class TestCredentialPlugin extends SecretsManagerCredentialsPlugin {
       if (key.equals("iso")) {
         secret = "TESTUSER:TESTPAS"
       } else if (key.equals(BingMapsPluginRest.BING_MAPS)) {
-        secret = "Ajpvk2HPH33AB6E2eF89vHybd0f9gwdr-suBLVFTTdYUybP7rdRrByR7Pohvy4Gb" //This is for the Bing "sandbox" env
+        secret = "SOMEUSER:Ajpvk2HPH33AB6E2eF89vHybd0f9gwdr-suBLVFTTdYUybP7rdRrByR7Pohvy4Gb" //PW is for the Bing "sandbox" - user name is irrelevant
       } else if (key.equals("wsi.remote.gw.webservice.ab.configurationprovider")) {
         secret = "ClientAppCC:gw"
       } else {

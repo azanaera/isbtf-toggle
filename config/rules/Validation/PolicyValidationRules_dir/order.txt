@@ -1,3 +1,5 @@
 POV01000EffectiveandExpirationDates
 POV02000OriginalEffectiveDate
 POV03000EndorsementDates
+POV04000PolicyAddress_Ext
+POV04000PolicyState_Ext

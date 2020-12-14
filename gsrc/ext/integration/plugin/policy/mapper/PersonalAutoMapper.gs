@@ -60,7 +60,7 @@ class PersonalAutoMapper extends SurePolicyMapper {
       }
       newSummary.LossDate = lossDate
       policySummaries.addToSummaries(newSummary)
-      _logger.trace("Policy Summary created for Policy From Sure PAS :method = SurePersonalAutoService#createPolicySummaries(List<com.surepolicy.rest.model.InlineResponse2001>)"
+      _logger.trace("Policy Summary created for Policy From Sure PAS :method = PersonalAutoMapper#createPolicySummaries(List<com.surepolicy.rest.model.InlineResponse2001>)"
           , :parameters = {"Policy Number" -> surePolicy.PolicyNumber})
     }
     _logger.debug("Exiting Policy Summary creation")
@@ -83,7 +83,7 @@ class PersonalAutoMapper extends SurePolicyMapper {
   }
 
   private static function addPolicyEndorsements(policy : Policy, farmersEndorsements : List<LongPolicyNumberFarmersEndorsements>) {
-    _logger.trace("Adding Endorsements to Policy :method = SurePersonalAutoService#addPolicyEndorsements(policy : Policy, farmersEndorsements : List<LongPolicyNumberFarmersEndorsements>)"
+    _logger.trace("Adding Endorsements to Policy :method = PersonalAutoMapper#addPolicyEndorsements(policy : Policy, farmersEndorsements : List<LongPolicyNumberFarmersEndorsements>)"
         , :parameters = ({"Policy" -> String.valueOf(policy), "Policy Effective Date" -> String.valueOf(policy.EffectiveDate)
         , "Sure Endorsements" -> String.valueOf(farmersEndorsements)}))
     for (endorsement in farmersEndorsements) {
@@ -98,7 +98,7 @@ class PersonalAutoMapper extends SurePolicyMapper {
       anEndorsement.Vehicle_Ext = maybeAddAssciatedVehicle(policy, endorsement.VehicleId)
       anEndorsement.ExpirationDate = endorsement.Deleted != null ? formatDateWithTimeZone(DateUtil.UTCDateStringToDate(endorsement.Deleted)) : policy.ExpirationDate
       policy.addToEndorsements(anEndorsement)
-      _logger.trace("Added Endorsement to Policy :method = SurePersonalAutoService#addPolicyEndorsements(policy : Policy, farmersEndorsements : List<LongPolicyNumberFarmersEndorsements>)"
+      _logger.trace("Added Endorsement to Policy :method = PersonalAutoMapper#addPolicyEndorsements(policy : Policy, farmersEndorsements : List<LongPolicyNumberFarmersEndorsements>)"
           , :parameters = ({"Policy" -> String.valueOf(policy), "Policy Effective Date" -> String.valueOf(policy.EffectiveDate)
           , "Endorsement" -> String.valueOf(anEndorsement)}))
     }
@@ -119,7 +119,7 @@ class PersonalAutoMapper extends SurePolicyMapper {
   }
 
   private static function addVehicleRUCoverages(policy : Policy, farmersVehicles : List<LongPolicyNumberFarmersVehicles>, policyStatus : String, policyCovs : List<LongPolicyNumberCoverageVariables>) {
-    _logger.trace("Adding vehicles and VehicleRU Coverages Policy :method = SurePersonalAutoService#addVehicleRUCoverages(policy : Policy, farmersVehicles : List<LongPolicyNumberFarmersVehicles>, policyStatus : String)"
+    _logger.trace("Adding vehicles and VehicleRU Coverages Policy :method = PersonalAutoMapper#addVehicleRUCoverages(policy : Policy, farmersVehicles : List<LongPolicyNumberFarmersVehicles>, policyStatus : String)"
         , :parameters = ({"Policy" -> String.valueOf(policy), "Policy Effective Date" -> String.valueOf(policy.EffectiveDate)
         , "Sure Vehicles" -> String.valueOf(farmersVehicles)}))
     for (vehicle in farmersVehicles) {
@@ -204,7 +204,7 @@ class PersonalAutoMapper extends SurePolicyMapper {
         aVehicleRU.addToCoverages(aVehicleCov)
       }
       policy.addToRiskUnits(aVehicleRU)
-      _logger.trace("Added Vehicle and VehicleRU Coverages to Policy :method = SurePersonalAutoService#addVehicleRUCoverages(policy : Policy, farmersVehicles : List<LongPolicyNumberFarmersVehicles>, policyStatus : String)"
+      _logger.trace("Added Vehicle and VehicleRU Coverages to Policy :method = PersonalAutoMapper#addVehicleRUCoverages(policy : Policy, farmersVehicles : List<LongPolicyNumberFarmersVehicles>, policyStatus : String)"
           , :parameters = ({"Policy" -> String.valueOf(policy), "Policy Effective Date" -> String.valueOf(policy.EffectiveDate)
           , "VehicleRU" -> String.valueOf(aVehicleRU), "Vehicle" -> String.valueOf(aVehicle)}))
     }
@@ -233,7 +233,7 @@ class PersonalAutoMapper extends SurePolicyMapper {
 
   private static function addPolicyContacts(policy : Policy, contacts : List<LongPolicyNumberFarmersDrivers>) {
     for (contact in contacts) {
-      _logger.trace("Adding contact to Policy :method = SurePersonalAutoService#addPolicyContacts(policy : Policy, contacts : List<LongPolicyNumberFarmersDrivers>)"
+      _logger.trace("Adding contact to Policy :method = PersonalAutoMapper#addPolicyContacts(policy : Policy, contacts : List<LongPolicyNumberFarmersDrivers>)"
           , :parameters = ({"Policy" -> String.valueOf(policy), "Policy Effective Date" -> String.valueOf(policy.EffectiveDate)
           , "Sure Contact" -> String.valueOf(contact)}))
       var polContact = new Person()
@@ -250,14 +250,14 @@ class PersonalAutoMapper extends SurePolicyMapper {
       var contactRole = contact.IsExcluded ? ContactRole.TC_EXCLUDEDPARTY : ContactRole.TC_COVEREDPARTY
       var claimContactRole = policy.addRole(contactRole, polContact)
       updateClaimContactandRole(claimContactRole, contact)
-      _logger.trace("Contact added to Policy :method = SurePersonalAutoService#addPolicyContacts(policy : Policy, contacts : List<LongPolicyNumberFarmersDrivers>)"
+      _logger.trace("Contact added to Policy :method = PersonalAutoMapper#addPolicyContacts(policy : Policy, contacts : List<LongPolicyNumberFarmersDrivers>)"
           , :parameters = ({"Policy" -> String.valueOf(policy), "Policy Effective Date" -> String.valueOf(policy.EffectiveDate)
           , "Policy Contact" -> String.valueOf(contactRole)}))
     }
   }
 
   private static function addPolicyPNI(policy : Policy, pni : LongPolicyNumberFarmersDrivers, ratingAddress : com.surepolicy.rest.model.LongPolicyNumberGarageAddress) {
-    _logger.trace("Adding PNI to Policy :method = SurePersonalAutoService#addPolicyPNI(policy : Policy, pni : LongPolicyNumberFarmersDrivers, ratingAddress : com.surepolicy.rest.model.LongPolicyNumberGarageAddress)"
+    _logger.trace("Adding PNI to Policy :method = PersonalAutoMapper#addPolicyPNI(policy : Policy, pni : LongPolicyNumberFarmersDrivers, ratingAddress : com.surepolicy.rest.model.LongPolicyNumberGarageAddress)"
         , :parameters = ({"Policy" -> String.valueOf(policy), "Policy Effective Date" -> String.valueOf(policy.EffectiveDate)
         , "Sure PNI" -> String.valueOf(pni), "Sure Rating Address" -> String.valueOf(ratingAddress)}))
     var insured = new Person()
@@ -276,7 +276,7 @@ class PersonalAutoMapper extends SurePolicyMapper {
     policy.insured = insured
     var pniClaimContactRole = policy.getClaimContactRoleByRole(ContactRole.TC_INSURED)
     updateClaimContactandRole(pniClaimContactRole, pni)
-    _logger.trace("PNI Added to Policy :method = SurePersonalAutoService#addPolicyPNI(policy : Policy, pni : LongPolicyNumberFarmersDrivers, ratingAddress : com.surepolicy.rest.model.LongPolicyNumberGarageAddress) Insured: " +
+    _logger.trace("PNI Added to Policy :method = PersonalAutoMapper#addPolicyPNI(policy : Policy, pni : LongPolicyNumberFarmersDrivers, ratingAddress : com.surepolicy.rest.model.LongPolicyNumberGarageAddress) Insured: " +
         policy.insured)
   }
 
@@ -293,7 +293,7 @@ class PersonalAutoMapper extends SurePolicyMapper {
   }
 
   private static function createPolicyAddress(sureAddress : LongPolicyNumberGarageAddress) : Address {
-    _logger.trace("Creating Address :method = SurePersonalAutoService#createPolicyAddress(sureAddress : LongPolicyNumberGarageAddress)"
+    _logger.trace("Creating Address :method = PersonalAutoMapper#createPolicyAddress(sureAddress : LongPolicyNumberGarageAddress)"
         , :parameters = ({"Sure Address" -> String.valueOf(sureAddress)}))
     var address = new Address()
     address.AddressLine1 = sureAddress.Line1
@@ -303,13 +303,13 @@ class PersonalAutoMapper extends SurePolicyMapper {
     address.State = State.getTypeKey(sureAddress.Region.Code)
     address.Country = Country.getTypeKey(sureAddress.Country.Alpha2)
     address.PostalCode = sureAddress.Postal
-    _logger.trace("Address Created :method = SurePersonalAuto#createPolicyAddress(sureAddress : LongPolicyNumberGarageAddress)"
+    _logger.trace("Address Created :method = PersonalAutoMapper#createPolicyAddress(sureAddress : LongPolicyNumberGarageAddress)"
         , :parameters = ({"Address" -> String.valueOf(address)}))
     return address
   }
 
   private static function addPolicyDetails(policy : Policy, surePolicy : InlineResponse2001) {
-    _logger.trace("Adding Policy Details for Policy From Sure PAS :method = SurePersonalAutoService#addPolicyDetails(policy : Policy, surePolicy : InlineResponse2001)"
+    _logger.trace("Adding Policy Details for Policy From Sure PAS :method = PersonalAutoMapper#addPolicyDetails(policy : Policy, surePolicy : InlineResponse2001)"
         , :parameters = ({"SurePolicy Policy Number" -> surePolicy.PolicyNumber, "SurePolicy Effective Date" -> surePolicy.StartsAt}))
     var statusCode = surePolicy.Status != null ? mapper.getInternalCodeByAlias("PolicyStatus", pasNamespace, surePolicy.Status) : null
     policy.PolicyType = typekey.PolicyType.TC_PERSONALAUTO
@@ -329,13 +329,13 @@ class PersonalAutoMapper extends SurePolicyMapper {
     policy.RenewalCadence_Ext = surePolicy.Service.RenewalCadence
     policy.UnderwritingCo = UnderwritingCompanyType.getTypeKey(surePolicy.CompanyCode)
 
-    _logger.trace("Policy Details added for Policy From Sure PAS :method = SurePersonalAutoService#addPolicyDetails(policy : Policy, surePolicy : InlineResponse2001)"
+    _logger.trace("Policy Details added for Policy From Sure PAS :method = PersonalAutoMapper#addPolicyDetails(policy : Policy, surePolicy : InlineResponse2001)"
         , :parameters = ({"Policy" -> String.valueOf(policy), "Policy Effective Date" -> String.valueOf(policy.EffectiveDate)
         , "SurePolicy Policy Number" -> surePolicy.PolicyNumber, "SurePolicy Effective Date" -> surePolicy.StartsAt}))
   }
 
   private static function getPrimaryAddress(address : LongPolicyNumberPersonAddress) : Address {
-    _logger.trace("Creating Address :method = SurePersonalAutoService#createPolicyAddress(address : LongPolicyNumberPersonAddress)"
+    _logger.trace("Creating Address :method = PersonalAutoMapper#createPolicyAddress(address : LongPolicyNumberPersonAddress)"
         , :parameters = ({"Sure Address" -> String.valueOf(address)}))
     var contactAddress = new Address()
     contactAddress.AddressLine1 = address.Line1
@@ -345,13 +345,13 @@ class PersonalAutoMapper extends SurePolicyMapper {
     contactAddress.PostalCode = address.Postal
     contactAddress.Country = Country.getTypeKey(address.Country.Alpha2)
     contactAddress.State = typekey.State.getTypeKey(address.Region.Code)
-    _logger.trace("Creating Address :method = SurePersonalAutoService#createPolicyAddress(address : LongPolicyNumberPersonAddress)"
+    _logger.trace("Creating Address :method = PersonalAutoMapper#createPolicyAddress(address : LongPolicyNumberPersonAddress)"
         , :parameters = ({"Address" -> String.valueOf(contactAddress)}))
     return contactAddress
   }
 
   private static function determineVehicleStatus(vehicleDeleted : String, status : String) : PolicyStatus {
-    _logger.trace("Setting Vehicle Status :method = SurePersonalAutoService#determineVehicleStatus(vehicle : LongPolicyNumberFarmersVehicles, status : String)"
+    _logger.trace("Setting Vehicle Status :method = PersonalAutoMapper#determineVehicleStatus(vehicle : LongPolicyNumberFarmersVehicles, status : String)"
         , :parameters = ({"Policy Status" -> status, "Sure Vehicle" -> vehicleDeleted}))
     var vehicleStatus : PolicyStatus
     switch (status) {
@@ -377,13 +377,13 @@ class PersonalAutoMapper extends SurePolicyMapper {
         vehicleStatus = vehicleDeleted == null ? PolicyStatus.TC_INFORCE : PolicyStatus.TC_EXPIRED
         break
     }
-    _logger.trace("Vehicle Status set :method = SurePersonalAutoService#determineVehicleStatus(vehicleDeleted : String, status : String)"
+    _logger.trace("Vehicle Status set :method = PersonalAutoMapper#determineVehicleStatus(vehicleDeleted : String, status : String)"
         , :parameters = ({"Policy Status" -> status, "Vehicle Status" -> String.valueOf(vehicleStatus)}))
     return vehicleStatus
   }
 
   private static function addLienHolderDetails(lienholder : com.surepolicy.rest.model.LongPolicyNumberLienholder) : VehicleOwner {
-    _logger.trace("Adding Lienholder details :method = SurePersonalAutoService#addLienHolderDetails(lienholder : com.surepolicy.rest.model.LongPolicyNumberLienholder) "
+    _logger.trace("Adding Lienholder details :method = PersonalAutoMapper#addLienHolderDetails(lienholder : com.surepolicy.rest.model.LongPolicyNumberLienholder) "
         , :parameters = ({"Sure Lienholder" -> String.valueOf(lienholder)}))
     var vehicleOwner = new VehicleOwner()
     var aLienholder = new Company()
@@ -398,7 +398,7 @@ class PersonalAutoMapper extends SurePolicyMapper {
     lienholderAddress.State = typekey.State.getTypeKey(lienholder.Address.Region.Code)
     aLienholder.addAddress(lienholderAddress)
     vehicleOwner.setLienholder(aLienholder)
-    _logger.trace("Lienholder details created :method = SurePersonalAutoService#addLienHolderDetails(lienholder : com.surepolicy.rest.model.LongPolicyNumberLienholder) "
+    _logger.trace("Lienholder details created :method = PersonalAutoMapper#addLienHolderDetails(lienholder : com.surepolicy.rest.model.LongPolicyNumberLienholder) "
         , :parameters = ({"Lienholder" -> String.valueOf(aLienholder)}))
     return vehicleOwner
   }

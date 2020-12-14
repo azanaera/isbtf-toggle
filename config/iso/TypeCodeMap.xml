@@ -668,8 +668,10 @@
     <mapping typecode="fire" namespace="iso" alias="FIRE"/>
     <mapping typecode="fire_smoke_ext" namespace="iso" alias="FIRE"/>
     <mapping typecode="flood_ext" namespace="iso" alias="FLOD"/>
+    <mapping typecode="flood_ho_ext" namespace="iso" alias="FLOD"/>    
     <mapping typecode="glassbreakage" namespace="iso" alias="GLSS"/>
     <mapping typecode="hail" namespace="iso" alias="HAIL"/>
+    <mapping typecode="hail_ho_ext" namespace="iso" alias="HAIL"/>
     <mapping typecode="hurricane_ho_ext" namespace="iso" alias="OTPR"/>
     <mapping typecode="iden_theft_ext" namespace="iso" alias="OTPR"/>
     <mapping typecode="lightning_ext" namespace="iso" alias="LGHT"/>
@@ -691,6 +693,7 @@
     <mapping typecode="theftentire" namespace="iso" alias="THFT"/>
     <mapping typecode="theftparts" namespace="iso" alias="PTFT"/>
     <mapping typecode="tornado_ext" namespace="iso" alias="OTPR"/>
+    <mapping typecode="tornado_ho_ext" namespace="iso" alias="OTPR"/>    
     <mapping typecode="tow_and_roadside_ext" namespace="iso" alias="TOWL"/>
     <mapping typecode="vand_malmis_ext" namespace="iso" alias="VAMM"/>
     <mapping typecode="vandalism" namespace="iso" alias="VAMM"/>
