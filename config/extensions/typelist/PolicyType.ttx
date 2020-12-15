@@ -926,6 +926,12 @@
     <category
       code="HOMedPayToOthers_Togl_Ext"
       typelist="CoverageType"/>
+    <category
+      code="HOReplaceCost_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="HOContentsDeductible_Togl_Ext"
+      typelist="CoverageType"/>
   </typecode>
   <typecode
     code="CommercialProperty"

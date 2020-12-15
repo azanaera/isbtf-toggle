@@ -1,0 +1,54 @@
+{
+  "schemaName": "ext.toggle.ccc.businessevents.response-1.0",
+  "mappers": {
+    "response": {
+      "schemaDefinition": "response",
+      "root": "ext.integration.toggle.ccc.businessevents.dto.TransactionResponse",
+      "properties": {
+        "cCCTransactionResponse": {
+          "path" : "TransactionResponse",
+          "mapper": "#/mappers/cCCTransactionResponse"
+        }
+      }
+    },
+    "cCCTransactionResponse" :  {
+      "schemaDefinition": "cCCTransactionResponse",
+      "root": "ext.integration.toggle.ccc.businessevents.dto.TransactionResponse",
+      "properties": {
+        "description": {
+          "path": "TransactionResponse.Description"
+        },
+        "messageHeader" : {
+          "path" : "TransactionResponse.MessageHeader",
+          "mapper" : "#/mappers/messageHeader"
+        },
+        "code": {
+          "path": "TransactionResponse.Code"
+        }
+      }
+
+    },
+    "messageHeader" : {
+      "schemaDefinition": "messageHeader",
+      "root": "ext.integration.toggle.ccc.businessevents.dto.MessageHeader",
+      "properties": {
+        "primaryInsuranceCompany" : {
+          "path" : "MessageHeader.PrimaryInsuranceCompany"
+        },
+        "estimatingSystem" : {
+          "path" : "MessageHeader.EstimatingSystem"
+        },
+        "echoField" : {
+          "path" : "MessageHeader.EchoField"
+        },
+        "transactionDateTime" : {
+          "path" : "MessageHeader.TransactionDateTime"
+        },
+        "lossReferenceID" : {
+          "path" : "MessageHeader.LossReferenceID"
+        }
+      }
+    }
+
+  }
+}

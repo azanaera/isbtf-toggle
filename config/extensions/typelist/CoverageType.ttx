@@ -5303,4 +5303,20 @@ all three files for that Coverage. Do not just delete these entries, because the
       code="HOMedPayToOthers_Togl_Ext"
       typelist="CoverageSubtype"/>
   </typecode>
+  <typecode
+    code="HOReplaceCost_Togl_Ext"
+    name="Replacement Cost"
+    desc="Replacement Cost">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="HOContentsDeductible_Togl_Ext"
+    name="Personal Property Deductible"
+    desc="Personal Property Deductible">
+    <category
+      code="HOPHomeowners"
+      typelist="PolicyType"/>
+  </typecode>
 </typelistextension>

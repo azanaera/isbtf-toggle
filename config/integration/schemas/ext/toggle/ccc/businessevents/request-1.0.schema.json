@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+      "request" : {
+        "type": "object",
+        "properties": {
+          "internal-id" : {
+            "type" : "string"
+          },
+          "cCCBusinessEventTransaction" : {
+            "$ref" : "#/definitions/cCCBusinessEventTransaction"
+          }
+        }
+      },
+      "cCCBusinessEventTransaction" : {
+        "type" : "object",
+        "properties" : {
+          "businessEvent" : {
+            "$ref": "#/definitions/businessEvent"
+          },
+          "messageHeader" : {
+            "$ref": "#/definitions/messageHeader"
+          }
+        }
+      },
+      "businessEvent" : {
+        "type" : "object",
+        "properties" : {
+          "eventDateTime" : {
+            "type" : "string"
+          },
+          "eventExtensionData" : {
+            "$ref": "#/definitions/recipientDetailsExtension"
+          },
+          "eventNotes" : {
+            "type" : "string"
+          },
+          "eventDescription" : {
+            "type" : "string"
+          },
+          "eventCode" : {
+            "type" : "string"
+          },
+          "sourceUserID" : {
+            "type" : "string"
+          }
+        }
+      },
+    "messageHeader" : {
+      "type" : "object",
+      "properties" : {
+        "primaryInsuranceCompany" : {
+          "type" : "string"
+        },
+        "estimatingSystem" : {
+          "type" : "string"
+        },
+        "echoField" : {
+          "type" : "string"
+        },
+        "uniqueTransactionID" : {
+          "type" : "string"
+        },
+        "transactionDateTime" : {
+          "type" : "string"
+        },
+        "lossReferenceID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "recipientDetailsExtension" : {
+      "type": "object",
+      "properties": {
+        "reassignedRecipient" : {
+          "$ref" : "#/definitions/recipient"
+        },
+        "originalRecipient" : {
+          "$ref" : "#/definitions/recipient"
+        }
+      }
+    },
+    "recipient" : {
+      "type" : "object",
+      "properties" : {
+        "companyName" : {
+          "type" : "string"
+        },
+        "recipientID" : {
+          "type" : "string"
+        },
+        "recipientType" : {
+          "type" : "string"
+        },
+        "personCompanyIndicator" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "response": {
+      "type": "object",
+      "properties" : {
+        "cCCTransactionResponse": {
+          "$ref": "#/definitions/cCCTransactionResponse"
+        }
+      }
+    },
+    "cCCTransactionResponse": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "messageHeader": {
+          "$ref": "#/definitions/messageHeader"
+        },
+        "code": {
+          "type": "string"
+        }
+      }
+    },
+    "messageHeader" : {
+      "type" : "object",
+      "properties" : {
+        "primaryInsuranceCompany" : {
+          "type" : "string"
+        },
+        "estimatingSystem" : {
+          "type" : "string"
+        },
+        "echoField" : {
+          "type" : "string"
+        },
+        "uniqueTransactionID" : {
+          "type" : "string"
+        },
+        "transactionDateTime" : {
+          "type" : "string"
+        },
+        "lossReferenceID" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

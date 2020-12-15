@@ -8739,4 +8739,80 @@
       code="PC-Custom"
       typelist="SourceSystem"/>
   </typecode>
+  <typecode
+    code="HOPersPropActiveSIM_Togl_Ext"
+    desc="Active - Single Item Max"
+    identifierCode="HOPersPropActiveSIM_Togl_Ext"
+    name="Active - Single Item Max">
+    <category
+      code="HOPersPropActive_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>
+  <typecode
+    code="HOPersPropCollectSIM_Togl_Ext"
+    desc="Collectibles - Single Item Max"
+    identifierCode="HOPersPropCollectSIM_Togl_Ext"
+    name="Collectibles - Single Item Max">
+    <category
+      code="HOPersPropCollect_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>
+  <typecode
+    code="HOPersPropCreativeandMakerSIM_Togl_Ext"
+    desc="Creative/Maker - Single Item Max"
+    identifierCode="HOPersPropCreativeandMakerSIM_Togl_Ext"
+    name="Creative/Maker - Single Item Max">
+    <category
+      code="HOPersPropCreativeandMaker_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>
+  <typecode
+    code="HOPersPropFashionandJewelrySIM_Togl_Ext"
+    desc="Fashion/Jewelry - Single Item Max"
+    identifierCode="HOPersPropFashionandJewelrySIM_Togl_Ext"
+    name="Fashion/Jewelry - Single Item Max">
+    <category
+      code="HOPersPropFashionandJewelry_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>
+  <typecode
+    code="HOPersPropTechnologySIM_Togl_Ext"
+    desc="Technology - Single Item Max"
+    identifierCode="HOPersPropTechnologySIM_Togl_Ext"
+    name="Technology - Single Item Max">
+    <category
+      code="HOPersPropTechnology_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>
+  <typecode
+    code="HOSideHustle_Togl_Ext"
+    desc="Side Hustle"
+    identifierCode="HOSideHustle_Togl_Ext"
+    name="Side Hustle">
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>
+  <typecode
+    code="HOReplaceCost_Togl_Ext"
+    desc="Replacement Cost"
+    identifierCode="HOReplaceCost_Togl_Ext"
+    name="Replacement Cost"
+    retired="true">
+    <category
+      code="HOSideHustleLossIncome_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>
+  <typecode
+    code="HOAllPerils_Togl_Ext"
+    desc="All Perils"
+    identifierCode="HOAllPerils_Togl_Ext"
+    name="All Perils">
+    <category
+      code="HOContentsDeductible_Togl_Ext"
+      typelist="CoverageType"/>
+    <category
+      code="Deductible"
+      typelist="CovTermModelType"/>
+  </typecode>  
 </typelistextension>

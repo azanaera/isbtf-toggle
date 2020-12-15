@@ -1,0 +1,35 @@
+swagger: '2.0'
+info:
+  description: "Business Events API"
+  version: '1.0'
+  title: "Business Events API"
+
+basePath: /ccc/businessevents/v1
+x-gw-schema-import:
+  request: ext.toggle.ccc.businessevents.request-1.0
+  response: ext.toggle.ccc.businessevents.response-1.0
+
+x-gw-apihandlers:
+  - ext.integration.toggle.ccc.businessevents.APIHandler
+
+produces:
+  - application/json
+consumes:
+  - application/json
+
+paths:
+  /businessevent:
+    post:
+      summary: Create a business events inside CC
+      operationId: postBusinessEvent # Becomes the handler function name, must be unique within this schema
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: "request#/definitions/request"
+      responses:
+        '200':
+          description: "Business event has created"
+          schema:
+            $ref: "response#/definitions/response"
