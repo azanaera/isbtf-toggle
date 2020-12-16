@@ -24,11 +24,27 @@
           required="true"
           value="Policy.PolicyType"
           valueType="typekey.PolicyType"/>
+        <TextInput
+          id="form_number_ext"
+          label="DisplayKey.get(&quot;Toggle.NVV.Policy.SubView.PolicyGeneral.Policy.FormNumber_Ext&quot;)"
+          value="Policy.FormNumber_Ext"/>
+        <TextInput
+          id="edition_number_ext"
+          label="DisplayKey.get(&quot;Toggle.NVV.Policy.SubView.PolicyGeneral.Policy.EditionNumber_Ext&quot;)"
+          value="Policy.Edition_Ext"/>
+        <TypeKeyInput
+          id="state_ext"
+          label="DisplayKey.get(&quot;Toggle.NVV.Policy.SubView.PolicyGeneral.Policy.State_Ext&quot;)"
+          required="true"
+          value="Policy.PolicyState_Ext"
+          valueType="typekey.State"/>
         <DateInput
+          dateFormat="short"
           editable="!Policy.Verified"
           id="EffectiveDate"
           label="DisplayKey.get(&quot;NVV.Policy.SubView.PolicyGeneral.Policy.EffectiveDate&quot;)"
           required="true"
+          timeFormat="long"
           value="Policy.EffectiveDate"/>
         <DateInput
           editable="!Policy.Verified"
@@ -213,7 +229,10 @@
           title="DisplayKey.get(&quot;NVV.Policy.SubView.PolicyGeneral.Policy.Coverages&quot;)"/>
         <Toolbar>
           <IteratorButtons
-            iterator="EditablePropertyPolicyCoveragesLV.EditablePropertyPolicyCoveragesLV"/>
+            iterator="EditablePropertyPolicyCoveragesLV.EditablePropertyPolicyCoveragesLV"
+            removeVisible="false"/>
+          <EditButtons
+            editVisible="perm.Claim.edit(Policy.Claim) and perm.Policy.edit(Policy.Claim) and perm.Policy.makeeditable(Policy.Claim) and perm.System.edit_coverages_ext"/>
         </Toolbar>
       </PanelRef>
       <PanelRef

@@ -8814,5 +8814,14 @@
     <category
       code="Deductible"
       typelist="CovTermModelType"/>
-  </typecode>  
+  </typecode>
+  <typecode
+    code="HORate_Togl_Ext"
+    desc="Rate"
+    identifierCode="HORate_Togl_Ext"
+    name="Rate">
+    <category
+      code="HOSideHustleLossIncome_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>
 </typelistextension>

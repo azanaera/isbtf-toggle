@@ -4,7 +4,6 @@
   xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
   <!-- This file automatically generated from lv_policy.xml -->
   <ListViewPanel
-    editable="!Policy.Verified"
     id="EditablePropertyPolicyCoveragesLV"
     stretch="true">
     <ExposeIterator
@@ -21,10 +20,9 @@
       toRemove="Policy.removeCoverage(PolicyCoverage)"
       value="Policy.Coverages"
       valueType="entity.PolicyCoverage[]">
-      <Row
-        editable="!Policy.Verified">
+      <Row>
         <TypeKeyCell
-          editable="true"
+          editable="PolicyCoverage.New"
           grow="true"
           id="CoverageType"
           label="DisplayKey.get(&quot;LV.Policy.PolicyCoverages.CoverageType&quot;)"

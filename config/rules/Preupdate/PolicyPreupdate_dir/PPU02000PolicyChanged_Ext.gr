@@ -1,24 +1,27 @@
 package rules.Preupdate.PolicyPreupdate_dir
-
 uses gw.api.locale.DisplayKey
 
-@gw.rules.RuleName("PPU02000 - Policy Changed")
-internal class PPU02000PolicyChanged {
-  static function doCondition(policy : entity.Policy) : boolean {
+@gw.rules.RuleName("PPU02000 - Policy Changed_Ext")
+internal class PPU02000PolicyChanged_Ext {
+  static function doCondition(policy  :  entity.Policy) : boolean {
 /*start00rule*/
 return !policy.New
 /*end00rule*/
 }
 
-  static function doAction(policy : entity.Policy, actions : gw.rules.Action) {
+  static function doAction(policy  :  entity.Policy, actions : gw.rules.Action) {
 /*start00rule*/
-    var createdCoverages = policy.Bundle.InsertedBeans.whereTypeIs(VehicleCoverage)
+    var createdCoverages : List <Coverage>
+    createdCoverages  = policy.Bundle.InsertedBeans.where(\kb -> kb typeis VehicleCoverage
+      or kb typeis PolicyCoverage or kb typeis PropertyCoverage) as List <Coverage>
     for(newCoverage in createdCoverages){
       policy.Claim.createCustomHistoryEvent(CustomHistoryType.TC_COVERAGE_CREATED_EXT,
           DisplayKey.get("Toggle.Rules.PreUpdate.Policy.NewCoverageCreated_Ext",newCoverage.Type,newCoverage))
     }
 
-    var modifiedCoverages = policy.Bundle.AllModifiedBeans.whereTypeIs(VehicleCoverage)
+    var modifiedCoverages  : List <Coverage>
+    modifiedCoverages = policy.Bundle.AllModifiedBeans.where(\kb -> kb typeis VehicleCoverage
+        or kb typeis PolicyCoverage or kb typeis PropertyCoverage) as List <Coverage>
     for(modifiedCoverage in modifiedCoverages){
       if((!modifiedCoverage.New) and
           modifiedCoverage.ChangedFields.hasMatch(\elt1 -> elt1 == VehicleCoverage#ExposureLimit.PropertyInfo.toString()
@@ -27,7 +30,7 @@ return !policy.New
         policy.Claim.createCustomHistoryEvent(CustomHistoryType.TC_COVERAGE_CHANGED_EXT,
             DisplayKey.get("Toggle.Rules.PreUpdate.Policy.CoverageEdited_Ext", modifiedCoverage.Type, modifiedCoverage))
       }
-    }
+    } 
 /*end00rule*/
   }
 }

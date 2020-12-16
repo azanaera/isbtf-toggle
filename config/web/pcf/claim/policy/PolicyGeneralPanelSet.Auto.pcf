@@ -245,8 +245,7 @@
       selectionName="Coverage"
       selectionType="Coverage">
       <PanelRef
-        def="EditableAutoPolicyCoveragesLV(Policy)"
-        editable="!Policy.Verified">
+        def="EditableAutoPolicyCoveragesLV(Policy)">
         <TitleBar
           subtitle="DisplayKey.get(&quot;NVV.Policy.PolicyVehicleDetail.Vehicle.Coverages.Subtitle&quot;)"
           title="DisplayKey.get(&quot;NVV.Policy.SubView.PolicyGeneral.Policy.Coverages&quot;)"/>

@@ -56,7 +56,8 @@
         sortValueRange="false"
         value="Endorsement.Vehicle_Ext"
         valueRange="AvailableVehicles_Ext"
-        valueType="entity.Vehicle"></RangeInput>
+        valueType="entity.Vehicle"
+        visible="Endorsement.Policy.PolicyType == PolicyType.TC_PERSONALAUTO"></RangeInput>
     </InputColumn>
   </DetailViewPanel>
 </PCF>
