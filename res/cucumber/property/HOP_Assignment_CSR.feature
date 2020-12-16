@@ -35,9 +35,9 @@ Feature: Assignment ~ HOP_Activity_CSR
   @23860-GW-I
   Scenario: 3. Assigning a claim manually and an exposure through automated assignment on new Homeowners claim
     Given a Homeowners policy
-    And a Homeowners policy in the state of "California"
+    And a Homeowners policy in the state of "New York"
     When I start filing a claim
-    And I set loss location to an address in state "California"
+    And I set loss location to an address in state "New York"
     And I add a "Third-party liability" injury incident
     And I set claim loss cause to "Tornado"
     And I add a bodily injury exposure
@@ -47,7 +47,7 @@ Feature: Assignment ~ HOP_Activity_CSR
     Then a "Homeowners" claim should be created
     And the claim should be assigned to group "Toggle Renters Claims Group 1"
     And the claim should be assigned to user "Matthew Armbruster"
-    And the exposure should be assigned to the claim owner
+    And the exposure should be assigned to group "Toggle Renters Claims Group 1"
 
   @23860-GW-I
   Scenario: 4. Assigning a claim through automated assignment and manually assigning an exposure on new Homeowners claim
