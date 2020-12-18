@@ -8824,4 +8824,32 @@
       code="HOSideHustleLossIncome_Togl_Ext"
       typelist="CoverageType"/>
   </typecode>
+
+  <typecode
+    code="HORateTempLivCost_Togl_Ext"
+    desc="Rate"
+    identifierCode="HORateTempLivCost_Togl_Ext"
+    name="Rate">
+    <category
+      code="HOTempLivingCost_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>
+  <typecode
+    code="HOPetParent_Togl_Ext"
+    desc="Pet Parent"
+    identifierCode="HOPetParent_Togl_Ext"
+    name="Pet Parent">
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>
+  <typecode
+    code="HOPetParentLtd_Togl_Ext"
+    desc="Pet Parent Limited"
+    identifierCode="HOPetParentLtd_Togl_Ext"
+    name="Pet Parent Limited">
+    <category
+      code="HOPersLiab_Togl_Ext"
+      typelist="CoverageType"/>
+  </typecode>
 </typelistextension>

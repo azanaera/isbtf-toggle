@@ -33,7 +33,8 @@ class SurePolicySearchPlugin implements IPolicySearchAdapter{
     var resultSet = new PolicyRetrievalResultSet()
     var service = new SurePolicyService()
     if (policy.PolicyType == PolicyType.TC_HOPHOMEOWNERS) {
-      resultSet = service.retrievePersonalAutoPolicyFromPolicy(policy.PolicyNumber, policy.Claim.LossDate)
+      //This will change to policy id when the policy number search is supported
+      resultSet = service.retrieveRenterPolicyFromPolicy(policy.SurePolicySystemPeriodID_Ext, policy.Claim.LossDate)
     } else {
       resultSet = service.retrievePersonalAutoPolicyFromPolicy(policy.PolicyNumber, policy.Claim.LossDate)
     }

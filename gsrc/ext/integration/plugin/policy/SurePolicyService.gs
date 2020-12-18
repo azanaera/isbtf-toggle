@@ -5,19 +5,19 @@ uses ext.integration.plugin.policy.mapper.RenterAutoMapper
 uses ext.integration.rest.client.SureClient
 uses ext.integration.rest.client.SureHOClient
 uses ext.integration.rest.properties.SurePASProperties
+uses ext.integration.rest.properties.SureRenterProperties
 uses ext.integration.util.service.AbstractServiceBase
 uses feign.FeignException
+uses gw.api.system.server.ServerUtil
 uses gw.api.util.DateUtil
 uses gw.api.util.DisplayableException
 uses gw.surepath.suite.integration.logging.StructuredLogger
 
 class SurePolicyService extends AbstractServiceBase implements PolicyService  {
-  private static var xSpace : String
-  private static var pasNamespace = "tog:PAS"
-  private static var pasNamespacePA = "tog:PAS:PA"
+  //private static var xSpace : String
   private static var _logger = StructuredLogger.PLUGIN
-  private static var sureClient : SureClient = new SureClient()
   private static var _properties = new SurePASProperties()
+  private static var _renterproperties = new SureRenterProperties()
 
   /**
    * Function which queries the Sure and creates policy summaries for PersonalAuto
@@ -38,10 +38,10 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
     if (not validPolicyNumber){
       _logger.warn("Incorrect format Policy Number used for PolicySearch", SurePolicyService#searchForPersonalAutoPolicies(PolicySearchCriteria),
           :parameters = {"Policy Number" -> criteria.PolicyNumber, "Loss Date" -> String.valueOf(criteria.LossDate)})
-      throw new DisplayableException("Incorrect format of Policy Number" + policyNumber + ". Format should be 10 Alphanumeric characters")
+      throw new DisplayableException("Incorrect format of Personal Auto Policy Number" + policyNumber + ". Format should be 10 Alphanumeric characters.  Please check your policy type and try again.")
     }
     try {
-      xSpace = _properties.SurePASXSpace
+      var xSpace = _properties.SurePASXSpace
       var policyNum = criteria.PolicyNumber
       var utcLossDate = PersonalAutoMapper.formatServerDateWithUTCTimeZone(criteria.LossDate)
       var lossDate = DateUtil.dateToYYYY_MM_DD_Ext(utcLossDate)
@@ -58,12 +58,12 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
       } else {
         _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#searchForPersonalAutoPolicies(PolicySearchCriteria), exception,
             :parameters = {"Policy Number" -> criteria.PolicyNumber, "Loss Date" -> String.valueOf(criteria.LossDate)})
-        throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: , Error Code: " + exception.status())
+        throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: " + ServerUtil.systemDateTime().toString() + " , Error Code: " + exception.status())
       }
     } catch (exception : Exception) {
       _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#searchForPersonalAutoPolicies(PolicySearchCriteria), exception,
           :parameters = {"Policy Number" -> criteria.PolicyNumber, "Loss Date" -> String.valueOf(criteria.LossDate)})
-      throw new DisplayableException("Policy Retrieve service unavailable. Please contact support. Time of Error: ,Error Message: " + exception.Message)
+      throw new DisplayableException("Policy Retrieve service unavailable. Please contact support. Time of Error: " + ServerUtil.systemDateTime().toString() + " , Error Message: " + exception.Message)
     }
     _logger.info("Returning Policy Summary ", :parameters = {"Policy Number" -> criteria.PolicyNumber, "Loss Date" -> String.valueOf(criteria.LossDate)},
         :method = SurePolicyService#searchForPersonalAutoPolicies(PolicySearchCriteria))
@@ -87,7 +87,7 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
     var retrievalResultSet = new PolicyRetrievalResultSet()
 
     try {
-      xSpace = _properties.SurePASXSpace
+      var xSpace = _properties.SurePASXSpace
       var polNum = policySummary.PolicyNumber
       var utcLossDate = PersonalAutoMapper.formatServerDateWithUTCTimeZone(policySummary.LossDate)
       var lossDate = DateUtil.dateToYYYY_MM_DD_Ext(utcLossDate)
@@ -117,12 +117,12 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
       } else {
         _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#retrievePersonalAutoPolicy(PolicySummary), exception,
             :parameters = {"Policy Number" -> policySummary.PolicyNumber, "Loss Date" -> String.valueOf(policySummary.LossDate)})
-        throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: , Error Code: " + exception.status())
+        throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: " + ServerUtil.systemDateTime().toString() + " , Error Code: " + exception.status())
       }
     } catch (exception : Exception) {
       _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#retrievePersonalAutoPolicy(PolicySummary), exception,
           :parameters = {"Policy Number" -> policySummary.PolicyNumber, "Loss Date" -> String.valueOf(policySummary.LossDate)})
-      throw new DisplayableException("Policy Retrieve service unavailable. Please contact support. Time of Error: ,Error Message: " + exception.Message)
+      throw new DisplayableException("Policy Retrieve service unavailable. Please contact support. Time of Error: " + ServerUtil.systemDateTime().toString() + " , Error Message: " + exception.Message)
     }
     _logger.info("Policy Details retrieved successfully ", :parameters = {"Policy Number" -> policySummary.PolicyNumber, "Loss Date" -> String.valueOf(policySummary.LossDate)},
         :method = SurePolicyService#retrievePersonalAutoPolicy(PolicySummary))
@@ -146,7 +146,7 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
     var retrievalResultSet = new PolicyRetrievalResultSet()
 
     try {
-      xSpace = _properties.SurePASXSpace
+      var xSpace = _properties.SurePASXSpace
       var utcLossDate = PersonalAutoMapper.formatServerDateWithUTCTimeZone(policyLossDate)
       var lossDate = DateUtil.dateToYYYY_MM_DD_Ext(utcLossDate)
       var resultList = api.longPull(policyNumber, null, lossDate, xSpace)
@@ -174,27 +174,33 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
       } else {
         _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#retrievePersonalAutoPolicyFromPolicy(String, Date), exception,
             :parameters = {"Policy Number" -> policyNumber, "Loss Date" -> String.valueOf(policyLossDate)})
-        throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: , Error Code: " + exception.status())
+        throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: " + ServerUtil.systemDateTime().toString() + " , Error Code: " + exception.status())
       }
     } catch (exception : Exception) {
       _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#retrievePersonalAutoPolicyFromPolicy(String, Date), exception,
           :parameters = {"Policy Number" -> policyNumber, "Loss Date" -> String.valueOf(policyLossDate)})
-      throw new DisplayableException("Policy Retrieve service unavailable. Please contact support. Time of Error: ,Error Message: " + exception.Message)
+      throw new DisplayableException("Policy Retrieve service unavailable. Please contact support. Time of Error: " + ServerUtil.systemDateTime().toString() + " , Error Message: " + exception.Message)
     }
     _logger.info("Policy Refresh successful ", :parameters = {"Policy Number" -> policyNumber, "Loss Date" -> String.valueOf(policyLossDate)},
         :method = SurePolicyService#retrievePersonalAutoPolicyFromPolicy(String, Date))
     return retrievalResultSet
   }
 
-
+  /**
+   * Function which queries the Sure and creates policy summaries for Renter (Homeowner)
+   *
+   * @param criteria Search criteria from the UI
+   * @return a PolicySearchResultSet containing the results of the search
+   * @throws(FeignException, "If there is an error thrown by Sure during REST call")
+   */
   public function searchForRenterPolicies(criteria : PolicySearchCriteria) : PolicySearchResultSet {
     _logger.info("Beginning Policy Search ", :parameters = {"Policy Number" -> criteria.PolicyNumber, "Loss Date" -> String.valueOf(criteria.LossDate)},
         :method = SurePolicyService#searchForPersonalAutoPolicies(PolicySearchCriteria))
 
     var searchResultSet = new PolicySearchResultSet()
-
+/*
     var validPolicyNumber = PersonalAutoMapper.validatePolicyNumber(criteria.PolicyNumber)
-/*  TODO: Uncomment this when policy number search works correctly, as it is currently using policy term id which is not a valid format
+
     if (not validPolicyNumber){
       _logger.warn("Incorrect format Policy Number used for PolicySearch", SurePolicyService#searchForPersonalAutoPolicies(PolicySearchCriteria),
           :parameters = {"Policy Number" -> criteria.PolicyNumber, "Loss Date" -> String.valueOf(criteria.LossDate)})
@@ -202,7 +208,7 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
     }
 */
     try {
-      xSpace = "farmers"
+      var xSpace = _renterproperties.SureRenterXSpace
       var policyNum = criteria.PolicyNumber
       var utcLossDate = PersonalAutoMapper.formatServerDateWithUTCTimeZone(criteria.LossDate)
       var lossDate = DateUtil.dateToYYYY_MM_DD_Ext(utcLossDate)
@@ -210,7 +216,6 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
       var client = new SureHOClient()
       var api = client.createClient()
       var result = api.policyIdGet(policyNum, xSpace)
-      print(result)
       searchResultSet = RenterAutoMapper.createPolicySummaries(result, criteria.LossDate)
 
     } catch (exception : FeignException) {
@@ -226,12 +231,12 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
       } else {
         _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#searchForRenterPolicies(PolicySearchCriteria), exception,
             :parameters = {"Policy Number" -> criteria.PolicyNumber, "Loss Date" -> String.valueOf(criteria.LossDate)})
-        throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: , Error Code: " + exception.status())
+        throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: " + ServerUtil.systemDateTime().toString() + " , Error Code: " + exception.status())
       }
     } catch (exception : Exception) {
       _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#searchForRenterPolicies(PolicySearchCriteria), exception,
           :parameters = {"Policy Number" -> criteria.PolicyNumber, "Loss Date" -> String.valueOf(criteria.LossDate)})
-      throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: , Error Message: " + exception.LocalizedMessage)
+      throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: " + ServerUtil.systemDateTime().toString() + " , Error Message: " + exception.LocalizedMessage)
     }
     _logger.info("Returning Policy Summary ", :parameters = {"Policy Number" -> criteria.PolicyNumber, "Loss Date" -> String.valueOf(criteria.LossDate)},
         :method = SurePolicyService#searchForRenterPolicies(PolicySearchCriteria))
@@ -240,7 +245,7 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
   }
 
   /**
-   * Function which queries the Sure and creates policy data for PersonalAuto Claim
+   * Function which queries the Sure and creates policy data for Renter (Homeowner) Claim
    *
    * @param policySummary Selected policy summary to retrieve detailed policy info for
    * @return a PolicyRetrievalResultSet containing the results of the search
@@ -253,7 +258,7 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
     var retrievalResultSet = new PolicyRetrievalResultSet()
 
     try {
-      xSpace = "farmers"
+      var xSpace = _renterproperties.SureRenterXSpace
       var polNum = policySummary.PolicyNumber
       var utcLossDate = PersonalAutoMapper.formatServerDateWithUTCTimeZone(policySummary.LossDate)
       var lossDate = DateUtil.dateToYYYY_MM_DD_Ext(utcLossDate)
@@ -275,21 +280,69 @@ class SurePolicyService extends AbstractServiceBase implements PolicyService  {
             :parameters = {"Policy Number" -> policySummary.PolicyNumber, "Loss Date" -> String.valueOf(policySummary.LossDate)})
         throw new DisplayableException("No results found for Policy: " + policySummary.PolicyNumber + "/LossDate: " + policySummary.LossDate)
       } else {
-        _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#retrievePersonalAutoPolicy(PolicySummary), exception,
+        _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#retrieveRenterPolicy(PolicySummary), exception,
             :parameters = {"Policy Number" -> policySummary.PolicyNumber, "Loss Date" -> String.valueOf(policySummary.LossDate)})
-        throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: , Error Code: " + exception.status())
+        throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: " + ServerUtil.systemDateTime().toString() + " , Error Code: " + exception.status())
       }
     } catch (exception : Exception) {
-      _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#retrievePersonalAutoPolicy(PolicySummary), exception,
+      _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#retrieveRenterPolicy(PolicySummary), exception,
           :parameters = {"Policy Number" -> policySummary.PolicyNumber, "Loss Date" -> String.valueOf(policySummary.LossDate)})
-      throw new DisplayableException("Policy Retrieve service unavailable. Please contact support. Time of Error: ,Error Message: " + exception.Message)
+      throw new DisplayableException("Policy Retrieve service unavailable. Please contact support. Time of Error: " + ServerUtil.systemDateTime().toString() + " , Error Message: " + exception.Message)
     }
     _logger.info("Policy Details retrieved successfully ", :parameters = {"Policy Number" -> policySummary.PolicyNumber, "Loss Date" -> String.valueOf(policySummary.LossDate)},
-        :method = SurePolicyService#retrievePersonalAutoPolicy(PolicySummary))
+        :method = SurePolicyService#retrieveRenterPolicy(PolicySummary))
 
     return retrievalResultSet
   }
 
+  /**
+   * Function which queries the Sure and creates policy data for Renter (Homeowner) Claim
+   *
+   * @param policyNumber policy number for refresh
+   * @param policyLossDate date for refresh
+   * @return a PolicyRetrievalResultSet containing the results of the search
+   * @throws(FeignException, "If there is an error thrown by Sure during REST call")
+   */
+  public function retrieveRenterPolicyFromPolicy(policyNumber : String, policyLossDate : Date) : PolicyRetrievalResultSet {
+    _logger.info("Beginning Policy Refresh ", :parameters = {"Policy Number" -> policyNumber, "Loss Date" -> String.valueOf(policyLossDate)},
+        :method = SurePolicyService#retrieveRenterPolicyFromPolicy(String, Date))
+
+    var client = new SureHOClient()
+    var api = client.createClient()
+    var retrievalResultSet = new PolicyRetrievalResultSet()
+
+    try {
+      var xSpace = _renterproperties.SureRenterXSpace
+      var utcLossDate = PersonalAutoMapper.formatServerDateWithUTCTimeZone(policyLossDate)
+      var lossDate = DateUtil.dateToYYYY_MM_DD_Ext(utcLossDate)
+      var result = api.policyIdGet(policyNumber, xSpace)
+      retrievalResultSet = RenterAutoMapper.createPolicyDetails(result, policyLossDate)
+      _logger.debug("Refreshing full policy details for Policy Number: " + policyNumber + ", Loss Date: " + policyLossDate)
+
+
+    } catch (exception : FeignException) {
+      if (exception.status() == 429) {
+        _logger.warn("Rate Limit exceeded for policy search", SurePolicyService#retrieveRenterPolicyFromPolicy(String, Date), exception,
+            :parameters = {"Policy Number" -> policyNumber, "Loss Date" -> String.valueOf(policyLossDate)})
+        throw new DisplayableException("Policy Retrieve service search limit reached. Please wait 5 minutes and try again")
+      } else if (exception.status() == 404) {
+        _logger.error("No results found", SurePolicyService#retrieveRenterPolicyFromPolicy(String, Date),
+            :parameters = {"Policy Number" -> policyNumber, "Loss Date" -> String.valueOf(policyLossDate)})
+        throw new DisplayableException("No results found for Policy: " + policyNumber + "/LossDate: " + policyLossDate)
+      } else {
+        _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#retrieveRenterPolicyFromPolicy(String, Date), exception,
+            :parameters = {"Policy Number" -> policyNumber, "Loss Date" -> String.valueOf(policyLossDate)})
+        throw new DisplayableException("Policy Search service unavailable. Please contact support. Time of Error: , Error Code: " + exception.status())
+      }
+    } catch (exception : Exception) {
+      _logger.error("Error occured when calling PolicySearchApi", SurePolicyService#retrieveRenterPolicyFromPolicy(String, Date), exception,
+          :parameters = {"Policy Number" -> policyNumber, "Loss Date" -> String.valueOf(policyLossDate)})
+      throw new DisplayableException("Policy Retrieve service unavailable. Please contact support. Time of Error: ,Error Message: " + exception.Message)
+    }
+    _logger.info("Policy Refresh successful ", :parameters = {"Policy Number" -> policyNumber, "Loss Date" -> String.valueOf(policyLossDate)},
+        :method = SurePolicyService#retrieveRenterPolicyFromPolicy(String, Date))
+    return retrievalResultSet
+  }
 
   override function getServiceName() : String {
     return SERVICENAME

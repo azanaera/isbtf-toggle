@@ -5,6 +5,7 @@ uses com.surepolicyrent.rest.api.SurePolicyRentApi
 uses com.surepolicy.rest.util.RequestInterceptorMultipartForm
 uses com.surepolicy.rest.util.RequestInterceptorReplaceNulls
 uses ext.integration.rest.properties.SurePASProperties
+uses ext.integration.rest.properties.SureRenterProperties
 uses feign.Feign.Builder
 uses feign.FeignException
 uses feign.Request.Options
@@ -25,7 +26,7 @@ class SureHOClient {
   private static final var IS_LOCAL = ServerUtil.Env.equalsIgnoreCase(LOCAL)
   private var path : String
   private var token : String
-  private static var _properties = new SurePASProperties()
+  private static var _properties = new SureRenterProperties()
   private static var _logger = StructuredLogger.INTEGRATION
 
   /**
@@ -40,11 +41,11 @@ class SureHOClient {
 
     var apiClient = new ApiClient(auths)
     if (IS_LOCAL) {
-      token = _properties.SurePASToken
+      token = _properties.SureToken
     } else {
       token = SecretsManagerService.getSensitiveProperty(TOKEN_SECRET_KEY)
     }
-    path = "https://api.trysurepolicy.com/api/management/v1/policies"
+    path = _properties.SureRenterPath
 
     try {
       apiClient.setBearerToken(token)

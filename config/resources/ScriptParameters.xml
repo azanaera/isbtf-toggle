@@ -74,7 +74,7 @@
     </ScriptParameterPack>
     <ScriptParameterPack ParamName="AllSharedServices_Ext" ParamType="varchar">
       <ResourceContexts length="255"/>
-      <ParamValue>salvage,siu,autosalvage_ext,hosalvage_ext</ParamValue>
+      <ParamValue>salvage,siu</ParamValue>
     </ScriptParameterPack>
     <ScriptParameterPack ParamName="ParentGroupType_Claims_Ext" ParamType="varchar">
       <ResourceContexts length="50"/>

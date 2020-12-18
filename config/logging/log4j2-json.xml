@@ -146,14 +146,13 @@ It determines which log messages are recorded and where they are recorded
     <!--
     ##### ISO #####
     -->
-    <!--
+    
     <RollingFile name="ISOLog" fileName="${guidewire.logDirectory}/CCISO.log"
                  filePattern="${guidewire.logDirectory}/CCISO.log%d{.yyyy-MM-dd}">
       <PatternLayout pattern="${file.defaultPattern}" charset="UTF-8"/>
       <TimeBasedTriggeringPolicy/>
     </RollingFile>
-    -->
-
+    
     <!--
     ##### Phone Normalizer #####
 
@@ -291,11 +290,10 @@ It determines which log messages are recorded and where they are recorded
     </Logger>
     -->
 
-    <!--
     <Logger name="Messaging.ISO" level="debug">
       <AppenderRef ref="ISOLog"/>
     </Logger>
-    -->
+    
 
     <Logger name="Globalization.PhoneNormalizer" level="off"/>
 

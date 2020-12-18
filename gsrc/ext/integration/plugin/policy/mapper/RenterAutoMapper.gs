@@ -2,6 +2,7 @@ package ext.integration.plugin.policy.mapper
 
 uses com.surepolicyrent.rest.model.Policy
 uses com.surepolicyrent.rest.model.PolicyDetailsVariables
+uses ext.integration.rest.properties.SureRenterProperties
 uses gw.api.financials.CurrencyAmount
 uses gw.api.util.DateUtil
 uses gw.api.util.TypecodeMapperUtil
@@ -9,11 +10,11 @@ uses gw.surepath.suite.integration.logging.StructuredLogger
 
 
 class RenterAutoMapper extends SurePolicyMapper {
+
   private static var _logger = StructuredLogger.PLUGIN
   private static var mapper = TypecodeMapperUtil.getTypecodeMapper()
-  private static var rentNamespace = "tog:RENT"
-  private static var rentNamespacePA = "tog:RENT:HO"
   private static var pasNamespace = "tog:PAS"
+  private static var _properties = new SureRenterProperties()
   /**
    * Function takes the returned policy from Sure and creates policy summaries for PersonalAuto
    *
@@ -33,7 +34,7 @@ class RenterAutoMapper extends SurePolicyMapper {
     newSummary.EffectiveDate = surePolicy.StartsAt
     newSummary.ExpirationDate = surePolicy.EndsAt
 
-    var insured = surePolicy.PolicyHolders.where(\h -> h.getPositionOnPolicy() == 1).first()
+    var insured = surePolicy.PolicyHolders.firstWhere(\h -> h.getPositionOnPolicy() == 1)
     newSummary.InsuredName = "${insured.Person.FirstName} ${insured.Person.LastName}"
     newSummary.AddressLine1 = insured.Person.Address.Line1
     newSummary.AddressLine2 = insured.Person.Address.Line2
@@ -109,41 +110,45 @@ class RenterAutoMapper extends SurePolicyMapper {
     locAddress.City = surePolicy.RatingAddress.City
     locAddress.PostalCode = surePolicy.RatingAddress.Postal
     locAddress.State = State.getTypeKey(surePolicy.RatingAddress.Region.Code)
+    locAddress.County = surePolicy.RatingAddress.County
     location.Address = locAddress
     location.LocationNumber = "1"
     location.Policy = policy
     location.PrimaryLocation = true
 
-    var po = new PropertyOwner()
-    var polContact = new Person()
-    //polContact.PolicySystemId = surePolicy.Details.InterestedParty.
-    polContact.Name = surePolicy.Details.InterestedParty.BusinessName
-    polContact.LastName = polContact.Name
-    polContact.CellPhone = surePolicy.Details.InterestedParty.PhoneNumber
-    polContact.EmailAddress1 = surePolicy.Details.InterestedParty.Email
-    var address = new Address()
-    address.AddressLine1 = surePolicy.Details.InterestedParty.Address.Line1
-    address.AddressLine2 = surePolicy.Details.InterestedParty.Address.Line2
-    address.City = surePolicy.Details.InterestedParty.Address.City
-    address.PostalCode = surePolicy.Details.InterestedParty.Address.Postal
-    address.State = State.getTypeKey(surePolicy.Details.InterestedParty.Address.Region.Code)
-    polContact.PrimaryAddress = address
-    po.Lienholder = polContact
-    po.Property = location
-    po.OwnerType = OwnerType.TC_SOLE_OWNER
-    po.Property = location
-
     var ru = policy.createLocationBasedRU(LocationBasedRU)
     ru.PolicyLocation = location
     ru.Policy = policy
     ru.RUNumber = 1
-    ru.addToLienholders(po)
+
+    if (surePolicy.Details.InterestedParty.BusinessName.NotBlank) {
+      var po = new PropertyOwner()
+      var polContact = new Person()
+      //polContact.PolicySystemId = surePolicy.Details.InterestedParty.
+      polContact.Name = surePolicy.Details.InterestedParty.BusinessName
+      polContact.LastName = polContact.Name
+      polContact.CellPhone = surePolicy.Details.InterestedParty.PhoneNumber
+      polContact.EmailAddress1 = surePolicy.Details.InterestedParty.Email
+      var address = new Address()
+      address.AddressLine1 = surePolicy.Details.InterestedParty.Address.Line1
+      address.AddressLine2 = surePolicy.Details.InterestedParty.Address.Line2
+      address.City = surePolicy.Details.InterestedParty.Address.City
+      address.PostalCode = surePolicy.Details.InterestedParty.Address.Postal
+      address.State = State.getTypeKey(surePolicy.Details.InterestedParty.Address.Region.Code)
+      address.County = surePolicy.Details.InterestedParty.Address.County
+      polContact.PrimaryAddress = address
+      po.Lienholder = polContact
+      po.Property = location
+      po.OwnerType = OwnerType.TC_SOLE_OWNER
+      po.Property = location
+      ru.addToLienholders(po)
+    }
+
 
     addLocationCoverages(ru, surePolicy.Details.Variables)
-    location.addToLienholders(po)
     location.addToLocationBasedRisks(ru)
     policy.addToPolicyLocations(location)
-    //policy.addToRiskUnits(ru)
+    policy.TotalProperties = policy.PolicyLocations.length
 
     //policy.UnderwritingCo = UnderwritingCompanyType.getTypeKey(surePolicy.C)
     _logger.trace("Policy Details added for Policy From Sure PAS :method = SurePersonalAutoService#addPolicyLocation(policy : entity.Policy, surePolicy : Policy)"
@@ -170,16 +175,17 @@ class RenterAutoMapper extends SurePolicyMapper {
       address.City = holder.Person.Address.City
       address.PostalCode = holder.Person.Address.Postal
       address.State = State.getTypeKey(holder.Person.Address.Region.Code)
+      address.County = holder.Person.Address.County
       polContact.PrimaryAddress = address
       if ((holder.PositionOnPolicy) > 1) {
         var contactRole = ContactRole.TC_COVEREDPARTY
-        policy.addRole(contactRole, polContact)
+        policy.addRole(contactRole, polContact).CoveredPartyType = CoveredPartyType.TC_ADDINSURED
       } else {
-        //var contactRole = ContactRole.TC_INSURED
-        //policy.addRole(contactRole, polContact)
-        var mainContactRole = ContactRole.TC_MAINCONTACT
-        policy.addRole(mainContactRole, polContact)
-        policy.policyholder = polContact
+
+        policy.insured = polContact
+        var pniClaimContactRole = policy.getClaimContactRoleByRole(ContactRole.TC_INSURED)
+        pniClaimContactRole.CoveredPartyType = CoveredPartyType.TC_PRIMARY_NAME_INSURED
+
       }
     }
       _logger.trace("Contact added to Policy :method = RenterAutoMapper#addPolicyContacts(policy : entity.Policy, surePolicy : Policy)"
@@ -192,111 +198,157 @@ class RenterAutoMapper extends SurePolicyMapper {
     liabCov.Type = CoverageType.TC_HOPERSLIAB_TOGL_EXT
     liabCov.IncidentLimit = new CurrencyAmount(surePolicy.Details.Variables.LiabilityLimit)
     liabCov.Policy = policy
+    if (surePolicy.Details.Variables.SideHustle) {
+      var covTerm = new FinancialCovTerm()
+      covTerm.CovTermPattern = CovTermPattern.TC_PASIDEHUSTBUSINC_EXT
+      liabCov.addToCovTerms(covTerm)
+    }
     policy.addCoverage(liabCov)
 
     var blanketCov = new PolicyCoverage()
     blanketCov.Type = CoverageType.TC_HOPERSPROPBLANKET_TOGL_EXT
-    blanketCov.IncidentLimit = new CurrencyAmount(1000)
-    liabCov.Policy = policy
+    blanketCov.IncidentLimit = new CurrencyAmount(_properties.BlanketLimit)
+    blanketCov.Policy = policy
     policy.addCoverage(blanketCov)
 
     var medPayCov = new PolicyCoverage()
     medPayCov.Type = CoverageType.TC_HOMEDPAYTOOTHERS_TOGL_EXT
-    medPayCov.IncidentLimit = new CurrencyAmount(1000)
-    liabCov.Policy = policy
+    medPayCov.ExposureLimit = new CurrencyAmount(_properties.MedPayLimit)
+    medPayCov.Policy = policy
     policy.addCoverage(medPayCov)
 
+    if (surePolicy.Details.Variables.IdTheft) {
+      var idCov = new PolicyCoverage()
+      idCov.Type = CoverageType.TC_HOIDENTITYPROTECT_TOGL_EXT
+      idCov.ExposureLimit = new CurrencyAmount(surePolicy.Details.Variables.LiabilityLimit)
+      idCov.Policy = policy
+      policy.addCoverage(idCov)
+    }
   }
 
-  /*
-            "contents_replacement_cost": true,
-            "id_theft": true,
-            "side_hustle": true,
-   */
+
   private static function addLocationCoverages(locationRU : entity.LocationBasedRU, variables : PolicyDetailsVariables) {
+
     if (variables.AdditionalLivingLimit > 0) {
-      var cov = addCoverageWithLimit(locationRU, variables.AdditionalLivingLimit, CoverageType.TC_HOTEMPLIVINGCOST_TOGL_EXT)
-      cov.addToCovTerms(addDeductible(variables.Deductible))
-      locationRU.addToCoverages(cov)
+      locationRU.addToCoverages(addCoverageWithLimit(locationRU, variables.AdditionalLivingLimit, CoverageType.TC_HOTEMPLIVINGCOST_TOGL_EXT, false, null))
     }
-    if (variables.AdventureLimit > 0) {
-      var cov = addCoverageWithLimit(locationRU, variables.AdventureLimit, CoverageType.TC_HOPERSPROPACTIVE_TOGL_EXT)
-      cov.addToCovTerms(addDeductible(variables.Deductible))
-      locationRU.addToCoverages(cov)
-    }
-    if (variables.TechLimit > 0) {
-      var cov = addCoverageWithLimit(locationRU, variables.TechLimit, CoverageType.TC_HOPERSPROPTECHNOLOGY_TOGL_EXT)
-      cov.addToCovTerms(addDeductible(variables.Deductible))
-      /* TODO: add tech term
-      if (variables.IsTechSiasl) {
-        var covTerm = new CovTerm()
-        covTerm.CovTermPattern = ??
-        cov.addToCovTerms(covTerm)
-      }
-      */
-      locationRU.addToCoverages(cov)
-    }
-    if (variables.CreativeLimit > 0) {
-      var cov = addCoverageWithLimit(locationRU, variables.CreativeLimit, CoverageType.TC_HOPERSPROPCREATIVEANDMAKER_TOGL_EXT)
-      cov.addToCovTerms(addDeductible(variables.Deductible))
-      locationRU.addToCoverages(cov)
-    }
-    if (variables.FashionLimit > 0) {
-      var cov = addCoverageWithLimit(locationRU, variables.FashionLimit, CoverageType.TC_HOPERSPROPFASHIONANDJEWELRY_TOGL_EXT)
-      cov.addToCovTerms(addDeductible(variables.Deductible))
-      /* TODO: add fashion term
-      if (variables.IsFashionSiasl) {
-        var covTerm = new CovTerm()
-        covTerm.CovTermPattern = ??
-            cov.addToCovTerms(covTerm)
-      }
-      */
-      locationRU.addToCoverages(cov)
-    }
+
     if (variables.FurnishingsLimit > 0) {
-      var cov = addCoverageWithLimit(locationRU, variables.FurnishingsLimit, CoverageType.TC_HOPERSPROPFURNITUREANDAPPLIANCES_TOGL_EXT)
-      cov.addToCovTerms(addDeductible(variables.Deductible))
-      locationRU.addToCoverages(cov)
+      locationRU.addToCoverages(addCoverageWithLimit(locationRU, variables.FurnishingsLimit, CoverageType.TC_HOPERSPROPFURNITUREANDAPPLIANCES_TOGL_EXT, false, null))
     }
+
+    if (variables.AdventureLimit > 0) {
+      locationRU.addToCoverages(
+          addCoverageWithLimit(locationRU,
+                               variables.AdventureLimit,
+                               CoverageType.TC_HOPERSPROPACTIVE_TOGL_EXT,
+                               variables.IsAdventureSiasl,
+                               CovTermPattern.TC_HOPERSPROPACTIVESIM_TOGL_EXT))
+    }
+
     if (variables.CollectiblesLimit > 0) {
-      var cov = addCoverageWithLimit(locationRU, variables.CollectiblesLimit, CoverageType.TC_HOPERSPROPCOLLECT_TOGL_EXT)
-      cov.addToCovTerms(addDeductible(variables.Deductible))
-      /* TODO: add collectable term
-      if (variables.IsCollectibleSiasl) {
-        var covTerm = new CovTerm()
-        covTerm.CovTermPattern = ??
-        cov.addToCovTerms(covTerm)
-      }
-      */
-      locationRU.addToCoverages(cov)
+      locationRU.addToCoverages(
+          addCoverageWithLimit(locationRU,
+              variables.CollectiblesLimit,
+              CoverageType.TC_HOPERSPROPCOLLECT_TOGL_EXT,
+              variables.IsCollectiblesSiasl,
+              CovTermPattern.TC_HOPERSPROPCOLLECTSIM_TOGL_EXT))
     }
+
+    if (variables.CreativeLimit > 0) {
+      locationRU.addToCoverages(
+          addCoverageWithLimit(locationRU,
+              variables.CreativeLimit,
+              CoverageType.TC_HOPERSPROPCREATIVEANDMAKER_TOGL_EXT,
+              variables.IsCreativeSiasl,
+              CovTermPattern.TC_HOPERSPROPCREATIVEANDMAKERSIM_TOGL_EXT))
+    }
+
+    if (variables.FashionLimit > 0) {
+      locationRU.addToCoverages(
+          addCoverageWithLimit(locationRU,
+              variables.FashionLimit,
+              CoverageType.TC_HOPERSPROPFASHIONANDJEWELRY_TOGL_EXT,
+              variables.IsFashionSiasl,
+              CovTermPattern.TC_HOPERSPROPFASHIONANDJEWELRYSIM_TOGL_EXT))
+    }
+
+    if (variables.TechLimit>0) {
+      locationRU.addToCoverages(
+          addCoverageWithLimit(locationRU,
+              variables.TechLimit,
+              CoverageType.TC_HOPERSPROPTECHNOLOGY_TOGL_EXT,
+              variables.IsFashionSiasl,
+              CovTermPattern.TC_HOPERSPROPTECHNOLOGYSIM_TOGL_EXT))
+    }
+
     if (variables.PetLover == true) {
         if (variables.DogBiteHistory == true) {
-          var cov = addCoverageWithLimit(locationRU, 500, CoverageType.TC_HOPETPARENTCOVGLIM_TOGL_EXT)
-          cov.addToCovTerms(addDeductible(variables.Deductible))
+          var cov = addCoverageWithLimit(locationRU, _properties.PetLimit, CoverageType.TC_HOPETPARENTCOVGLIM_TOGL_EXT, false, null)
           locationRU.addToCoverages(cov)
         } else {
-          var cov = addCoverageWithLimit(locationRU, 500, CoverageType.TC_HOPETPARENTCOVG_TOGL_EXT)
-          cov.addToCovTerms(addDeductible(variables.Deductible))
+          var cov = addCoverageWithLimit(locationRU, _properties.PetLimit, CoverageType.TC_HOPETPARENTCOVG_TOGL_EXT, false, null)
           locationRU.addToCoverages(cov)
         }
     }
+
+    if (variables.ContentsReplacementCost) {
+      var cov = new PropertyCoverage()
+      cov.Type=CoverageType.TC_HOREPLACECOST_TOGL_EXT
+      cov.Policy=locationRU.Policy
+      locationRU.addToCoverages(cov)
+    }
+
+    if (variables.SideHustle) {
+      //Side Hustle has two extra location coverages that are defaulted
+      var lfeecov = new PropertyCoverage()
+      lfeecov.Type=CoverageType.TC_HOSIDEHUSTLELEGALFEES_TOGL_EXT
+      lfeecov.IncidentLimit = new CurrencyAmount(_properties.SHLegalFeesLimit)
+      lfeecov.Policy=locationRU.Policy
+      locationRU.addToCoverages(lfeecov)
+
+      var cov = new PropertyCoverage()
+      cov.Type=CoverageType.TC_HOSIDEHUSTLELOSSINCOME_TOGL_EXT
+      cov.IncidentLimit = new CurrencyAmount(_properties.SHLossIncomeLimit)
+      cov.Policy=locationRU.Policy
+      var covTerm = new FinancialCovTerm()
+      covTerm.CovTermPattern = CovTermPattern.TC_HORATE_TOGL_EXT
+      covTerm.ModelAggregation = CovTermModelAgg.TC_EW_EXT
+      covTerm.FinancialAmount = new CurrencyAmount(_properties.SHLossIncomePerWeekLimit)
+      cov.addToCovTerms(covTerm)
+      locationRU.addToCoverages(cov)
+    }
+
+    if (variables.Deductible > 0) {
+      var cov = new PropertyCoverage()
+      cov.Type=CoverageType.TC_HOCONTENTSDEDUCTIBLE_TOGL_EXT
+      cov.Policy=locationRU.Policy
+      var covTerm = new FinancialCovTerm()
+      covTerm.CovTermPattern = CovTermPattern.TC_HOALLPERILS_TOGL_EXT
+      covTerm.FinancialAmount = new CurrencyAmount(variables.Deductible)
+      cov.addToCovTerms(covTerm)
+      locationRU.addToCoverages(cov)
+    }
+
   }
 
-  private static function addCoverageWithLimit(locationRU : entity.LocationBasedRU, limit : Integer, type : CoverageType) : PropertyCoverage{
+  private static function addCoverageWithLimit(locationRU : entity.LocationBasedRU,
+                                               limit : Integer,
+                                               type : CoverageType,
+                                               singleLimit : boolean,
+                                               pattern : CovTermPattern) : PropertyCoverage{
     var cov = new PropertyCoverage()
     cov.Type=type
     cov.IncidentLimit=new CurrencyAmount(limit)
+    if (singleLimit) {
+      var covTerm = new FinancialCovTerm()
+      covTerm.CovTermPattern = pattern
+      covTerm.FinancialAmount = new CurrencyAmount(limit)
+      cov.addToCovTerms(covTerm)
+    }
+
     cov.Policy=locationRU.Policy
     return cov
-  }
-
-  private static function addDeductible( ded : Integer) : CovTerm {
-    var covTerm = new FinancialCovTerm()
-    covTerm.CovTermPattern = CovTermPattern.TC_HOPSCHEDULEDPERSONALPROPERTYITEMDEDUCTIBLE
-   // covTerm.ModelRestriction = CovTermModelRest.TC_PD
-    covTerm.FinancialAmount = new CurrencyAmount(ded)
-    return covTerm
   }
 
 }

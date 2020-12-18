@@ -20,7 +20,6 @@ class SureClient {
 
   private static final var TOKEN_AUTH_SECURITY = "Token"
   private static final var LOCAL = "local"
-  private static final var PATH_SECRET_KEY = "tog.sure.path"
   private static final var TOKEN_SECRET_KEY = "tog.sure.token"
   private static final var IS_LOCAL = ServerUtil.Env.equalsIgnoreCase(LOCAL)
   private var path : String
